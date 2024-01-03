@@ -1,0 +1,19 @@
+<?php
+$_colors = [
+  'success',
+  'danger',
+  'teal',
+  'indigo',
+  'yellow',
+  'primary',
+  'secondary',
+  'purple',
+  'info',
+  'warning',
+  'indigo',
+  'danger',
+  'purple',
+  'secondary',
+  'teal',
+  'success',
+];
