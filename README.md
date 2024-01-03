@@ -1,1 +1,1 @@
-This is a web service project weitten pHp, javascript
+This is a web service project written pHp, javascript
