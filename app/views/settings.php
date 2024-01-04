@@ -34,9 +34,11 @@
         <link rel="stylesheet" type="text/css" href="<?= APPURL . "/assets/css/vendors/select2.css?v=" . VERSION ?>">
         <!-- App css-->
         <link rel="stylesheet" type="text/css" href="<?= APPURL . "/assets/css/style.css?v=" . VERSION ?>">
-        <link id="color" rel="stylesheet" href="<?= APPURL . "assets/css/color-1.css?v=" . VERSION ?>" media="screen">
+        <link id="color" rel="stylesheet" href="<?= APPURL . "/assets/css/color-1.css?v=" . VERSION ?>" media="screen">
         <!-- Responsive css-->
         <link rel="stylesheet" type="text/css" href="<?= APPURL . "/assets/css/responsive.css?v=" . VERSION ?>">
+
+        <link rel="stylesheet" type="text/css" href="<?= APPURL . "/assets/css/vendors/sweetalert2.css?v=" . VERSION ?>">
     </head>
     <body>
         <!-- Loader starts-->
@@ -90,7 +92,6 @@
         <!-- Plugins JS start-->
         <script src="<?= APPURL . "/assets/js/chart/chartjs/chart.min.js?v=" . VERSION ?>"></script>
         <script src="<?= APPURL . "/assets/js/chart/chartist/chartist.js?v=" . VERSION ?>"></script>
-        <script src="<?= APPURL . "/assets/js/chart/chartist/chartist-plugin-tooltip.js?v=" . VERSION ?>"></script>
         <script src="<?= APPURL . "/assets/js/chart/morris-chart/raphael.js?v=" . VERSION ?>"></script>
         <script src="<?= APPURL . "/assets/js/chart/morris-chart/morris.js?v=" . VERSION ?>"> </script>
         <script src="<?= APPURL . "/assets/js/chart/morris-chart/prettify.min.js?v=" . VERSION ?>"></script>
@@ -111,9 +112,12 @@
         <script src="<?= APPURL . "/assets/js/select2/select2-custom.js?v=" . VERSION ?>"></script>
         <!-- Plugins JS Ends-->
         <!-- Theme js-->
+
+        <script src="<?= APPURL . "/assets/js/sweet-alert/sweetalert.min.js?v=" . VERSION ?>"></script>
+        <script src="<?= APPURL . "/assets/js/sweet-alert/app.js?v=" . VERSION ?>"></script>
+
         <script src="<?= APPURL . "/assets/js/theme-customizer/customizer.js?v=" . VERSION ?>"></script>
         <script src="<?= APPURL . "/assets/js/script.js?v=" . VERSION ?>"></script>
-        <script src="<?= APPURL . "/assets/js/app.js?v=" . VERSION ?>"></script>
         <script src="<?= APPURL . "/assets/js/custom.js?v=" . VERSION ?>"></script>
         <?php if ($page == "logotype") : ?>
             <script src="<?= APPURL . "/assets/ckfinder/ckfinder.js?v=" . VERSION ?>"></script>

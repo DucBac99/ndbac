@@ -324,4 +324,3 @@ function loadConfig() {
           : n("#checkAll").prop("checked", !1);
       });
   })(jQuery);
-  
