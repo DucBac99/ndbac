@@ -1,117 +1,125 @@
 
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html lang="en">
     <head>
-        <meta charset="utf-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="wingo admin is super flexible, powerful, clean &amp; modern responsive bootstrap 4 admin template with unlimited possibilities.">
+        <meta name="keywords" content="admin template, wingo admin template, dashboard template, flat admin template, responsive admin template, web app">
+        <meta name="author" content="pixelstrap">
+        <link rel="icon" href="../assets/images/favicon.png" type="image/x-icon">
+        <link rel="shortcut icon" href="../assets/images/favicon.png" type="image/x-icon">
         <title>Cài đặt | <?= site_settings("site_name") . " - " . site_settings("site_slogan") ?></title>
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="icon" type="image/x-icon" href="favicon.png" />
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-        <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
-        <link rel="stylesheet" type="text/css" media="screen" href="<?= APPURL . "/assets/css/perfect-scrollbar.min.css?v=" . VERSION ?>" />
-        <link rel="stylesheet" type="text/css" media="screen" href="<?= APPURL . "/assets/css/style.css?v=" . VERSION ?>" />
-        <link defer rel="stylesheet" type="text/css" media="screen" href="<?= APPURL . "/assets/css/animate.css?v=" . VERSION ?>" />
-        <script src="<?= APPURL . "/assets/js/perfect-scrollbar.min.js?v=" . VERSION ?>"></script>
-        <script defer src="<?= APPURL . "/assets/js/popper.min.js?v=" . VERSION ?>"></script>
-        <script defer src="<?= APPURL . "/assets/js/tippy-bundle.umd.min.js?v=" . VERSION ?>"></script>
-        <script defer src="<?= APPURL . "/assets/js/sweetalert.min.js?v=" . VERSION ?>"></script>
+        <!-- Google font-->
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&amp;display=swap" rel="stylesheet">
+        <!-- Font Awesome-->
+        <link rel="stylesheet" type="text/css" href="<?= APPURL . "/assets/css/vendors/font-awesome.css?v=" . VERSION ?>">
+        <!-- ico-font-->
+        <link rel="stylesheet" type="text/css" href="<?= APPURL . "/assets/css/vendors/icofont.css?v=" . VERSION ?>">
+        <!-- Themify icon-->
+        <link rel="stylesheet" type="text/css" href="<?= APPURL . "/assets/css/vendors/themify.css?v=" . VERSION ?>">
+        <!-- Flag icon-->
+        <link rel="stylesheet" type="text/css" href="<?= APPURL . "/assets/css/vendors/flag-icon.css?v=" . VERSION ?>">
+        <!-- Feather icon-->
+        <link rel="stylesheet" type="text/css" href="<?= APPURL . "/assets/css/vendors/feather-icon.css?v=" . VERSION ?>">
+        <!-- Plugins css start-->
+        <link rel="stylesheet" type="text/css" href="<?= APPURL . "/assets/css/vendors/animate.css?v=" . VERSION ?>">
+        <link rel="stylesheet" type="text/css" href="<?= APPURL . "/assets/css/vendors/chartist.css?v=" . VERSION ?>">
+        <link rel="stylesheet" type="text/css" href="<?= APPURL . "/assets/css/vendors/prism.css?v=" . VERSION ?>">
+        <!-- Plugins css Ends-->
+        <!-- Bootstrap css-->
+        <link rel="stylesheet" type="text/css" href="<?= APPURL . "/assets/css/vendors/bootstrap.css?v=" . VERSION ?>">
+        <link rel="stylesheet" type="text/css" href="<?= APPURL . "/assets/css/vendors/select2.css?v=" . VERSION ?>">
+        <!-- App css-->
+        <link rel="stylesheet" type="text/css" href="<?= APPURL . "/assets/css/style.css?v=" . VERSION ?>">
+        <link id="color" rel="stylesheet" href="<?= APPURL . "assets/css/color-1.css?v=" . VERSION ?>" media="screen">
+        <!-- Responsive css-->
+        <link rel="stylesheet" type="text/css" href="<?= APPURL . "/assets/css/responsive.css?v=" . VERSION ?>">
     </head>
-
-    <body
-        x-data="main"
-        class="relative overflow-x-hidden font-nunito text-sm font-normal antialiased"
-        :class="[ $store.app.sidebar ? 'toggle-sidebar' : '', $store.app.theme === 'dark' || $store.app.isDarkMode ?  'dark' : '', $store.app.menu, $store.app.layout,$store.app.rtlClass]"
-    >
-        <!-- sidebar menu overlay -->
-        <div x-cloak class="fixed inset-0 z-50 bg-[black]/60 lg:hidden" :class="{'hidden' : !$store.app.sidebar}" @click="$store.app.toggleSidebar()"></div>
-
-        <!-- screen loader -->
-        <div class="screen_loader animate__animated fixed inset-0 z-[60] grid place-content-center bg-[#fafafa] dark:bg-[#060818]">
-            <svg width="64" height="64" viewBox="0 0 135 135" xmlns="http://www.w3.org/2000/svg" fill="#4361ee">
-                <path
-                    d="M67.447 58c5.523 0 10-4.477 10-10s-4.477-10-10-10-10 4.477-10 10 4.477 10 10 10zm9.448 9.447c0 5.523 4.477 10 10 10 5.522 0 10-4.477 10-10s-4.478-10-10-10c-5.523 0-10 4.477-10 10zm-9.448 9.448c-5.523 0-10 4.477-10 10 0 5.522 4.477 10 10 10s10-4.478 10-10c0-5.523-4.477-10-10-10zM58 67.447c0-5.523-4.477-10-10-10s-10 4.477-10 10 4.477 10 10 10 10-4.477 10-10z"
-                >
-                    <animateTransform attributeName="transform" type="rotate" from="0 67 67" to="-360 67 67" dur="2.5s" repeatCount="indefinite" />
-                </path>
-                <path
-                    d="M28.19 40.31c6.627 0 12-5.374 12-12 0-6.628-5.373-12-12-12-6.628 0-12 5.372-12 12 0 6.626 5.372 12 12 12zm30.72-19.825c4.686 4.687 12.284 4.687 16.97 0 4.686-4.686 4.686-12.284 0-16.97-4.686-4.687-12.284-4.687-16.97 0-4.687 4.686-4.687 12.284 0 16.97zm35.74 7.705c0 6.627 5.37 12 12 12 6.626 0 12-5.373 12-12 0-6.628-5.374-12-12-12-6.63 0-12 5.372-12 12zm19.822 30.72c-4.686 4.686-4.686 12.284 0 16.97 4.687 4.686 12.285 4.686 16.97 0 4.687-4.686 4.687-12.284 0-16.97-4.685-4.687-12.283-4.687-16.97 0zm-7.704 35.74c-6.627 0-12 5.37-12 12 0 6.626 5.373 12 12 12s12-5.374 12-12c0-6.63-5.373-12-12-12zm-30.72 19.822c-4.686-4.686-12.284-4.686-16.97 0-4.686 4.687-4.686 12.285 0 16.97 4.686 4.687 12.284 4.687 16.97 0 4.687-4.685 4.687-12.283 0-16.97zm-35.74-7.704c0-6.627-5.372-12-12-12-6.626 0-12 5.373-12 12s5.374 12 12 12c6.628 0 12-5.373 12-12zm-19.823-30.72c4.687-4.686 4.687-12.284 0-16.97-4.686-4.686-12.284-4.686-16.97 0-4.687 4.686-4.687 12.284 0 16.97 4.686 4.687 12.284 4.687 16.97 0z"
-                >
-                    <animateTransform attributeName="transform" type="rotate" from="0 67 67" to="360 67 67" dur="8s" repeatCount="indefinite" />
-                </path>
-            </svg>
+    <body>
+        <!-- Loader starts-->
+        <div class="loader-wrapper">
+        <div class="main-loader">
+            <div class="bar-0"></div>
+            <div class="bar-1"></div>
+            <div class="bar-2"></div>
+            <div class="bar-3"></div>
+            <div class="bar-4"></div>
         </div>
-
-        <!-- scroll to top button -->
-        <div class="fixed bottom-6 z-50 ltr:right-6 rtl:left-6" x-data="scrollToTop">
-            <template x-if="showTopButton">
-                <button
-                    type="button"
-                    class="btn btn-outline-primary animate-pulse rounded-full bg-[#fafafa] p-2 dark:bg-[#060818] dark:hover:bg-primary"
-                    @click="goToTop"
-                >
-                    <svg width="24" height="24" class="h-4 w-4" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path
-                            opacity="0.5"
-                            fill-rule="evenodd"
-                            clip-rule="evenodd"
-                            d="M12 20.75C12.4142 20.75 12.75 20.4142 12.75 20L12.75 10.75L11.25 10.75L11.25 20C11.25 20.4142 11.5858 20.75 12 20.75Z"
-                            fill="currentColor"
-                        />
-                        <path
-                            d="M6.00002 10.75C5.69667 10.75 5.4232 10.5673 5.30711 10.287C5.19103 10.0068 5.25519 9.68417 5.46969 9.46967L11.4697 3.46967C11.6103 3.32902 11.8011 3.25 12 3.25C12.1989 3.25 12.3897 3.32902 12.5304 3.46967L18.5304 9.46967C18.7449 9.68417 18.809 10.0068 18.6929 10.287C18.5768 10.5673 18.3034 10.75 18 10.75L6.00002 10.75Z"
-                            fill="currentColor"
-                        />
-                    </svg>
-                </button>
-            </template>
+        <div class="loading">Loading...    </div>
         </div>
-
-        <!-- start theme customizer section -->
-        <?php require_once(APPPATH . '/views/components/configurator.component.php'); ?>
-        <!-- end theme customizer section -->
-
-        <div class="main-container min-h-screen text-black dark:text-white-dark" :class="[$store.app.navbar]">
-            <!-- start sidebar section -->
-            <?php require_once(APPPATH . '/views/components/navigation.component.php'); ?>
-            <!-- end sidebar section -->
-
-            <div class="main-content flex flex-col min-h-screen">
-                <!-- start header section -->
-                <?php require_once(APPPATH . '/views/components/topbar.component.php'); ?>
-                <!-- end header section -->
-
-                <?php require_once(APPPATH . '/views/settings/' . $page . '.setting.php'); ?>
-
-                <!-- start footer section -->
-                <?php require_once(APPPATH . '/views/components/footer.component.php') ?>
-                <!-- end footer section -->
+        <!-- Loader ends-->
+        <!-- page-wrapper Start-->
+        <div class="page-wrapper compact-wrapper" id="pageWrapper">
+        <!-- Page Header Start-->
+        <?php require_once(APPPATH . '/views/components/topbar.component.php'); ?>
+        <!-- Page Header Ends                              -->
+        <!-- Page Body Start-->
+        <div class="page-body-wrapper sidebar-icon">
+            <!-- Page Sidebar Start-->
+            <?php
+            $Nav = new stdClass;
+            $Nav->activeMenu = "dashboard";
+            require_once(APPPATH . '/views/components/navigation.component.php');
+            ?>
+            <!-- Page Sidebar Ends-->
+            <div class="page-body">
+            <?php require_once(APPPATH . '/views/settings/' . $page . '.setting.php'); ?>
+            <!-- Container-fluid Ends-->
             </div>
+            <!-- footer start-->
+            <?php require_once(APPPATH . '/views/components/footer.component.php'); ?>
+            <!-- tap on top starts-->
+            <div class="tap-top"><i class="icon-control-eject"></i></div>
+            <!-- tap on tap ends-->
         </div>
-
-        <script src="<?= APPURL . "/assets/libs/jquery/jquery.min.js?v=" . VERSION ?>"></script>
-
-        <!-- Required datatable js -->
-        <script src="<?= APPURL . "/assets/libs/datatables.net/js/jquery.dataTables.min.js?v=" . VERSION ?>"></script>
-        <script src="<?= APPURL . "/assets/libs/datatables.net-bs4/js/dataTables.bootstrap4.min.js?v=" . VERSION ?>"></script>
-
-        <script src="<?= APPURL . "/assets/js/alpine-collaspe.min.js?v=" . VERSION ?>"></script>
-        <script src="<?= APPURL . "/assets/js/alpine-persist.min.js?v=" . VERSION ?>"></script>
-        <script defer src="<?= APPURL . "/assets/js/alpine-ui.min.js?v=" . VERSION ?>"></script>
-        <script defer src="<?= APPURL . "/assets/js/alpine-focus.min.js?v=" . VERSION ?>"></script>
-        <script defer src="<?= APPURL . "/assets/js/alpine.min.js?v=" . VERSION ?>"></script>
+        </div>
+        <!-- latest jquery-->
+        <script src="<?= APPURL . "/assets/js/jquery-3.5.1.min.js?v=" . VERSION ?>"></script>
+        <!-- feather icon js-->
+        <script src="<?= APPURL . "/assets/js/icons/feather-icon/feather.min.js?v=" . VERSION ?>"></script>
+        <script src="<?= APPURL . "/assets/js/icons/feather-icon/feather-icon.js?v=" . VERSION ?>"></script>
+        <!-- Sidebar jquery-->
+        <script src="<?= APPURL . "/assets/js/sidebar-menu.js?v=" . VERSION ?>"></script>
+        <script src="<?= APPURL . "/assets/js/config.js?v=" . VERSION ?>">   </script>
+        <!-- Bootstrap js-->
+        <script src="<?= APPURL . "/assets/js/bootstrap/popper.min.js?v=" . VERSION ?>"></script>
+        <script src="<?= APPURL . "/assets/js/bootstrap/bootstrap.min.js?v=" . VERSION ?>"></script>
+        <!-- Plugins JS start-->
+        <script src="<?= APPURL . "/assets/js/chart/chartjs/chart.min.js?v=" . VERSION ?>"></script>
+        <script src="<?= APPURL . "/assets/js/chart/chartist/chartist.js?v=" . VERSION ?>"></script>
+        <script src="<?= APPURL . "/assets/js/chart/chartist/chartist-plugin-tooltip.js?v=" . VERSION ?>"></script>
+        <script src="<?= APPURL . "/assets/js/chart/morris-chart/raphael.js?v=" . VERSION ?>"></script>
+        <script src="<?= APPURL . "/assets/js/chart/morris-chart/morris.js?v=" . VERSION ?>"> </script>
+        <script src="<?= APPURL . "/assets/js/chart/morris-chart/prettify.min.js?v=" . VERSION ?>"></script>
+        <script src="<?= APPURL . "/assets/js/chart/knob/knob.min.js?v=" . VERSION ?>"></script>
+        <script src="<?= APPURL . "/assets/js/chart/apex-chart/apex-chart.js?v=" . VERSION ?>"></script>
+        <script src="<?= APPURL . "/assets/js/chart/apex-chart/stock-prices.js?v=" . VERSION ?>"></script>
+        <script src="<?= APPURL . "/assets/js/prism/prism.min.js?v=" . VERSION ?>"></script>
+        <script src="<?= APPURL . "/assets/js/clipboard/clipboard.min.js?v=" . VERSION ?>"></script>
+        <script src="<?= APPURL . "/assets/js/counter/jquery.waypoints.min.js?v=" . VERSION ?>"></script>
+        <script src="<?= APPURL . "/assets/js/counter/jquery.counterup.min.js?v=" . VERSION ?>"></script>
+        <script src="<?= APPURL . "/assets/js/counter/counter-custom.js?v=" . VERSION ?>"></script>
+        <script src="<?= APPURL . "/assets/js/custom-card/custom-card.js?v=" . VERSION ?>"></script>
+        <script src="<?= APPURL . "/assets/js/notify/bootstrap-notify.min.js?v=" . VERSION ?>"></script>
+        <script src="<?= APPURL . "/assets/js/dashboard/default.js?v=" . VERSION ?>"></script>
+        <script src="<?= APPURL . "/assets/js/notify/index.js?v=" . VERSION ?>"></script>
+        <script src="<?= APPURL . "/assets/js/greeting.js?v=" . VERSION ?>"></script>
+        <script src="<?= APPURL . "/assets/js/select2/select2.full.min.js?v=" . VERSION ?>"></script>
+        <script src="<?= APPURL . "/assets/js/select2/select2-custom.js?v=" . VERSION ?>"></script>
+        <!-- Plugins JS Ends-->
+        <!-- Theme js-->
+        <script src="<?= APPURL . "/assets/js/theme-customizer/customizer.js?v=" . VERSION ?>"></script>
+        <script src="<?= APPURL . "/assets/js/script.js?v=" . VERSION ?>"></script>
+        <script src="<?= APPURL . "/assets/js/app.js?v=" . VERSION ?>"></script>
         <script src="<?= APPURL . "/assets/js/custom.js?v=" . VERSION ?>"></script>
-        <script defer src="<?= APPURL . "/assets/js/apexcharts.js?v=" . VERSION ?>"></script>
-
         <?php if ($page == "logotype") : ?>
             <script src="<?= APPURL . "/assets/ckfinder/ckfinder.js?v=" . VERSION ?>"></script>
         <?php endif ?>
-
-        <script src="<?= APPURL . "/assets/js/pages/base.js?v=" . VERSION ?>"></script>
-        <script src="<?= APPURL . "/assets/js/pages/custom.js?v=" . VERSION ?>"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/moment.min.js"></script>
-
+        <!-- login js-->
+        <!-- Plugin used-->
         <script>
             $(function() {
             Sub99.Settings();

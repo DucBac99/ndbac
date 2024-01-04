@@ -218,15 +218,22 @@ $(function () {
     });
   };
   
-  Sub99.initToolTips = function () {
-    var tooltipTriggerList = [].slice.call(
-      document.querySelectorAll('[data-bs-popup="tooltip"]')
-    );
-    var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
-      return new bootstrap.Tooltip(tooltipTriggerEl);
-    });
-  };
-  
+Sub99.initToolTips = function () {
+  var tooltip_init = {
+		init: function() {
+			$("button").tooltip();
+			$("a").tooltip();
+			$("input").tooltip();
+		}
+	};
+    tooltip_init.init()
+
+  var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+  var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+  return new bootstrap.Tooltip(tooltipTriggerEl)
+})
+};
+
   Sub99.initChoices = function () {
     if (!window.Choices) {
       console.warn("Warning - choices.min.js is not loaded.");

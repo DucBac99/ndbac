@@ -148,7 +148,7 @@
                                                 </li>
                                                 <li><a href="<?= APPURL . "/settings/other" ?>" data-key="other" target="_blank">Khác</a>
                                                 </li>
-                                                <li><a href="<?= APPURL . "/settings/other" ?>" data-key="other" target="_blank">Đơn</a>
+                                                <li><a href="<?= APPURL . "/settings/order" ?>" data-key="other" target="_blank">Đơn</a>
                                                 </li>
                                             </ul>
                                         </div>
