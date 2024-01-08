@@ -1,997 +1,2659 @@
 
 <!DOCTYPE html>
-<html lang="en">
+
+<html
+  lang="en"
+  class="light-style layout-navbar-fixed layout-menu-fixed layout-compact"
+  dir="ltr"
+  data-theme="theme-default"
+  data-assets-path="../../assets/"
+  data-template="vertical-menu-template">
   <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="wingo admin is super flexible, powerful, clean &amp; modern responsive bootstrap 4 admin template with unlimited possibilities.">
-    <meta name="keywords" content="admin template, wingo admin template, dashboard template, flat admin template, responsive admin template, web app">
-    <meta name="author" content="pixelstrap">
-    <link rel="icon" href="../assets/images/favicon.png" type="image/x-icon">
-    <link rel="shortcut icon" href="../assets/images/favicon.png" type="image/x-icon">
-    <title>wingo - Premium Admin Template</title>
-    <!-- Google font-->
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&amp;display=swap" rel="stylesheet">
-    <!-- Font Awesome-->
-    <link rel="stylesheet" type="text/css" href="../assets/css/vendors/font-awesome.css">
-    <!-- ico-font-->
-    <link rel="stylesheet" type="text/css" href="../assets/css/vendors/icofont.css">
-    <!-- Themify icon-->
-    <link rel="stylesheet" type="text/css" href="../assets/css/vendors/themify.css">
-    <!-- Flag icon-->
-    <link rel="stylesheet" type="text/css" href="../assets/css/vendors/flag-icon.css">
-    <!-- Feather icon-->
-    <link rel="stylesheet" type="text/css" href="../assets/css/vendors/feather-icon.css">
-    <!-- Plugins css start-->
-    <link rel="stylesheet" type="text/css" href="../assets/css/vendors/animate.css">
-    <!-- Plugins css Ends-->
-    <!-- Bootstrap css-->
-    <link rel="stylesheet" type="text/css" href="../assets/css/vendors/bootstrap.css">
-    <!-- App css-->
-    <link rel="stylesheet" type="text/css" href="../assets/css/style.css">
-    <link id="color" rel="stylesheet" href="../assets/css/color-1.css" media="screen">
-    <!-- Responsive css-->
-    <link rel="stylesheet" type="text/css" href="../assets/css/responsive.css">
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0" />
+
+    <title>Dashboard - Analytics | Vuexy - Bootstrap Admin Template</title>
+
+    <meta name="description" content="" />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="../../assets/img/favicon/favicon.ico" />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&ampdisplay=swap"
+      rel="stylesheet" />
+
+    <!-- Icons -->
+    <link rel="stylesheet" href="../../assets/vendor/fonts/fontawesome.css" />
+    <link rel="stylesheet" href="../../assets/vendor/fonts/tabler-icons.css" />
+    <link rel="stylesheet" href="../../assets/vendor/fonts/flag-icons.css" />
+
+    <!-- Core CSS -->
+    <link rel="stylesheet" href="../../assets/vendor/css/rtl/core.css" class="template-customizer-core-css" />
+    <link rel="stylesheet" href="../../assets/vendor/css/rtl/theme-default.css" class="template-customizer-theme-css" />
+    <link rel="stylesheet" href="../../assets/css/demo.css" />
+
+    <!-- Vendors CSS -->
+    <link rel="stylesheet" href="../../assets/vendor/libs/node-waves/node-waves.css" />
+    <link rel="stylesheet" href="../../assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.css" />
+    <link rel="stylesheet" href="../../assets/vendor/libs/typeahead-js/typeahead.css" />
+    <link rel="stylesheet" href="../../assets/vendor/libs/apex-charts/apex-charts.css" />
+    <link rel="stylesheet" href="../../assets/vendor/libs/swiper/swiper.css" />
+    <link rel="stylesheet" href="../../assets/vendor/libs/datatables-bs5/datatables.bootstrap5.css" />
+    <link rel="stylesheet" href="../../assets/vendor/libs/datatables-responsive-bs5/responsive.bootstrap5.css" />
+    <link rel="stylesheet" href="../../assets/vendor/libs/datatables-checkboxes-jquery/datatables.checkboxes.css" />
+
+    <!-- Page CSS -->
+    <link rel="stylesheet" href="../../assets/vendor/css/pages/cards-advance.css" />
+
+    <!-- Helpers -->
+    <script src="../../assets/vendor/js/helpers.js"></script>
+    <!--! Template customizer & Theme config files MUST be included after core stylesheets and helpers.js in the <head> section -->
+    <!--? Template customizer: To hide customizer set displayCustomizer value false in config.js.  -->
+    <script src="../../assets/vendor/js/template-customizer.js"></script>
+    <!--? Config:  Mandatory theme config file contain global vars & default theme options, Set your preferred theme option in this file.  -->
+    <script src="../../assets/js/config.js"></script>
   </head>
-  <body class="landing-page">
-    <!-- page-wrapper Start-->
-    <div class="page-wrapper compact-wrapper">
-      <!-- Page Body Start-->
-      <!-- header start-->
-      <header class="landing-header">                 
-        <div class="custom-container">
-          <div class="row">
-            <div class="col-12">
-              <nav class="navbar navbar-light p-0" id="navbar-example2"><a class="navbar-brand" href="javascript:void(0)"> <img class="img-fluid" src="../assets/images/logo/logo.png" alt=""></a>
-                <ul class="landing-menu nav nav-pills">
-                  <li class="nav-item menu-back">back<i class="fa fa-angle-right"></i></li>
-                  <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
-                  <li class="nav-item"><a class="nav-link" href="#demo">Demo</a></li>
-                  <li class="nav-item"><a class="nav-link" href="#framework">Frameworks</a></li>
-                  <li class="nav-item"><a class="nav-link" href="#Applications">Applications</a></li>
-                  <li class="nav-item"><a class="nav-link" href="#core-feature">Core Feature </a></li>
-                  <li class="nav-item"><a class="nav-link" href="#footer">Footer</a></li>
-                </ul>
-                <div class="buy-block"><a class="btn-landing" href="https://themeforest.net/user/pixelstrap/portfolio" target="_blank">Purchase</a>
-                  <div class="toggle-menu"><i class="fa fa-bars"></i></div>
-                </div>
-              </nav>
-            </div>
+
+  <body>
+    <!-- Layout wrapper -->
+    <div class="layout-wrapper layout-content-navbar">
+      <div class="layout-container">
+        <!-- Menu -->
+
+        <aside id="layout-menu" class="layout-menu menu-vertical menu bg-menu-theme">
+          <div class="app-brand demo">
+            <a href="index.html" class="app-brand-link">
+              <span class="app-brand-logo demo">
+                <svg width="32" height="22" viewBox="0 0 32 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M0.00172773 0V6.85398C0.00172773 6.85398 -0.133178 9.01207 1.98092 10.8388L13.6912 21.9964L19.7809 21.9181L18.8042 9.88248L16.4951 7.17289L9.23799 0H0.00172773Z"
+                    fill="#7367F0" />
+                  <path
+                    opacity="0.06"
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M7.69824 16.4364L12.5199 3.23696L16.5541 7.25596L7.69824 16.4364Z"
+                    fill="#161616" />
+                  <path
+                    opacity="0.06"
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M8.07751 15.9175L13.9419 4.63989L16.5849 7.28475L8.07751 15.9175Z"
+                    fill="#161616" />
+                  <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M7.77295 16.3566L23.6563 0H32V6.88383C32 6.88383 31.8262 9.17836 30.6591 10.4057L19.7824 22H13.6938L7.77295 16.3566Z"
+                    fill="#7367F0" />
+                </svg>
+              </span>
+              <span class="app-brand-text demo menu-text fw-bold">Vuexy</span>
+            </a>
+
+            <a href="javascript:void(0);" class="layout-menu-toggle menu-link text-large ms-auto">
+              <i class="ti menu-toggle-icon d-none d-xl-block ti-sm align-middle"></i>
+              <i class="ti ti-x d-block d-xl-none ti-sm align-middle"></i>
+            </a>
           </div>
-        </div>
-      </header>
-      <!-- header end-->
-      <!-- landing home start-->
-      <section class="landing-home">             
-        <div class="custom-container">
-          <div class="row">
-            <div class="col-12">
-              <div class="landing-home-contain">
-                <div>                      
-                  <h6>UNIQUE DESIGN</h6>
-                  <h2>Wingo Bootstrap 5 HTML<span>Admin Template</span></h2>
-                  <p> When it comes to dashboard or web apps. one of the first impression you consider is the design. It needs to be high quality enough otherwise you will lose potential users due to bad design.</p>
-                  <div class="landing-button"><a class="btn-landing go-btn" href="index.html" target="_blank"> <img class="img-fluid img-30 me-2" src="../assets/images/logo/html.png" alt="">Html<i class="fa fa-angle-right"></i></a><a class="btn-secondary btn-landing go-btn ms-2" href="https://react.pixelstrap.com/wingo/dashboard/default" target="_blank"> <img class="img-fluid img-30 me-2" src="../assets/images/logo/react.png" alt="">React<i class="fa fa-angle-right"></i></a><a class="btn-success btn-landing go-btn ms-2" href="https://wingodjango.pixelstrap.com/login?next=/" target="_blank"> <img class="img-fluid img-30 me-2" src="../assets/images/landing/icon/django/django.png" alt="">Django<i class="fa fa-angle-right"></i></a></div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="animat-block"><img class="img-fluid animat1" src="../assets/images/landing/landing-home/animat/1.png" alt=""><img class="img-fluid animat2" src="../assets/images/landing/landing-home/animat/2.png" alt=""><img class="img-fluid animat3" src="../assets/images/landing/landing-home/animat/3.png" alt=""><img class="img-fluid animat4" src="../assets/images/landing/landing-home/animat/4.png" alt=""><img class="img-fluid animat5" src="../assets/images/landing/landing-home/animat/5.png" alt=""><img class="img-fluid animat6" src="../assets/images/landing/landing-home/animat/6.png" alt=""><img class="img-fluid animat7" src="../assets/images/landing/landing-home/animat/7.png" alt=""><img class="img-fluid animat12" src="../assets/images/landing/landing-home/animat/shap3.png" alt=""><img class="img-fluid animat13" src="../assets/images/landing/landing-home/animat/shap4.png" alt=""></div>
-      </section>
-      <!-- landing home end-->
-      <!-- demo section start-->
-      <section class="demo-section section-py-space" id="demo">
-        <div class="title">
-          <div class="logo-wrraper"><img class="img-fluid bg-img" src="../assets/images/logo/logo-icon.png" alt=""></div>
-          <h2>Creative Layouts</h2>
-        </div>
-        <div class="container-fluid">
-          <div class="row demo-block">
-            <div class="col-lg-4 col-md-6 wow pulse">  
-              <div class="demo-box">
-                <div class="img-wrraper"><img class="img-fluid" src="../assets/images/landing/demo/1.jpg" alt="">
-                  <ul class="demo-link">
-                    <li><a id="default-demo" href="index.html" target="_blank">
-                        <svg viewbox="-30 0 512 512" xmlns="http://www.w3.org/2000/svg">
-                          <path d="m31.859375 448.058594 194.253906 63.941406 194.253907-63.941406 31.859374-448.058594h-452.226562zm339.757813-373.058594-4.277344 60h-222.246094l5.417969 77h211.480469l-12.878907 180.601562-123 41.101563-123.003906-41.101563-4.203125-60.601562h60l1.214844 16.492188 65.992187 21.902343 66.003907-21.898437 5.390624-76.496094h-203.097656l-13.800781-197zm0 0"></path>
-                        </svg>Html</a></li>
-                    <li><a href="https://react.pixelstrap.com/wingo/dashboard/default" target="_blank"><img class="img-fluid img-20 me-1" src="../assets/images/logo/react1.png">React</a></li>
-                    <li><a href="https://wingodjango.pixelstrap.com/dashboard_default" target="_blank"><img class="img-fluid img-20 me-1" src="../assets/images/landing/icon/django/django.png">django</a></li>
-                  </ul>
-                </div>
-                <div class="demo-title">
-                  <h3>demo 1</h3>
-                </div>
-              </div>
-            </div>
-            <div class="col-lg-4 col-md-6 wow pulse">
-              <div class="demo-box">                      
-                <div class="img-wrraper"><img class="img-fluid" src="../assets/images/landing/demo/2.jpg" alt="">
-                  <ul class="demo-link">
-                    <li><a id="compact-demo" href="dashboard-02.html" target="_blank">
-                        <svg viewbox="-30 0 512 512" xmlns="http://www.w3.org/2000/svg">
-                          <path d="m31.859375 448.058594 194.253906 63.941406 194.253907-63.941406 31.859374-448.058594h-452.226562zm339.757813-373.058594-4.277344 60h-222.246094l5.417969 77h211.480469l-12.878907 180.601562-123 41.101563-123.003906-41.101563-4.203125-60.601562h60l1.214844 16.492188 65.992187 21.902343 66.003907-21.898437 5.390624-76.496094h-203.097656l-13.800781-197zm0 0"></path>
-                        </svg>Html</a></li>
-                    <li><a href="https://react.pixelstrap.com/wingo/dashboard/ecommerce" target="_blank"><img class="img-fluid img-20 me-1" src="../assets/images/logo/react1.png">React</a></li>
-                    <li><a href="https://wingodjango.pixelstrap.com/dashboard_ecommerce" target="_blank"><img class="img-fluid img-20 me-1" src="../assets/images/landing/icon/django/django.png">django</a></li>
-                  </ul>
-                </div>
-                <div class="demo-title">
-                  <h3>demo 2</h3>
-                </div>
-              </div>
-            </div>
-            <div class="col-lg-4 col-md-6 offset-md-3 offset-lg-0 wow pulse">
-              <div class="demo-box">                      
-                <div class="img-wrraper"><img class="img-fluid" src="../assets/images/landing/demo/3.jpg" alt="">
-                  <ul class="demo-link">
-                    <li><a id="modern-demo" href="dashboard-03.html">
-                        <svg viewbox="-30 0 512 512" xmlns="http://www.w3.org/2000/svg" target="_blank">
-                          <path d="m31.859375 448.058594 194.253906 63.941406 194.253907-63.941406 31.859374-448.058594h-452.226562zm339.757813-373.058594-4.277344 60h-222.246094l5.417969 77h211.480469l-12.878907 180.601562-123 41.101563-123.003906-41.101563-4.203125-60.601562h60l1.214844 16.492188 65.992187 21.902343 66.003907-21.898437 5.390624-76.496094h-203.097656l-13.800781-197zm0 0"></path>
-                        </svg>Html</a></li>
-                    <li><a href="https://react.pixelstrap.com/wingo/dashboard/project" target="_blank"><img class="img-fluid img-20 me-1" src="../assets/images/logo/react1.png">React</a></li>
-                    <li><a href="https://wingodjango.pixelstrap.com/dashboard_project" target="_blank"><img class="img-fluid img-20 me-1" src="../assets/images/landing/icon/django/django.png">django</a></li>
-                  </ul>
-                </div>
-                <div class="demo-title">
-                  <h3>demo 3                     </h3>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      <!-- demo section end-->
-      <!-- frameworks start-->
-      <section class="framework section-pb-space light-bg" id="framework">
-        <div class="custom-container">
-          <div class="row">                 
-            <div class="col-sm-12 wow pulse">
-              <div class="title">
-                <div class="logo-wrraper"><img class="img-fluid bg-img" src="../assets/images/logo/logo-icon.png" alt=""></div>
-                <h2>Top Frameworks </h2>
-              </div>
-            </div>
-            <div class="col-sm-12 framworks">                 
-              <ul class="nav nav-pills justify-content-center" id="pills-tab" role="tablist">
-                <li class="nav-item"><a class="nav-link d-flex active" id="pills-home-tab" data-bs-toggle="pill" href="#pills-home" role="tab" aria-controls="pills-home" aria-selected="true"> <img src="../assets/images/landing/icon/html/html.png" alt="">
-                    <div class="text-start">
-                      <h5 class="mb-0">HTML</h5>
-                      <p class="mb-0">Frameworks</p>
-                    </div></a></li>
-                <li class="nav-item"><a class="d-flex nav-link" id="pills-contact-tab" data-bs-toggle="pill" href="#pills-contact" role="tab" aria-controls="pills-contact" aria-selected="false"> <img src="../assets/images/landing/icon/react/props_state.png" alt="">
-                    <div class="text-start">
-                      <h5 class="mb-0">React</h5>
-                      <p class="mb-0">Frameworks</p>
-                    </div></a></li>
-                <li class="nav-item"><a class="d-flex nav-link" id="pills-django-tab" data-bs-toggle="pill" href="#pills-django" role="tab" aria-controls="pills-contact" aria-selected="false"> <img src="../assets/images/landing/icon/django/django.png" alt="">
-                    <div class="text-start">
-                      <h5 class="mb-0">Django</h5>
-                      <p class="mb-0">Frameworks</p>
-                    </div></a></li>
+
+          <div class="menu-inner-shadow"></div>
+
+          <ul class="menu-inner py-1">
+            <!-- Dashboards -->
+            <li class="menu-item active open">
+              <a href="javascript:void(0);" class="menu-link menu-toggle">
+                <i class="menu-icon tf-icons ti ti-smart-home"></i>
+                <div data-i18n="Dashboards">Dashboards</div>
+                <div class="badge bg-primary rounded-pill ms-auto">5</div>
+              </a>
+              <ul class="menu-sub">
+                <li class="menu-item active">
+                  <a href="index.html" class="menu-link">
+                    <div data-i18n="Analytics">Analytics</div>
+                  </a>
+                </li>
+                <li class="menu-item">
+                  <a href="dashboards-crm.html" class="menu-link">
+                    <div data-i18n="CRM">CRM</div>
+                  </a>
+                </li>
+                <li class="menu-item">
+                  <a href="app-ecommerce-dashboard.html" class="menu-link">
+                    <div data-i18n="eCommerce">eCommerce</div>
+                  </a>
+                </li>
+                <li class="menu-item">
+                  <a href="app-logistics-dashboard.html" class="menu-link">
+                    <div data-i18n="Logistics">Logistics</div>
+                  </a>
+                </li>
+                <li class="menu-item">
+                  <a href="app-academy-dashboard.html" class="menu-link">
+                    <div data-i18n="Academy">Academy</div>
+                  </a>
+                </li>
               </ul>
-              <div class="tab-content" id="pills-tabContent">
-                <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
-                  <ul class="framworks-list">
-                    <li class="bounceIn wow">
-                      <div> <img src="../assets/images/landing/icon/laravel/bootstrap.png" alt=""></div>
-                      <h6>Booxstrap 5</h6>
+            </li>
+
+            <!-- Layouts -->
+            <li class="menu-item">
+              <a href="javascript:void(0);" class="menu-link menu-toggle">
+                <i class="menu-icon tf-icons ti ti-layout-sidebar"></i>
+                <div data-i18n="Layouts">Layouts</div>
+              </a>
+
+              <ul class="menu-sub">
+                <li class="menu-item">
+                  <a href="layouts-collapsed-menu.html" class="menu-link">
+                    <div data-i18n="Collapsed menu">Collapsed menu</div>
+                  </a>
+                </li>
+                <li class="menu-item">
+                  <a href="layouts-content-navbar.html" class="menu-link">
+                    <div data-i18n="Content navbar">Content navbar</div>
+                  </a>
+                </li>
+                <li class="menu-item">
+                  <a href="layouts-content-navbar-with-sidebar.html" class="menu-link">
+                    <div data-i18n="Content nav + Sidebar">Content nav + Sidebar</div>
+                  </a>
+                </li>
+                <li class="menu-item">
+                  <a href="../horizontal-menu-template" class="menu-link" target="_blank">
+                    <div data-i18n="Horizontal">Horizontal</div>
+                  </a>
+                </li>
+                <li class="menu-item">
+                  <a href="layouts-without-menu.html" class="menu-link">
+                    <div data-i18n="Without menu">Without menu</div>
+                  </a>
+                </li>
+                <li class="menu-item">
+                  <a href="layouts-without-navbar.html" class="menu-link">
+                    <div data-i18n="Without navbar">Without navbar</div>
+                  </a>
+                </li>
+                <li class="menu-item">
+                  <a href="layouts-fluid.html" class="menu-link">
+                    <div data-i18n="Fluid">Fluid</div>
+                  </a>
+                </li>
+                <li class="menu-item">
+                  <a href="layouts-container.html" class="menu-link">
+                    <div data-i18n="Container">Container</div>
+                  </a>
+                </li>
+                <li class="menu-item">
+                  <a href="layouts-blank.html" class="menu-link">
+                    <div data-i18n="Blank">Blank</div>
+                  </a>
+                </li>
+              </ul>
+            </li>
+
+            <!-- Front Pages -->
+            <li class="menu-item">
+              <a href="javascript:void(0);" class="menu-link menu-toggle">
+                <i class="menu-icon tf-icons ti ti-files"></i>
+                <div data-i18n="Front Pages">Front Pages</div>
+              </a>
+              <ul class="menu-sub">
+                <li class="menu-item">
+                  <a href="../front-pages/landing-page.html" class="menu-link" target="_blank">
+                    <div data-i18n="Landing">Landing</div>
+                  </a>
+                </li>
+                <li class="menu-item">
+                  <a href="../front-pages/pricing-page.html" class="menu-link" target="_blank">
+                    <div data-i18n="Pricing">Pricing</div>
+                  </a>
+                </li>
+                <li class="menu-item">
+                  <a href="../front-pages/payment-page.html" class="menu-link" target="_blank">
+                    <div data-i18n="Payment">Payment</div>
+                  </a>
+                </li>
+                <li class="menu-item">
+                  <a href="../front-pages/checkout-page.html" class="menu-link" target="_blank">
+                    <div data-i18n="Checkout">Checkout</div>
+                  </a>
+                </li>
+                <li class="menu-item">
+                  <a href="../front-pages/help-center-landing.html" class="menu-link" target="_blank">
+                    <div data-i18n="Help Center">Help Center</div>
+                  </a>
+                </li>
+              </ul>
+            </li>
+
+            <!-- Apps & Pages -->
+            <li class="menu-header small text-uppercase">
+              <span class="menu-header-text" data-i18n="Apps & Pages">Apps &amp; Pages</span>
+            </li>
+            <li class="menu-item">
+              <a href="app-email.html" class="menu-link">
+                <i class="menu-icon tf-icons ti ti-mail"></i>
+                <div data-i18n="Email">Email</div>
+              </a>
+            </li>
+            <li class="menu-item">
+              <a href="app-chat.html" class="menu-link">
+                <i class="menu-icon tf-icons ti ti-messages"></i>
+                <div data-i18n="Chat">Chat</div>
+              </a>
+            </li>
+            <li class="menu-item">
+              <a href="app-calendar.html" class="menu-link">
+                <i class="menu-icon tf-icons ti ti-calendar"></i>
+                <div data-i18n="Calendar">Calendar</div>
+              </a>
+            </li>
+            <li class="menu-item">
+              <a href="app-kanban.html" class="menu-link">
+                <i class="menu-icon tf-icons ti ti-layout-kanban"></i>
+                <div data-i18n="Kanban">Kanban</div>
+              </a>
+            </li>
+            <!-- e-commerce-app menu start -->
+            <li class="menu-item">
+              <a href="javascript:void(0);" class="menu-link menu-toggle">
+                <i class="menu-icon tf-icons ti ti-shopping-cart"></i>
+                <div data-i18n="eCommerce">eCommerce</div>
+              </a>
+              <ul class="menu-sub">
+                <li class="menu-item">
+                  <a href="app-ecommerce-dashboard.html" class="menu-link">
+                    <div data-i18n="Dashboard">Dashboard</div>
+                  </a>
+                </li>
+                <li class="menu-item">
+                  <a href="javascript:void(0);" class="menu-link menu-toggle">
+                    <div data-i18n="Products">Products</div>
+                  </a>
+                  <ul class="menu-sub">
+                    <li class="menu-item">
+                      <a href="app-ecommerce-product-list.html" class="menu-link">
+                        <div data-i18n="Product List">Product List</div>
+                      </a>
                     </li>
-                    <li class="bounceIn wow">
-                      <div> <img src="../assets/images/landing/icon/html/css.png" alt=""></div>
-                      <h6>CSS</h6>
+                    <li class="menu-item">
+                      <a href="app-ecommerce-product-add.html" class="menu-link">
+                        <div data-i18n="Add Product">Add Product</div>
+                      </a>
                     </li>
-                    <li class="bounceIn wow">
-                      <div> <img src="../assets/images/landing/icon/html/sass.png" alt=""></div>
-                      <h6>Sass</h6>
-                    </li>
-                    <li class="bounceIn wow">
-                      <div> <img src="../assets/images/landing/icon/html/pug.png" alt=""></div>
-                      <h6>Pug</h6>
-                    </li>
-                    <li class="bounceIn wow">
-                      <div> <img src="../assets/images/landing/icon/html/npm.png" alt=""></div>
-                      <h6>NPM</h6>
-                    </li>
-                    <li class="bounceIn wow">
-                      <div> <img src="../assets/images/landing/icon/html/gulp.png" alt=""></div>
-                      <h6>Gulp</h6>
-                    </li>
-                    <li class="bounceIn wow">
-                      <div> <img src="../assets/images/landing/icon/html/kit.png" alt=""></div>
-                      <h6>Starter Kit</h6>
-                    </li>
-                    <li class="bounceIn wow">
-                      <div> <img src="../assets/images/landing/icon/html/uikits.png" alt=""></div>
-                      <h6>40+ UI Kits</h6>
-                    </li>
-                    <li class="bounceIn wow">
-                      <div> <img src="../assets/images/landing/icon/html/layout.png" alt=""></div>
-                      <h6>8+ Layout</h6>
-                    </li>
-                    <li class="bounceIn wow">
-                      <div> <img src="../assets/images/landing/icon/html/builders.png" alt=""></div>
-                      <h6>Builders</h6>
-                    </li>
-                    <li class="bounceIn wow">
-                      <div> <img src="../assets/images/landing/icon/html/iconset.png" alt=""></div>
-                      <h6>11 Icon Sets</h6>
-                    </li>
-                    <li class="bounceIn wow">
-                      <div> <img src="../assets/images/landing/icon/html/forms.png" alt=""></div>
-                      <h6>Forms</h6>
-                    </li>
-                    <li class="bounceIn wow">
-                      <div> <img src="../assets/images/landing/icon/html/table.png" alt=""></div>
-                      <h6>Tables</h6>
-                    </li>
-                    <li class="bounceIn wow">
-                      <div> <img src="../assets/images/landing/icon/html/apps.png" alt=""></div>
-                      <h6>17+ Apps</h6>
-                    </li>
-                  </ul>
-                </div>
-                <div class="tab-pane fade" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab">
-                  <ul class="framworks-list">
-                    <li class="box bounceIn wow">
-                      <div> <img src="../assets/images/landing/icon/react/props_state.png" alt=""></div>
-                      <h6>State & Props</h6>
-                    </li>
-                    <li class="box bounceIn wow">
-                      <div> <img src="../assets/images/landing/icon/react/hook.png" alt=""></div>
-                      <h6>React Hook</h6>
-                    </li>
-                    <li class="box bounceIn wow">
-                      <div> <img src="../assets/images/landing/icon/react/reactstrap.png" alt=""></div>
-                      <h6>React Strap</h6>
-                    </li>
-                    <li class="box bounceIn wow">
-                      <div> <img src="../assets/images/landing/icon/react/noquery.png" alt=""></div>
-                      <h6>No Jquery</h6>
-                    </li>
-                    <li class="box bounceIn wow">
-                      <div> <img src="../assets/images/landing/icon/react/redux.png" alt=""></div>
-                      <h6>Redux</h6>
-                    </li>
-                    <li class="box bounceIn wow">
-                      <div> <img src="../assets/images/landing/icon/react/firebase.png" alt=""></div>
-                      <h6>Firebase Auth</h6>
-                    </li>
-                    <li class="box bounceIn wow">
-                      <div> <img src="../assets/images/landing/icon/react/crud.png" alt=""></div>
-                      <h6>Firebase Crud</h6>
-                    </li>
-                    <li class="box bounceIn wow">
-                      <div> <img src="../assets/images/landing/icon/react/chat.png" alt=""></div>
-                      <h6>Chat</h6>
-                    </li>
-                    <li class="box bounceIn wow">
-                      <div> <img src="../assets/images/landing/icon/react/animation.png" alt=""></div>
-                      <h6>Router Animation</h6>
-                    </li>
-                    <li class="box bounceIn wow">
-                      <div> <img src="../assets/images/landing/icon/react/firebase.png" alt=""></div>
-                      <h6>Firebase Auth</h6>
-                    </li>
-                    <li class="box bounceIn wow">
-                      <div> <img src="../assets/images/landing/icon/react/reactrouter.png" alt=""></div>
-                      <h6>React Router</h6>
-                    </li>
-                    <li class="box bounceIn wow">
-                      <div> <img src="../assets/images/landing/icon/react/chat.png" alt=""></div>
-                      <h6>Chat</h6>
-                    </li>
-                    <li class="box bounceIn wow">
-                      <div> <img src="../assets/images/landing/icon/react/chart.png" alt=""></div>
-                      <h6>Chart</h6>
-                    </li>
-                    <li class="box bounceIn wow">
-                      <div> <img src="../assets/images/landing/icon/react/map.png" alt=""></div>
-                      <h6>Map</h6>
-                    </li>
-                    <li class="box bounceIn wow">
-                      <div> <img src="../assets/images/landing/icon/react/gallery.png" alt=""></div>
-                      <h6>Gallery</h6>
-                    </li>
-                    <li class="box bounceIn wow">
-                      <div> <img src="../assets/images/landing/icon/react/map.png" alt=""></div>
-                      <h6>Map</h6>
-                    </li>
-                  </ul>
-                </div>
-                <div class="tab-pane fade" id="pills-django" role="tabpanel" aria-labelledby="pills-contact-tab">
-                  <ul class="framworks-list">
-                    <li class="bounceIn wow">
-                      <div> <img src="../assets/images/landing/icon/django/bootstrap.png" alt=""></div>
-                      <h6>Booxstrap 5</h6>
-                    </li>
-                    <li class="box bounceIn wow">
-                      <div> <img src="../assets/images/landing/icon/django/firebase.png" alt=""></div>
-                      <h6>Authentication</h6>
-                    </li>
-                    <li class="box bounceIn wow">
-                      <div> <img src="../assets/images/landing/icon/django/mix.png" alt=""></div>
-                      <h6>Unlimited color</h6>
-                    </li>
-                    <li class="bounceIn wow">
-                      <div> <img src="../assets/images/landing/icon/django/font-awesome.png" alt=""></div>
-                      <h6>Font-awesome icon</h6>
-                    </li>
-                    <li class="box bounceIn wow">
-                      <div> <img src="../assets/images/landing/icon/django/animation.png" alt=""></div>
-                      <h6>Animation css</h6>
-                    </li>
-                    <li class="box bounceIn wow">
-                      <div> <img src="../assets/images/landing/icon/django/slick.png" alt=""></div>
-                      <h6>Slick carousal</h6>
-                    </li>
-                    <li class="bounceIn wow">
-                      <div> <img src="../assets/images/landing/icon/django/apps.png" alt=""></div>
-                      <h6>To-do</h6>
-                    </li>
-                    <li class="box bounceIn wow">
-                      <div> <img src="../assets/images/landing/icon/django/gallery.png" alt=""></div>
-                      <h6>Gallery</h6>
-                    </li>
-                    <li class="bounceIn wow">
-                      <div> <img src="../assets/images/landing/icon/django/table.png" alt=""></div>
-                      <h6>DataTables</h6>
-                    </li>
-                    <li class="box bounceIn wow">
-                      <div> <img src="../assets/images/landing/icon/django/layouts.png" alt=""></div>
-                      <h6>Responsive Layout</h6>
-                    </li>
-                    <li class="box bounceIn wow">
-                      <div> <img src="../assets/images/landing/icon/django/chart.png" alt=""></div>
-                      <h6>Attractive chart</h6>
-                    </li>
-                    <li class="box bounceIn wow">
-                      <div> <img src="../assets/images/landing/icon/django/cusomize.png" alt=""></div>
-                      <h6>Easy customizer</h6>
-                    </li>
-                    <li class="box bounceIn wow">
-                      <div> <img src="../assets/images/landing/icon/django/weather.png" alt=""></div>
-                      <h6>Weather icon</h6>
-                    </li>
-                    <li class="box bounceIn wow">
-                      <div> <img src="../assets/images/landing/icon/django/ico.png" alt=""></div>
-                      <h6>Ico icon</h6>
-                    </li>
-                    <li class="box bounceIn wow">
-                      <div> <img src="../assets/images/landing/icon/django/feather.png" alt=""></div>
-                      <h6>Feather icon</h6>
-                    </li>
-                    <li class="box bounceIn wow">
-                      <div> <img src="../assets/images/landing/icon/django/dropzone.png" alt=""></div>
-                      <h6>Dropzone</h6>
-                    </li>
-                    <li class="box bounceIn wow">
-                      <div> <img src="../assets/images/landing/icon/django/flag.png" alt=""></div>
-                      <h6>Flag icon</h6>
+                    <li class="menu-item">
+                      <a href="app-ecommerce-category-list.html" class="menu-link">
+                        <div data-i18n="Category List">Category List</div>
+                      </a>
                     </li>
                   </ul>
+                </li>
+                <li class="menu-item">
+                  <a href="javascript:void(0);" class="menu-link menu-toggle">
+                    <div data-i18n="Order">Order</div>
+                  </a>
+                  <ul class="menu-sub">
+                    <li class="menu-item">
+                      <a href="app-ecommerce-order-list.html" class="menu-link">
+                        <div data-i18n="Order List">Order List</div>
+                      </a>
+                    </li>
+                    <li class="menu-item">
+                      <a href="app-ecommerce-order-details.html" class="menu-link">
+                        <div data-i18n="Order Details">Order Details</div>
+                      </a>
+                    </li>
+                  </ul>
+                </li>
+                <li class="menu-item">
+                  <a href="javascript:void(0);" class="menu-link menu-toggle">
+                    <div data-i18n="Customer">Customer</div>
+                  </a>
+                  <ul class="menu-sub">
+                    <li class="menu-item">
+                      <a href="app-ecommerce-customer-all.html" class="menu-link">
+                        <div data-i18n="All Customers">All Customers</div>
+                      </a>
+                    </li>
+                    <li class="menu-item">
+                      <a href="javascript:void(0);" class="menu-link menu-toggle">
+                        <div data-i18n="Customer Details">Customer Details</div>
+                      </a>
+                      <ul class="menu-sub">
+                        <li class="menu-item">
+                          <a href="app-ecommerce-customer-details-overview.html" class="menu-link">
+                            <div data-i18n="Overview">Overview</div>
+                          </a>
+                        </li>
+                        <li class="menu-item">
+                          <a href="app-ecommerce-customer-details-security.html" class="menu-link">
+                            <div data-i18n="Security">Security</div>
+                          </a>
+                        </li>
+                        <li class="menu-item">
+                          <a href="app-ecommerce-customer-details-billing.html" class="menu-link">
+                            <div data-i18n="Address & Billing">Address & Billing</div>
+                          </a>
+                        </li>
+                        <li class="menu-item">
+                          <a href="app-ecommerce-customer-details-notifications.html" class="menu-link">
+                            <div data-i18n="Notifications">Notifications</div>
+                          </a>
+                        </li>
+                      </ul>
+                    </li>
+                  </ul>
+                </li>
+                <li class="menu-item">
+                  <a href="app-ecommerce-manage-reviews.html" class="menu-link">
+                    <div data-i18n="Manage Reviews">Manage Reviews</div>
+                  </a>
+                </li>
+                <li class="menu-item">
+                  <a href="app-ecommerce-referral.html" class="menu-link">
+                    <div data-i18n="Referrals">Referrals</div>
+                  </a>
+                </li>
+                <li class="menu-item">
+                  <a href="javascript:void(0);" class="menu-link menu-toggle">
+                    <div data-i18n="Settings">Settings</div>
+                  </a>
+                  <ul class="menu-sub">
+                    <li class="menu-item">
+                      <a href="app-ecommerce-settings-detail.html" class="menu-link">
+                        <div data-i18n="Store details">Store details</div>
+                      </a>
+                    </li>
+                    <li class="menu-item">
+                      <a href="app-ecommerce-settings-payments.html" class="menu-link">
+                        <div data-i18n="Payments">Payments</div>
+                      </a>
+                    </li>
+                    <li class="menu-item">
+                      <a href="app-ecommerce-settings-checkout.html" class="menu-link">
+                        <div data-i18n="Checkout">Checkout</div>
+                      </a>
+                    </li>
+                    <li class="menu-item">
+                      <a href="app-ecommerce-settings-shipping.html" class="menu-link">
+                        <div data-i18n="Shipping & Delivery">Shipping & Delivery</div>
+                      </a>
+                    </li>
+                    <li class="menu-item">
+                      <a href="app-ecommerce-settings-locations.html" class="menu-link">
+                        <div data-i18n="Locations">Locations</div>
+                      </a>
+                    </li>
+                    <li class="menu-item">
+                      <a href="app-ecommerce-settings-notifications.html" class="menu-link">
+                        <div data-i18n="Notifications">Notifications</div>
+                      </a>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+            <!-- e-commerce-app menu end -->
+            <!-- Academy menu start -->
+            <li class="menu-item">
+              <a href="javascript:void(0);" class="menu-link menu-toggle">
+                <i class="menu-icon tf-icons ti ti-book"></i>
+                <div data-i18n="Academy">Academy</div>
+              </a>
+              <ul class="menu-sub">
+                <li class="menu-item">
+                  <a href="app-academy-dashboard.html" class="menu-link">
+                    <div data-i18n="Dashboard">Dashboard</div>
+                  </a>
+                </li>
+                <li class="menu-item">
+                  <a href="app-academy-course.html" class="menu-link">
+                    <div data-i18n="My Course">My Course</div>
+                  </a>
+                </li>
+                <li class="menu-item">
+                  <a href="app-academy-course-details.html" class="menu-link">
+                    <div data-i18n="Course Details">Course Details</div>
+                  </a>
+                </li>
+              </ul>
+            </li>
+            <!-- Academy menu end -->
+            <li class="menu-item">
+              <a href="javascript:void(0);" class="menu-link menu-toggle">
+                <i class="menu-icon tf-icons ti ti-truck"></i>
+                <div data-i18n="Logistics">Logistics</div>
+              </a>
+              <ul class="menu-sub">
+                <li class="menu-item">
+                  <a href="app-logistics-dashboard.html" class="menu-link">
+                    <div data-i18n="Dashboard">Dashboard</div>
+                  </a>
+                </li>
+                <li class="menu-item">
+                  <a href="app-logistics-fleet.html" class="menu-link">
+                    <div data-i18n="Fleet">Fleet</div>
+                  </a>
+                </li>
+              </ul>
+            </li>
+            <li class="menu-item">
+              <a href="javascript:void(0);" class="menu-link menu-toggle">
+                <i class="menu-icon tf-icons ti ti-file-dollar"></i>
+                <div data-i18n="Invoice">Invoice</div>
+                <div class="badge bg-danger rounded-pill ms-auto">4</div>
+              </a>
+              <ul class="menu-sub">
+                <li class="menu-item">
+                  <a href="app-invoice-list.html" class="menu-link">
+                    <div data-i18n="List">List</div>
+                  </a>
+                </li>
+                <li class="menu-item">
+                  <a href="app-invoice-preview.html" class="menu-link">
+                    <div data-i18n="Preview">Preview</div>
+                  </a>
+                </li>
+                <li class="menu-item">
+                  <a href="app-invoice-edit.html" class="menu-link">
+                    <div data-i18n="Edit">Edit</div>
+                  </a>
+                </li>
+                <li class="menu-item">
+                  <a href="app-invoice-add.html" class="menu-link">
+                    <div data-i18n="Add">Add</div>
+                  </a>
+                </li>
+              </ul>
+            </li>
+            <li class="menu-item">
+              <a href="javascript:void(0);" class="menu-link menu-toggle">
+                <i class="menu-icon tf-icons ti ti-users"></i>
+                <div data-i18n="Users">Users</div>
+              </a>
+              <ul class="menu-sub">
+                <li class="menu-item">
+                  <a href="app-user-list.html" class="menu-link">
+                    <div data-i18n="List">List</div>
+                  </a>
+                </li>
+
+                <li class="menu-item">
+                  <a href="javascript:void(0);" class="menu-link menu-toggle">
+                    <div data-i18n="View">View</div>
+                  </a>
+                  <ul class="menu-sub">
+                    <li class="menu-item">
+                      <a href="app-user-view-account.html" class="menu-link">
+                        <div data-i18n="Account">Account</div>
+                      </a>
+                    </li>
+                    <li class="menu-item">
+                      <a href="app-user-view-security.html" class="menu-link">
+                        <div data-i18n="Security">Security</div>
+                      </a>
+                    </li>
+                    <li class="menu-item">
+                      <a href="app-user-view-billing.html" class="menu-link">
+                        <div data-i18n="Billing & Plans">Billing & Plans</div>
+                      </a>
+                    </li>
+                    <li class="menu-item">
+                      <a href="app-user-view-notifications.html" class="menu-link">
+                        <div data-i18n="Notifications">Notifications</div>
+                      </a>
+                    </li>
+                    <li class="menu-item">
+                      <a href="app-user-view-connections.html" class="menu-link">
+                        <div data-i18n="Connections">Connections</div>
+                      </a>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+            <li class="menu-item">
+              <a href="javascript:void(0);" class="menu-link menu-toggle">
+                <i class="menu-icon tf-icons ti ti-settings"></i>
+                <div data-i18n="Roles & Permissions">Roles & Permissions</div>
+              </a>
+              <ul class="menu-sub">
+                <li class="menu-item">
+                  <a href="app-access-roles.html" class="menu-link">
+                    <div data-i18n="Roles">Roles</div>
+                  </a>
+                </li>
+                <li class="menu-item">
+                  <a href="app-access-permission.html" class="menu-link">
+                    <div data-i18n="Permission">Permission</div>
+                  </a>
+                </li>
+              </ul>
+            </li>
+            <li class="menu-item">
+              <a href="javascript:void(0);" class="menu-link menu-toggle">
+                <i class="menu-icon tf-icons ti ti-file"></i>
+                <div data-i18n="Pages">Pages</div>
+              </a>
+              <ul class="menu-sub">
+                <li class="menu-item">
+                  <a href="javascript:void(0);" class="menu-link menu-toggle">
+                    <div data-i18n="User Profile">User Profile</div>
+                  </a>
+                  <ul class="menu-sub">
+                    <li class="menu-item">
+                      <a href="pages-profile-user.html" class="menu-link">
+                        <div data-i18n="Profile">Profile</div>
+                      </a>
+                    </li>
+                    <li class="menu-item">
+                      <a href="pages-profile-teams.html" class="menu-link">
+                        <div data-i18n="Teams">Teams</div>
+                      </a>
+                    </li>
+                    <li class="menu-item">
+                      <a href="pages-profile-projects.html" class="menu-link">
+                        <div data-i18n="Projects">Projects</div>
+                      </a>
+                    </li>
+                    <li class="menu-item">
+                      <a href="pages-profile-connections.html" class="menu-link">
+                        <div data-i18n="Connections">Connections</div>
+                      </a>
+                    </li>
+                  </ul>
+                </li>
+                <li class="menu-item">
+                  <a href="javascript:void(0);" class="menu-link menu-toggle">
+                    <div data-i18n="Account Settings">Account Settings</div>
+                  </a>
+                  <ul class="menu-sub">
+                    <li class="menu-item">
+                      <a href="pages-account-settings-account.html" class="menu-link">
+                        <div data-i18n="Account">Account</div>
+                      </a>
+                    </li>
+                    <li class="menu-item">
+                      <a href="pages-account-settings-security.html" class="menu-link">
+                        <div data-i18n="Security">Security</div>
+                      </a>
+                    </li>
+                    <li class="menu-item">
+                      <a href="pages-account-settings-billing.html" class="menu-link">
+                        <div data-i18n="Billing & Plans">Billing & Plans</div>
+                      </a>
+                    </li>
+                    <li class="menu-item">
+                      <a href="pages-account-settings-notifications.html" class="menu-link">
+                        <div data-i18n="Notifications">Notifications</div>
+                      </a>
+                    </li>
+                    <li class="menu-item">
+                      <a href="pages-account-settings-connections.html" class="menu-link">
+                        <div data-i18n="Connections">Connections</div>
+                      </a>
+                    </li>
+                  </ul>
+                </li>
+                <li class="menu-item">
+                  <a href="pages-faq.html" class="menu-link">
+                    <div data-i18n="FAQ">FAQ</div>
+                  </a>
+                </li>
+                <li class="menu-item">
+                  <a href="pages-pricing.html" class="menu-link">
+                    <div data-i18n="Pricing">Pricing</div>
+                  </a>
+                </li>
+                <li class="menu-item">
+                  <a href="javascript:void(0);" class="menu-link menu-toggle">
+                    <div data-i18n="Misc">Misc</div>
+                  </a>
+                  <ul class="menu-sub">
+                    <li class="menu-item">
+                      <a href="pages-misc-error.html" class="menu-link" target="_blank">
+                        <div data-i18n="Error">Error</div>
+                      </a>
+                    </li>
+                    <li class="menu-item">
+                      <a href="pages-misc-under-maintenance.html" class="menu-link" target="_blank">
+                        <div data-i18n="Under Maintenance">Under Maintenance</div>
+                      </a>
+                    </li>
+                    <li class="menu-item">
+                      <a href="pages-misc-comingsoon.html" class="menu-link" target="_blank">
+                        <div data-i18n="Coming Soon">Coming Soon</div>
+                      </a>
+                    </li>
+                    <li class="menu-item">
+                      <a href="pages-misc-not-authorized.html" class="menu-link" target="_blank">
+                        <div data-i18n="Not Authorized">Not Authorized</div>
+                      </a>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+            <li class="menu-item">
+              <a href="javascript:void(0);" class="menu-link menu-toggle">
+                <i class="menu-icon tf-icons ti ti-lock"></i>
+                <div data-i18n="Authentications">Authentications</div>
+              </a>
+              <ul class="menu-sub">
+                <li class="menu-item">
+                  <a href="javascript:void(0);" class="menu-link menu-toggle">
+                    <div data-i18n="Login">Login</div>
+                  </a>
+                  <ul class="menu-sub">
+                    <li class="menu-item">
+                      <a href="auth-login-basic.html" class="menu-link" target="_blank">
+                        <div data-i18n="Basic">Basic</div>
+                      </a>
+                    </li>
+                    <li class="menu-item">
+                      <a href="auth-login-cover.html" class="menu-link" target="_blank">
+                        <div data-i18n="Cover">Cover</div>
+                      </a>
+                    </li>
+                  </ul>
+                </li>
+                <li class="menu-item">
+                  <a href="javascript:void(0);" class="menu-link menu-toggle">
+                    <div data-i18n="Register">Register</div>
+                  </a>
+                  <ul class="menu-sub">
+                    <li class="menu-item">
+                      <a href="auth-register-basic.html" class="menu-link" target="_blank">
+                        <div data-i18n="Basic">Basic</div>
+                      </a>
+                    </li>
+                    <li class="menu-item">
+                      <a href="auth-register-cover.html" class="menu-link" target="_blank">
+                        <div data-i18n="Cover">Cover</div>
+                      </a>
+                    </li>
+                    <li class="menu-item">
+                      <a href="auth-register-multisteps.html" class="menu-link" target="_blank">
+                        <div data-i18n="Multi-steps">Multi-steps</div>
+                      </a>
+                    </li>
+                  </ul>
+                </li>
+                <li class="menu-item">
+                  <a href="javascript:void(0);" class="menu-link menu-toggle">
+                    <div data-i18n="Verify Email">Verify Email</div>
+                  </a>
+                  <ul class="menu-sub">
+                    <li class="menu-item">
+                      <a href="auth-verify-email-basic.html" class="menu-link" target="_blank">
+                        <div data-i18n="Basic">Basic</div>
+                      </a>
+                    </li>
+                    <li class="menu-item">
+                      <a href="auth-verify-email-cover.html" class="menu-link" target="_blank">
+                        <div data-i18n="Cover">Cover</div>
+                      </a>
+                    </li>
+                  </ul>
+                </li>
+                <li class="menu-item">
+                  <a href="javascript:void(0);" class="menu-link menu-toggle">
+                    <div data-i18n="Reset Password">Reset Password</div>
+                  </a>
+                  <ul class="menu-sub">
+                    <li class="menu-item">
+                      <a href="auth-reset-password-basic.html" class="menu-link" target="_blank">
+                        <div data-i18n="Basic">Basic</div>
+                      </a>
+                    </li>
+                    <li class="menu-item">
+                      <a href="auth-reset-password-cover.html" class="menu-link" target="_blank">
+                        <div data-i18n="Cover">Cover</div>
+                      </a>
+                    </li>
+                  </ul>
+                </li>
+                <li class="menu-item">
+                  <a href="javascript:void(0);" class="menu-link menu-toggle">
+                    <div data-i18n="Forgot Password">Forgot Password</div>
+                  </a>
+                  <ul class="menu-sub">
+                    <li class="menu-item">
+                      <a href="auth-forgot-password-basic.html" class="menu-link" target="_blank">
+                        <div data-i18n="Basic">Basic</div>
+                      </a>
+                    </li>
+                    <li class="menu-item">
+                      <a href="auth-forgot-password-cover.html" class="menu-link" target="_blank">
+                        <div data-i18n="Cover">Cover</div>
+                      </a>
+                    </li>
+                  </ul>
+                </li>
+                <li class="menu-item">
+                  <a href="javascript:void(0);" class="menu-link menu-toggle">
+                    <div data-i18n="Two Steps">Two Steps</div>
+                  </a>
+                  <ul class="menu-sub">
+                    <li class="menu-item">
+                      <a href="auth-two-steps-basic.html" class="menu-link" target="_blank">
+                        <div data-i18n="Basic">Basic</div>
+                      </a>
+                    </li>
+                    <li class="menu-item">
+                      <a href="auth-two-steps-cover.html" class="menu-link" target="_blank">
+                        <div data-i18n="Cover">Cover</div>
+                      </a>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+            <li class="menu-item">
+              <a href="javascript:void(0);" class="menu-link menu-toggle">
+                <i class="menu-icon tf-icons ti ti-forms"></i>
+                <div data-i18n="Wizard Examples">Wizard Examples</div>
+              </a>
+              <ul class="menu-sub">
+                <li class="menu-item">
+                  <a href="wizard-ex-checkout.html" class="menu-link">
+                    <div data-i18n="Checkout">Checkout</div>
+                  </a>
+                </li>
+                <li class="menu-item">
+                  <a href="wizard-ex-property-listing.html" class="menu-link">
+                    <div data-i18n="Property Listing">Property Listing</div>
+                  </a>
+                </li>
+                <li class="menu-item">
+                  <a href="wizard-ex-create-deal.html" class="menu-link">
+                    <div data-i18n="Create Deal">Create Deal</div>
+                  </a>
+                </li>
+              </ul>
+            </li>
+            <li class="menu-item">
+              <a href="modal-examples.html" class="menu-link">
+                <i class="menu-icon tf-icons ti ti-square"></i>
+                <div data-i18n="Modal Examples">Modal Examples</div>
+              </a>
+            </li>
+
+            <!-- Components -->
+            <li class="menu-header small text-uppercase">
+              <span class="menu-header-text" data-i18n="Components">Components</span>
+            </li>
+            <!-- Cards -->
+            <li class="menu-item">
+              <a href="javascript:void(0);" class="menu-link menu-toggle">
+                <i class="menu-icon tf-icons ti ti-id"></i>
+                <div data-i18n="Cards">Cards</div>
+                <div class="badge bg-primary rounded-pill ms-auto">6</div>
+              </a>
+              <ul class="menu-sub">
+                <li class="menu-item">
+                  <a href="cards-basic.html" class="menu-link">
+                    <div data-i18n="Basic">Basic</div>
+                  </a>
+                </li>
+                <li class="menu-item">
+                  <a href="cards-advance.html" class="menu-link">
+                    <div data-i18n="Advance">Advance</div>
+                  </a>
+                </li>
+                <li class="menu-item">
+                  <a href="cards-statistics.html" class="menu-link">
+                    <div data-i18n="Statistics">Statistics</div>
+                  </a>
+                </li>
+                <li class="menu-item">
+                  <a href="cards-analytics.html" class="menu-link">
+                    <div data-i18n="Analytics">Analytics</div>
+                  </a>
+                </li>
+                <li class="menu-item">
+                  <a href="cards-actions.html" class="menu-link">
+                    <div data-i18n="Actions">Actions</div>
+                  </a>
+                </li>
+              </ul>
+            </li>
+            <!-- User interface -->
+            <li class="menu-item">
+              <a href="javascript:void(0)" class="menu-link menu-toggle">
+                <i class="menu-icon tf-icons ti ti-color-swatch"></i>
+                <div data-i18n="User interface">User interface</div>
+              </a>
+              <ul class="menu-sub">
+                <li class="menu-item">
+                  <a href="ui-accordion.html" class="menu-link">
+                    <div data-i18n="Accordion">Accordion</div>
+                  </a>
+                </li>
+                <li class="menu-item">
+                  <a href="ui-alerts.html" class="menu-link">
+                    <div data-i18n="Alerts">Alerts</div>
+                  </a>
+                </li>
+                <li class="menu-item">
+                  <a href="ui-badges.html" class="menu-link">
+                    <div data-i18n="Badges">Badges</div>
+                  </a>
+                </li>
+                <li class="menu-item">
+                  <a href="ui-buttons.html" class="menu-link">
+                    <div data-i18n="Buttons">Buttons</div>
+                  </a>
+                </li>
+                <li class="menu-item">
+                  <a href="ui-carousel.html" class="menu-link">
+                    <div data-i18n="Carousel">Carousel</div>
+                  </a>
+                </li>
+                <li class="menu-item">
+                  <a href="ui-collapse.html" class="menu-link">
+                    <div data-i18n="Collapse">Collapse</div>
+                  </a>
+                </li>
+                <li class="menu-item">
+                  <a href="ui-dropdowns.html" class="menu-link">
+                    <div data-i18n="Dropdowns">Dropdowns</div>
+                  </a>
+                </li>
+                <li class="menu-item">
+                  <a href="ui-footer.html" class="menu-link">
+                    <div data-i18n="Footer">Footer</div>
+                  </a>
+                </li>
+                <li class="menu-item">
+                  <a href="ui-list-groups.html" class="menu-link">
+                    <div data-i18n="List Groups">List groups</div>
+                  </a>
+                </li>
+                <li class="menu-item">
+                  <a href="ui-modals.html" class="menu-link">
+                    <div data-i18n="Modals">Modals</div>
+                  </a>
+                </li>
+                <li class="menu-item">
+                  <a href="ui-navbar.html" class="menu-link">
+                    <div data-i18n="Navbar">Navbar</div>
+                  </a>
+                </li>
+                <li class="menu-item">
+                  <a href="ui-offcanvas.html" class="menu-link">
+                    <div data-i18n="Offcanvas">Offcanvas</div>
+                  </a>
+                </li>
+                <li class="menu-item">
+                  <a href="ui-pagination-breadcrumbs.html" class="menu-link">
+                    <div data-i18n="Pagination & Breadcrumbs">Pagination &amp; Breadcrumbs</div>
+                  </a>
+                </li>
+                <li class="menu-item">
+                  <a href="ui-progress.html" class="menu-link">
+                    <div data-i18n="Progress">Progress</div>
+                  </a>
+                </li>
+                <li class="menu-item">
+                  <a href="ui-spinners.html" class="menu-link">
+                    <div data-i18n="Spinners">Spinners</div>
+                  </a>
+                </li>
+                <li class="menu-item">
+                  <a href="ui-tabs-pills.html" class="menu-link">
+                    <div data-i18n="Tabs & Pills">Tabs &amp; Pills</div>
+                  </a>
+                </li>
+                <li class="menu-item">
+                  <a href="ui-toasts.html" class="menu-link">
+                    <div data-i18n="Toasts">Toasts</div>
+                  </a>
+                </li>
+                <li class="menu-item">
+                  <a href="ui-tooltips-popovers.html" class="menu-link">
+                    <div data-i18n="Tooltips & Popovers">Tooltips &amp; Popovers</div>
+                  </a>
+                </li>
+                <li class="menu-item">
+                  <a href="ui-typography.html" class="menu-link">
+                    <div data-i18n="Typography">Typography</div>
+                  </a>
+                </li>
+              </ul>
+            </li>
+
+            <!-- Extended components -->
+            <li class="menu-item">
+              <a href="javascript:void(0)" class="menu-link menu-toggle">
+                <i class="menu-icon tf-icons ti ti-components"></i>
+                <div data-i18n="Extended UI">Extended UI</div>
+              </a>
+              <ul class="menu-sub">
+                <li class="menu-item">
+                  <a href="extended-ui-avatar.html" class="menu-link">
+                    <div data-i18n="Avatar">Avatar</div>
+                  </a>
+                </li>
+                <li class="menu-item">
+                  <a href="extended-ui-blockui.html" class="menu-link">
+                    <div data-i18n="BlockUI">BlockUI</div>
+                  </a>
+                </li>
+                <li class="menu-item">
+                  <a href="extended-ui-drag-and-drop.html" class="menu-link">
+                    <div data-i18n="Drag & Drop">Drag &amp; Drop</div>
+                  </a>
+                </li>
+                <li class="menu-item">
+                  <a href="extended-ui-media-player.html" class="menu-link">
+                    <div data-i18n="Media Player">Media Player</div>
+                  </a>
+                </li>
+                <li class="menu-item">
+                  <a href="extended-ui-perfect-scrollbar.html" class="menu-link">
+                    <div data-i18n="Perfect Scrollbar">Perfect Scrollbar</div>
+                  </a>
+                </li>
+                <li class="menu-item">
+                  <a href="extended-ui-star-ratings.html" class="menu-link">
+                    <div data-i18n="Star Ratings">Star Ratings</div>
+                  </a>
+                </li>
+                <li class="menu-item">
+                  <a href="extended-ui-sweetalert2.html" class="menu-link">
+                    <div data-i18n="SweetAlert2">SweetAlert2</div>
+                  </a>
+                </li>
+                <li class="menu-item">
+                  <a href="extended-ui-text-divider.html" class="menu-link">
+                    <div data-i18n="Text Divider">Text Divider</div>
+                  </a>
+                </li>
+                <li class="menu-item">
+                  <a href="javascript:void(0);" class="menu-link menu-toggle">
+                    <div data-i18n="Timeline">Timeline</div>
+                  </a>
+                  <ul class="menu-sub">
+                    <li class="menu-item">
+                      <a href="extended-ui-timeline-basic.html" class="menu-link">
+                        <div data-i18n="Basic">Basic</div>
+                      </a>
+                    </li>
+                    <li class="menu-item">
+                      <a href="extended-ui-timeline-fullscreen.html" class="menu-link">
+                        <div data-i18n="Fullscreen">Fullscreen</div>
+                      </a>
+                    </li>
+                  </ul>
+                </li>
+                <li class="menu-item">
+                  <a href="extended-ui-tour.html" class="menu-link">
+                    <div data-i18n="Tour">Tour</div>
+                  </a>
+                </li>
+                <li class="menu-item">
+                  <a href="extended-ui-treeview.html" class="menu-link">
+                    <div data-i18n="Treeview">Treeview</div>
+                  </a>
+                </li>
+                <li class="menu-item">
+                  <a href="extended-ui-misc.html" class="menu-link">
+                    <div data-i18n="Miscellaneous">Miscellaneous</div>
+                  </a>
+                </li>
+              </ul>
+            </li>
+
+            <!-- Icons -->
+            <li class="menu-item">
+              <a href="javascript:void(0)" class="menu-link menu-toggle">
+                <i class="menu-icon tf-icons ti ti-brand-tabler"></i>
+                <div data-i18n="Icons">Icons</div>
+              </a>
+              <ul class="menu-sub">
+                <li class="menu-item">
+                  <a href="icons-tabler.html" class="menu-link">
+                    <div data-i18n="Tabler">Tabler</div>
+                  </a>
+                </li>
+                <li class="menu-item">
+                  <a href="icons-font-awesome.html" class="menu-link">
+                    <div data-i18n="Fontawesome">Fontawesome</div>
+                  </a>
+                </li>
+              </ul>
+            </li>
+
+            <!-- Forms & Tables -->
+            <li class="menu-header small text-uppercase">
+              <span class="menu-header-text" data-i18n="Forms & Tables">Forms &amp; Tables</span>
+            </li>
+            <!-- Forms -->
+            <li class="menu-item">
+              <a href="javascript:void(0);" class="menu-link menu-toggle">
+                <i class="menu-icon tf-icons ti ti-toggle-left"></i>
+                <div data-i18n="Form Elements">Form Elements</div>
+              </a>
+              <ul class="menu-sub">
+                <li class="menu-item">
+                  <a href="forms-basic-inputs.html" class="menu-link">
+                    <div data-i18n="Basic Inputs">Basic Inputs</div>
+                  </a>
+                </li>
+                <li class="menu-item">
+                  <a href="forms-input-groups.html" class="menu-link">
+                    <div data-i18n="Input groups">Input groups</div>
+                  </a>
+                </li>
+                <li class="menu-item">
+                  <a href="forms-custom-options.html" class="menu-link">
+                    <div data-i18n="Custom Options">Custom Options</div>
+                  </a>
+                </li>
+                <li class="menu-item">
+                  <a href="forms-editors.html" class="menu-link">
+                    <div data-i18n="Editors">Editors</div>
+                  </a>
+                </li>
+                <li class="menu-item">
+                  <a href="forms-file-upload.html" class="menu-link">
+                    <div data-i18n="File Upload">File Upload</div>
+                  </a>
+                </li>
+                <li class="menu-item">
+                  <a href="forms-pickers.html" class="menu-link">
+                    <div data-i18n="Pickers">Pickers</div>
+                  </a>
+                </li>
+                <li class="menu-item">
+                  <a href="forms-selects.html" class="menu-link">
+                    <div data-i18n="Select & Tags">Select &amp; Tags</div>
+                  </a>
+                </li>
+                <li class="menu-item">
+                  <a href="forms-sliders.html" class="menu-link">
+                    <div data-i18n="Sliders">Sliders</div>
+                  </a>
+                </li>
+                <li class="menu-item">
+                  <a href="forms-switches.html" class="menu-link">
+                    <div data-i18n="Switches">Switches</div>
+                  </a>
+                </li>
+                <li class="menu-item">
+                  <a href="forms-extras.html" class="menu-link">
+                    <div data-i18n="Extras">Extras</div>
+                  </a>
+                </li>
+              </ul>
+            </li>
+            <li class="menu-item">
+              <a href="javascript:void(0);" class="menu-link menu-toggle">
+                <i class="menu-icon tf-icons ti ti-layout-navbar"></i>
+                <div data-i18n="Form Layouts">Form Layouts</div>
+              </a>
+              <ul class="menu-sub">
+                <li class="menu-item">
+                  <a href="form-layouts-vertical.html" class="menu-link">
+                    <div data-i18n="Vertical Form">Vertical Form</div>
+                  </a>
+                </li>
+                <li class="menu-item">
+                  <a href="form-layouts-horizontal.html" class="menu-link">
+                    <div data-i18n="Horizontal Form">Horizontal Form</div>
+                  </a>
+                </li>
+                <li class="menu-item">
+                  <a href="form-layouts-sticky.html" class="menu-link">
+                    <div data-i18n="Sticky Actions">Sticky Actions</div>
+                  </a>
+                </li>
+              </ul>
+            </li>
+            <li class="menu-item">
+              <a href="javascript:void(0);" class="menu-link menu-toggle">
+                <i class="menu-icon tf-icons ti ti-text-wrap-disabled"></i>
+                <div data-i18n="Form Wizard">Form Wizard</div>
+              </a>
+              <ul class="menu-sub">
+                <li class="menu-item">
+                  <a href="form-wizard-numbered.html" class="menu-link">
+                    <div data-i18n="Numbered">Numbered</div>
+                  </a>
+                </li>
+                <li class="menu-item">
+                  <a href="form-wizard-icons.html" class="menu-link">
+                    <div data-i18n="Icons">Icons</div>
+                  </a>
+                </li>
+              </ul>
+            </li>
+            <li class="menu-item">
+              <a href="form-validation.html" class="menu-link">
+                <i class="menu-icon tf-icons ti ti-checkbox"></i>
+                <div data-i18n="Form Validation">Form Validation</div>
+              </a>
+            </li>
+            <!-- Tables -->
+            <li class="menu-item">
+              <a href="tables-basic.html" class="menu-link">
+                <i class="menu-icon tf-icons ti ti-table"></i>
+                <div data-i18n="Tables">Tables</div>
+              </a>
+            </li>
+            <li class="menu-item">
+              <a href="javascript:void(0);" class="menu-link menu-toggle">
+                <i class="menu-icon tf-icons ti ti-layout-grid"></i>
+                <div data-i18n="Datatables">Datatables</div>
+              </a>
+              <ul class="menu-sub">
+                <li class="menu-item">
+                  <a href="tables-datatables-basic.html" class="menu-link">
+                    <div data-i18n="Basic">Basic</div>
+                  </a>
+                </li>
+                <li class="menu-item">
+                  <a href="tables-datatables-advanced.html" class="menu-link">
+                    <div data-i18n="Advanced">Advanced</div>
+                  </a>
+                </li>
+                <li class="menu-item">
+                  <a href="tables-datatables-extensions.html" class="menu-link">
+                    <div data-i18n="Extensions">Extensions</div>
+                  </a>
+                </li>
+              </ul>
+            </li>
+
+            <!-- Charts & Maps -->
+            <li class="menu-header small text-uppercase">
+              <span class="menu-header-text" data-i18n="Charts & Maps">Charts &amp; Maps</span>
+            </li>
+            <li class="menu-item">
+              <a href="javascript:void(0);" class="menu-link menu-toggle">
+                <i class="menu-icon tf-icons ti ti-chart-pie"></i>
+                <div data-i18n="Charts">Charts</div>
+              </a>
+              <ul class="menu-sub">
+                <li class="menu-item">
+                  <a href="charts-apex.html" class="menu-link">
+                    <div data-i18n="Apex Charts">Apex Charts</div>
+                  </a>
+                </li>
+                <li class="menu-item">
+                  <a href="charts-chartjs.html" class="menu-link">
+                    <div data-i18n="ChartJS">ChartJS</div>
+                  </a>
+                </li>
+              </ul>
+            </li>
+            <li class="menu-item">
+              <a href="maps-leaflet.html" class="menu-link">
+                <i class="menu-icon tf-icons ti ti-map"></i>
+                <div data-i18n="Leaflet Maps">Leaflet Maps</div>
+              </a>
+            </li>
+
+            <!-- Misc -->
+            <li class="menu-header small text-uppercase">
+              <span class="menu-header-text" data-i18n="Misc">Misc</span>
+            </li>
+            <li class="menu-item">
+              <a href="https://pixinvent.ticksy.com/" target="_blank" class="menu-link">
+                <i class="menu-icon tf-icons ti ti-lifebuoy"></i>
+                <div data-i18n="Support">Support</div>
+              </a>
+            </li>
+            <li class="menu-item">
+              <a
+                href="https://demos.pixinvent.com/vuexy-html-admin-template/documentation/"
+                target="_blank"
+                class="menu-link">
+                <i class="menu-icon tf-icons ti ti-file-description"></i>
+                <div data-i18n="Documentation">Documentation</div>
+              </a>
+            </li>
+          </ul>
+        </aside>
+        <!-- / Menu -->
+
+        <!-- Layout container -->
+        <div class="layout-page">
+          <!-- Navbar -->
+
+          <nav
+            class="layout-navbar container-xxl navbar navbar-expand-xl navbar-detached align-items-center bg-navbar-theme"
+            id="layout-navbar">
+            <div class="layout-menu-toggle navbar-nav align-items-xl-center me-3 me-xl-0 d-xl-none">
+              <a class="nav-item nav-link px-0 me-xl-4" href="javascript:void(0)">
+                <i class="ti ti-menu-2 ti-sm"></i>
+              </a>
+            </div>
+
+            <div class="navbar-nav-right d-flex align-items-center" id="navbar-collapse">
+              <!-- Search -->
+              <div class="navbar-nav align-items-center">
+                <div class="nav-item navbar-search-wrapper mb-0">
+                  <a class="nav-item nav-link search-toggler d-flex align-items-center px-0" href="javascript:void(0);">
+                    <i class="ti ti-search ti-md me-2"></i>
+                    <span class="d-none d-md-inline-block text-muted">Search (Ctrl+/)</span>
+                  </a>
                 </div>
               </div>
+              <!-- /Search -->
+
+              <ul class="navbar-nav flex-row align-items-center ms-auto">
+                <!-- Language -->
+                <li class="nav-item dropdown-language dropdown me-2 me-xl-0">
+                  <a class="nav-link dropdown-toggle hide-arrow" href="javascript:void(0);" data-bs-toggle="dropdown">
+                    <i class="ti ti-language rounded-circle ti-md"></i>
+                  </a>
+                  <ul class="dropdown-menu dropdown-menu-end">
+                    <li>
+                      <a class="dropdown-item" href="javascript:void(0);" data-language="en" data-text-direction="ltr">
+                        <span class="align-middle">English</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="javascript:void(0);" data-language="fr" data-text-direction="ltr">
+                        <span class="align-middle">French</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="javascript:void(0);" data-language="ar" data-text-direction="rtl">
+                        <span class="align-middle">Arabic</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="javascript:void(0);" data-language="de" data-text-direction="ltr">
+                        <span class="align-middle">German</span>
+                      </a>
+                    </li>
+                  </ul>
+                </li>
+                <!--/ Language -->
+
+                <!-- Style Switcher -->
+                <li class="nav-item dropdown-style-switcher dropdown me-2 me-xl-0">
+                  <a class="nav-link dropdown-toggle hide-arrow" href="javascript:void(0);" data-bs-toggle="dropdown">
+                    <i class="ti ti-md"></i>
+                  </a>
+                  <ul class="dropdown-menu dropdown-menu-end dropdown-styles">
+                    <li>
+                      <a class="dropdown-item" href="javascript:void(0);" data-theme="light">
+                        <span class="align-middle"><i class="ti ti-sun me-2"></i>Light</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="javascript:void(0);" data-theme="dark">
+                        <span class="align-middle"><i class="ti ti-moon me-2"></i>Dark</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="javascript:void(0);" data-theme="system">
+                        <span class="align-middle"><i class="ti ti-device-desktop me-2"></i>System</span>
+                      </a>
+                    </li>
+                  </ul>
+                </li>
+                <!-- / Style Switcher-->
+
+                <!-- Quick links  -->
+                <li class="nav-item dropdown-shortcuts navbar-dropdown dropdown me-2 me-xl-0">
+                  <a
+                    class="nav-link dropdown-toggle hide-arrow"
+                    href="javascript:void(0);"
+                    data-bs-toggle="dropdown"
+                    data-bs-auto-close="outside"
+                    aria-expanded="false">
+                    <i class="ti ti-layout-grid-add ti-md"></i>
+                  </a>
+                  <div class="dropdown-menu dropdown-menu-end py-0">
+                    <div class="dropdown-menu-header border-bottom">
+                      <div class="dropdown-header d-flex align-items-center py-3">
+                        <h5 class="text-body mb-0 me-auto">Shortcuts</h5>
+                        <a
+                          href="javascript:void(0)"
+                          class="dropdown-shortcuts-add text-body"
+                          data-bs-toggle="tooltip"
+                          data-bs-placement="top"
+                          title="Add shortcuts"
+                          ><i class="ti ti-sm ti-apps"></i
+                        ></a>
+                      </div>
+                    </div>
+                    <div class="dropdown-shortcuts-list scrollable-container">
+                      <div class="row row-bordered overflow-visible g-0">
+                        <div class="dropdown-shortcuts-item col">
+                          <span class="dropdown-shortcuts-icon rounded-circle mb-2">
+                            <i class="ti ti-calendar fs-4"></i>
+                          </span>
+                          <a href="app-calendar.html" class="stretched-link">Calendar</a>
+                          <small class="text-muted mb-0">Appointments</small>
+                        </div>
+                        <div class="dropdown-shortcuts-item col">
+                          <span class="dropdown-shortcuts-icon rounded-circle mb-2">
+                            <i class="ti ti-file-invoice fs-4"></i>
+                          </span>
+                          <a href="app-invoice-list.html" class="stretched-link">Invoice App</a>
+                          <small class="text-muted mb-0">Manage Accounts</small>
+                        </div>
+                      </div>
+                      <div class="row row-bordered overflow-visible g-0">
+                        <div class="dropdown-shortcuts-item col">
+                          <span class="dropdown-shortcuts-icon rounded-circle mb-2">
+                            <i class="ti ti-users fs-4"></i>
+                          </span>
+                          <a href="app-user-list.html" class="stretched-link">User App</a>
+                          <small class="text-muted mb-0">Manage Users</small>
+                        </div>
+                        <div class="dropdown-shortcuts-item col">
+                          <span class="dropdown-shortcuts-icon rounded-circle mb-2">
+                            <i class="ti ti-lock fs-4"></i>
+                          </span>
+                          <a href="app-access-roles.html" class="stretched-link">Role Management</a>
+                          <small class="text-muted mb-0">Permission</small>
+                        </div>
+                      </div>
+                      <div class="row row-bordered overflow-visible g-0">
+                        <div class="dropdown-shortcuts-item col">
+                          <span class="dropdown-shortcuts-icon rounded-circle mb-2">
+                            <i class="ti ti-chart-bar fs-4"></i>
+                          </span>
+                          <a href="index.html" class="stretched-link">Dashboard</a>
+                          <small class="text-muted mb-0">User Profile</small>
+                        </div>
+                        <div class="dropdown-shortcuts-item col">
+                          <span class="dropdown-shortcuts-icon rounded-circle mb-2">
+                            <i class="ti ti-settings fs-4"></i>
+                          </span>
+                          <a href="pages-account-settings-account.html" class="stretched-link">Setting</a>
+                          <small class="text-muted mb-0">Account Settings</small>
+                        </div>
+                      </div>
+                      <div class="row row-bordered overflow-visible g-0">
+                        <div class="dropdown-shortcuts-item col">
+                          <span class="dropdown-shortcuts-icon rounded-circle mb-2">
+                            <i class="ti ti-help fs-4"></i>
+                          </span>
+                          <a href="pages-faq.html" class="stretched-link">FAQs</a>
+                          <small class="text-muted mb-0">FAQs & Articles</small>
+                        </div>
+                        <div class="dropdown-shortcuts-item col">
+                          <span class="dropdown-shortcuts-icon rounded-circle mb-2">
+                            <i class="ti ti-square fs-4"></i>
+                          </span>
+                          <a href="modal-examples.html" class="stretched-link">Modals</a>
+                          <small class="text-muted mb-0">Useful Popups</small>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <!-- Quick links -->
+
+                <!-- Notification -->
+                <li class="nav-item dropdown-notifications navbar-dropdown dropdown me-3 me-xl-1">
+                  <a
+                    class="nav-link dropdown-toggle hide-arrow"
+                    href="javascript:void(0);"
+                    data-bs-toggle="dropdown"
+                    data-bs-auto-close="outside"
+                    aria-expanded="false">
+                    <i class="ti ti-bell ti-md"></i>
+                    <span class="badge bg-danger rounded-pill badge-notifications">5</span>
+                  </a>
+                  <ul class="dropdown-menu dropdown-menu-end py-0">
+                    <li class="dropdown-menu-header border-bottom">
+                      <div class="dropdown-header d-flex align-items-center py-3">
+                        <h5 class="text-body mb-0 me-auto">Notification</h5>
+                        <a
+                          href="javascript:void(0)"
+                          class="dropdown-notifications-all text-body"
+                          data-bs-toggle="tooltip"
+                          data-bs-placement="top"
+                          title="Mark all as read"
+                          ><i class="ti ti-mail-opened fs-4"></i
+                        ></a>
+                      </div>
+                    </li>
+                    <li class="dropdown-notifications-list scrollable-container">
+                      <ul class="list-group list-group-flush">
+                        <li class="list-group-item list-group-item-action dropdown-notifications-item">
+                          <div class="d-flex">
+                            <div class="flex-shrink-0 me-3">
+                              <div class="avatar">
+                                <img src="../../assets/img/avatars/1.png" alt class="h-auto rounded-circle" />
+                              </div>
+                            </div>
+                            <div class="flex-grow-1">
+                              <h6 class="mb-1">Congratulation Lettie 🎉</h6>
+                              <p class="mb-0">Won the monthly best seller gold badge</p>
+                              <small class="text-muted">1h ago</small>
+                            </div>
+                            <div class="flex-shrink-0 dropdown-notifications-actions">
+                              <a href="javascript:void(0)" class="dropdown-notifications-read"
+                                ><span class="badge badge-dot"></span
+                              ></a>
+                              <a href="javascript:void(0)" class="dropdown-notifications-archive"
+                                ><span class="ti ti-x"></span
+                              ></a>
+                            </div>
+                          </div>
+                        </li>
+                        <li class="list-group-item list-group-item-action dropdown-notifications-item">
+                          <div class="d-flex">
+                            <div class="flex-shrink-0 me-3">
+                              <div class="avatar">
+                                <span class="avatar-initial rounded-circle bg-label-danger">CF</span>
+                              </div>
+                            </div>
+                            <div class="flex-grow-1">
+                              <h6 class="mb-1">Charles Franklin</h6>
+                              <p class="mb-0">Accepted your connection</p>
+                              <small class="text-muted">12hr ago</small>
+                            </div>
+                            <div class="flex-shrink-0 dropdown-notifications-actions">
+                              <a href="javascript:void(0)" class="dropdown-notifications-read"
+                                ><span class="badge badge-dot"></span
+                              ></a>
+                              <a href="javascript:void(0)" class="dropdown-notifications-archive"
+                                ><span class="ti ti-x"></span
+                              ></a>
+                            </div>
+                          </div>
+                        </li>
+                        <li class="list-group-item list-group-item-action dropdown-notifications-item marked-as-read">
+                          <div class="d-flex">
+                            <div class="flex-shrink-0 me-3">
+                              <div class="avatar">
+                                <img src="../../assets/img/avatars/2.png" alt class="h-auto rounded-circle" />
+                              </div>
+                            </div>
+                            <div class="flex-grow-1">
+                              <h6 class="mb-1">New Message ✉️</h6>
+                              <p class="mb-0">You have new message from Natalie</p>
+                              <small class="text-muted">1h ago</small>
+                            </div>
+                            <div class="flex-shrink-0 dropdown-notifications-actions">
+                              <a href="javascript:void(0)" class="dropdown-notifications-read"
+                                ><span class="badge badge-dot"></span
+                              ></a>
+                              <a href="javascript:void(0)" class="dropdown-notifications-archive"
+                                ><span class="ti ti-x"></span
+                              ></a>
+                            </div>
+                          </div>
+                        </li>
+                        <li class="list-group-item list-group-item-action dropdown-notifications-item">
+                          <div class="d-flex">
+                            <div class="flex-shrink-0 me-3">
+                              <div class="avatar">
+                                <span class="avatar-initial rounded-circle bg-label-success"
+                                  ><i class="ti ti-shopping-cart"></i
+                                ></span>
+                              </div>
+                            </div>
+                            <div class="flex-grow-1">
+                              <h6 class="mb-1">Whoo! You have new order 🛒</h6>
+                              <p class="mb-0">ACME Inc. made new order $1,154</p>
+                              <small class="text-muted">1 day ago</small>
+                            </div>
+                            <div class="flex-shrink-0 dropdown-notifications-actions">
+                              <a href="javascript:void(0)" class="dropdown-notifications-read"
+                                ><span class="badge badge-dot"></span
+                              ></a>
+                              <a href="javascript:void(0)" class="dropdown-notifications-archive"
+                                ><span class="ti ti-x"></span
+                              ></a>
+                            </div>
+                          </div>
+                        </li>
+                        <li class="list-group-item list-group-item-action dropdown-notifications-item marked-as-read">
+                          <div class="d-flex">
+                            <div class="flex-shrink-0 me-3">
+                              <div class="avatar">
+                                <img src="../../assets/img/avatars/9.png" alt class="h-auto rounded-circle" />
+                              </div>
+                            </div>
+                            <div class="flex-grow-1">
+                              <h6 class="mb-1">Application has been approved 🚀</h6>
+                              <p class="mb-0">Your ABC project application has been approved.</p>
+                              <small class="text-muted">2 days ago</small>
+                            </div>
+                            <div class="flex-shrink-0 dropdown-notifications-actions">
+                              <a href="javascript:void(0)" class="dropdown-notifications-read"
+                                ><span class="badge badge-dot"></span
+                              ></a>
+                              <a href="javascript:void(0)" class="dropdown-notifications-archive"
+                                ><span class="ti ti-x"></span
+                              ></a>
+                            </div>
+                          </div>
+                        </li>
+                        <li class="list-group-item list-group-item-action dropdown-notifications-item marked-as-read">
+                          <div class="d-flex">
+                            <div class="flex-shrink-0 me-3">
+                              <div class="avatar">
+                                <span class="avatar-initial rounded-circle bg-label-success"
+                                  ><i class="ti ti-chart-pie"></i
+                                ></span>
+                              </div>
+                            </div>
+                            <div class="flex-grow-1">
+                              <h6 class="mb-1">Monthly report is generated</h6>
+                              <p class="mb-0">July monthly financial report is generated</p>
+                              <small class="text-muted">3 days ago</small>
+                            </div>
+                            <div class="flex-shrink-0 dropdown-notifications-actions">
+                              <a href="javascript:void(0)" class="dropdown-notifications-read"
+                                ><span class="badge badge-dot"></span
+                              ></a>
+                              <a href="javascript:void(0)" class="dropdown-notifications-archive"
+                                ><span class="ti ti-x"></span
+                              ></a>
+                            </div>
+                          </div>
+                        </li>
+                        <li class="list-group-item list-group-item-action dropdown-notifications-item marked-as-read">
+                          <div class="d-flex">
+                            <div class="flex-shrink-0 me-3">
+                              <div class="avatar">
+                                <img src="../../assets/img/avatars/5.png" alt class="h-auto rounded-circle" />
+                              </div>
+                            </div>
+                            <div class="flex-grow-1">
+                              <h6 class="mb-1">Send connection request</h6>
+                              <p class="mb-0">Peter sent you connection request</p>
+                              <small class="text-muted">4 days ago</small>
+                            </div>
+                            <div class="flex-shrink-0 dropdown-notifications-actions">
+                              <a href="javascript:void(0)" class="dropdown-notifications-read"
+                                ><span class="badge badge-dot"></span
+                              ></a>
+                              <a href="javascript:void(0)" class="dropdown-notifications-archive"
+                                ><span class="ti ti-x"></span
+                              ></a>
+                            </div>
+                          </div>
+                        </li>
+                        <li class="list-group-item list-group-item-action dropdown-notifications-item">
+                          <div class="d-flex">
+                            <div class="flex-shrink-0 me-3">
+                              <div class="avatar">
+                                <img src="../../assets/img/avatars/6.png" alt class="h-auto rounded-circle" />
+                              </div>
+                            </div>
+                            <div class="flex-grow-1">
+                              <h6 class="mb-1">New message from Jane</h6>
+                              <p class="mb-0">Your have new message from Jane</p>
+                              <small class="text-muted">5 days ago</small>
+                            </div>
+                            <div class="flex-shrink-0 dropdown-notifications-actions">
+                              <a href="javascript:void(0)" class="dropdown-notifications-read"
+                                ><span class="badge badge-dot"></span
+                              ></a>
+                              <a href="javascript:void(0)" class="dropdown-notifications-archive"
+                                ><span class="ti ti-x"></span
+                              ></a>
+                            </div>
+                          </div>
+                        </li>
+                        <li class="list-group-item list-group-item-action dropdown-notifications-item marked-as-read">
+                          <div class="d-flex">
+                            <div class="flex-shrink-0 me-3">
+                              <div class="avatar">
+                                <span class="avatar-initial rounded-circle bg-label-warning"
+                                  ><i class="ti ti-alert-triangle"></i
+                                ></span>
+                              </div>
+                            </div>
+                            <div class="flex-grow-1">
+                              <h6 class="mb-1">CPU is running high</h6>
+                              <p class="mb-0">CPU Utilization Percent is currently at 88.63%,</p>
+                              <small class="text-muted">5 days ago</small>
+                            </div>
+                            <div class="flex-shrink-0 dropdown-notifications-actions">
+                              <a href="javascript:void(0)" class="dropdown-notifications-read"
+                                ><span class="badge badge-dot"></span
+                              ></a>
+                              <a href="javascript:void(0)" class="dropdown-notifications-archive"
+                                ><span class="ti ti-x"></span
+                              ></a>
+                            </div>
+                          </div>
+                        </li>
+                      </ul>
+                    </li>
+                    <li class="dropdown-menu-footer border-top">
+                      <a
+                        href="javascript:void(0);"
+                        class="dropdown-item d-flex justify-content-center text-primary p-2 h-px-40 mb-1 align-items-center">
+                        View all notifications
+                      </a>
+                    </li>
+                  </ul>
+                </li>
+                <!--/ Notification -->
+
+                <!-- User -->
+                <li class="nav-item navbar-dropdown dropdown-user dropdown">
+                  <a class="nav-link dropdown-toggle hide-arrow" href="javascript:void(0);" data-bs-toggle="dropdown">
+                    <div class="avatar avatar-online">
+                      <img src="../../assets/img/avatars/1.png" alt class="h-auto rounded-circle" />
+                    </div>
+                  </a>
+                  <ul class="dropdown-menu dropdown-menu-end">
+                    <li>
+                      <a class="dropdown-item" href="pages-account-settings-account.html">
+                        <div class="d-flex">
+                          <div class="flex-shrink-0 me-3">
+                            <div class="avatar avatar-online">
+                              <img src="../../assets/img/avatars/1.png" alt class="h-auto rounded-circle" />
+                            </div>
+                          </div>
+                          <div class="flex-grow-1">
+                            <span class="fw-medium d-block">John Doe</span>
+                            <small class="text-muted">Admin</small>
+                          </div>
+                        </div>
+                      </a>
+                    </li>
+                    <li>
+                      <div class="dropdown-divider"></div>
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="pages-profile-user.html">
+                        <i class="ti ti-user-check me-2 ti-sm"></i>
+                        <span class="align-middle">My Profile</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="pages-account-settings-account.html">
+                        <i class="ti ti-settings me-2 ti-sm"></i>
+                        <span class="align-middle">Settings</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="pages-account-settings-billing.html">
+                        <span class="d-flex align-items-center align-middle">
+                          <i class="flex-shrink-0 ti ti-credit-card me-2 ti-sm"></i>
+                          <span class="flex-grow-1 align-middle">Billing</span>
+                          <span class="flex-shrink-0 badge badge-center rounded-pill bg-label-danger w-px-20 h-px-20"
+                            >2</span
+                          >
+                        </span>
+                      </a>
+                    </li>
+                    <li>
+                      <div class="dropdown-divider"></div>
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="pages-faq.html">
+                        <i class="ti ti-help me-2 ti-sm"></i>
+                        <span class="align-middle">FAQ</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="pages-pricing.html">
+                        <i class="ti ti-currency-dollar me-2 ti-sm"></i>
+                        <span class="align-middle">Pricing</span>
+                      </a>
+                    </li>
+                    <li>
+                      <div class="dropdown-divider"></div>
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="auth-login-cover.html" target="_blank">
+                        <i class="ti ti-logout me-2 ti-sm"></i>
+                        <span class="align-middle">Log Out</span>
+                      </a>
+                    </li>
+                  </ul>
+                </li>
+                <!--/ User -->
+              </ul>
             </div>
-          </div>
-        </div>
-      </section>
-      <!-- frameworks end-->
-      <!-- demo section start-->
-      <section class="demo-section section-pb-space" id="dashboard">
-        <div class="title">
-          <div class="logo-wrraper"><img class="img-fluid bg-img" src="../assets/images/logo/logo-icon.png" alt=""></div>
-          <h2>wingo dashboard</h2>
-        </div>
-        <div class="container-fluid">
-          <div class="row demo-block">
-            <div class="col-lg-4 col-sm-6 wow pulse">
-              <div class="demo-box"><a href="index.html">                      
-                  <div class="img-wrraper"><img class="img-fluid" src="../assets/images/landing/dashboard/1.jpg" alt=""></div>
-                  <div class="demo-title">
-                    <h3>Default Dashboard</h3>
-                  </div></a></div>
+
+            <!-- Search Small Screens -->
+            <div class="navbar-search-wrapper search-input-wrapper d-none">
+              <input
+                type="text"
+                class="form-control search-input container-xxl border-0"
+                placeholder="Search..."
+                aria-label="Search..." />
+              <i class="ti ti-x ti-sm search-toggler cursor-pointer"></i>
             </div>
-            <div class="col-lg-4 col-sm-6 wow pulse">
-              <div class="demo-box">     <a href="dashboard-02.html">                
-                  <div class="img-wrraper"><img class="img-fluid" src="../assets/images/landing/dashboard/2.jpg" alt=""></div>
-                  <div class="demo-title">
-                    <h3>Ecommerce Dashboard</h3>
-                  </div></a></div>
-            </div>
-            <div class="col-lg-4 col-sm-6 offset-sm-3 offset-lg-0 wow pulse">
-              <div class="demo-box">         <a href="dashboard-03.html">            
-                  <div class="img-wrraper"><img class="img-fluid" src="../assets/images/landing/dashboard/3.jpg" alt=""></div>
-                  <div class="demo-title">
-                    <h3>Business Dashboard</h3>
-                  </div></a></div>
-            </div>
-          </div>
-        </div>
-      </section>
-      <!-- demo section end-->
-      <!-- unic-cards start-->
-      <section class="unique-cards">
-        <div class="title">
-          <div class="logo-wrraper"><img class="img-fluid bg-img" src="../assets/images/logo/logo-icon.png" alt=""></div>
-          <h2>unique cards</h2>
-        </div>
-        <div class="custom-container">
-          <div class="row">
-            <div class="col-lg-3">
+          </nav>
+
+          <!-- / Navbar -->
+
+          <!-- Content wrapper -->
+          <div class="content-wrapper">
+            <!-- Content -->
+
+            <div class="container-xxl flex-grow-1 container-p-y">
               <div class="row">
-                <div class="col-lg-12 col-sm-6 lan-col-50">
-                  <div class="card">
-                    <div class="img-wrraper"><img class="img-fluid bg-img" src="../assets/images/landing/unique-cards/1.jpg" alt=""></div>
-                  </div>
-                </div>
-                <div class="col-lg-12 col-sm-6 lan-col-50">
-                  <div class="card">
-                    <div class="img-wrraper"><img class="img-fluid bg-img" src="../assets/images/landing/unique-cards/2.jpg" alt=""></div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-lg-6 col-sm-12">
-              <div class="row">
-                <div class="col-sm-12">
-                  <div class="card">
-                    <div class="img-wrraper"><img class="img-fluid bg-img" src="../assets/images/landing/unique-cards/3.jpg" alt=""></div>
-                  </div>
-                </div>
-                <div class="col-sm-6">
-                  <div class="card">
-                    <div class="img-wrraper"><img class="img-fluid bg-img" src="../assets/images/landing/unique-cards/4.jpg" alt=""></div>
-                  </div>
-                </div>
-                <div class="col-sm-6">
-                  <div class="row">
-                    <div class="col-4">
-                      <div class="card">
-                        <div class="img-wrraper"><img class="img-fluid bg-img" src="../assets/images/landing/unique-cards/5.jpg" alt=""></div>
+                <!-- Website Analytics -->
+                <div class="col-lg-6 mb-4">
+                  <div
+                    class="swiper-container swiper-container-horizontal swiper swiper-card-advance-bg"
+                    id="swiper-with-pagination-cards">
+                    <div class="swiper-wrapper">
+                      <div class="swiper-slide">
+                        <div class="row">
+                          <div class="col-12">
+                            <h5 class="text-white mb-0 mt-2">Website Analytics</h5>
+                            <small>Total 28.5% Conversion Rate</small>
+                          </div>
+                          <div class="row">
+                            <div class="col-lg-7 col-md-9 col-12 order-2 order-md-1">
+                              <h6 class="text-white mt-0 mt-md-3 mb-3">Traffic</h6>
+                              <div class="row">
+                                <div class="col-6">
+                                  <ul class="list-unstyled mb-0">
+                                    <li class="d-flex mb-4 align-items-center">
+                                      <p class="mb-0 fw-medium me-2 website-analytics-text-bg">28%</p>
+                                      <p class="mb-0">Sessions</p>
+                                    </li>
+                                    <li class="d-flex align-items-center mb-2">
+                                      <p class="mb-0 fw-medium me-2 website-analytics-text-bg">1.2k</p>
+                                      <p class="mb-0">Leads</p>
+                                    </li>
+                                  </ul>
+                                </div>
+                                <div class="col-6">
+                                  <ul class="list-unstyled mb-0">
+                                    <li class="d-flex mb-4 align-items-center">
+                                      <p class="mb-0 fw-medium me-2 website-analytics-text-bg">3.1k</p>
+                                      <p class="mb-0">Page Views</p>
+                                    </li>
+                                    <li class="d-flex align-items-center mb-2">
+                                      <p class="mb-0 fw-medium me-2 website-analytics-text-bg">12%</p>
+                                      <p class="mb-0">Conversions</p>
+                                    </li>
+                                  </ul>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="col-lg-5 col-md-3 col-12 order-1 order-md-2 my-4 my-md-0 text-center">
+                              <img
+                                src="../../assets/img/illustrations/card-website-analytics-1.png"
+                                alt="Website Analytics"
+                                width="170"
+                                class="card-website-analytics-img" />
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="swiper-slide">
+                        <div class="row">
+                          <div class="col-12">
+                            <h5 class="text-white mb-0 mt-2">Website Analytics</h5>
+                            <small>Total 28.5% Conversion Rate</small>
+                          </div>
+                          <div class="col-lg-7 col-md-9 col-12 order-2 order-md-1">
+                            <h6 class="text-white mt-0 mt-md-3 mb-3">Spending</h6>
+                            <div class="row">
+                              <div class="col-6">
+                                <ul class="list-unstyled mb-0">
+                                  <li class="d-flex mb-4 align-items-center">
+                                    <p class="mb-0 fw-medium me-2 website-analytics-text-bg">12h</p>
+                                    <p class="mb-0">Spend</p>
+                                  </li>
+                                  <li class="d-flex align-items-center mb-2">
+                                    <p class="mb-0 fw-medium me-2 website-analytics-text-bg">127</p>
+                                    <p class="mb-0">Order</p>
+                                  </li>
+                                </ul>
+                              </div>
+                              <div class="col-6">
+                                <ul class="list-unstyled mb-0">
+                                  <li class="d-flex mb-4 align-items-center">
+                                    <p class="mb-0 fw-medium me-2 website-analytics-text-bg">18</p>
+                                    <p class="mb-0">Order Size</p>
+                                  </li>
+                                  <li class="d-flex align-items-center mb-2">
+                                    <p class="mb-0 fw-medium me-2 website-analytics-text-bg">2.3k</p>
+                                    <p class="mb-0">Items</p>
+                                  </li>
+                                </ul>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-lg-5 col-md-3 col-12 order-1 order-md-2 my-4 my-md-0 text-center">
+                            <img
+                              src="../../assets/img/illustrations/card-website-analytics-2.png"
+                              alt="Website Analytics"
+                              width="170"
+                              class="card-website-analytics-img" />
+                          </div>
+                        </div>
+                      </div>
+                      <div class="swiper-slide">
+                        <div class="row">
+                          <div class="col-12">
+                            <h5 class="text-white mb-0 mt-2">Website Analytics</h5>
+                            <small>Total 28.5% Conversion Rate</small>
+                          </div>
+                          <div class="col-lg-7 col-md-9 col-12 order-2 order-md-1">
+                            <h6 class="text-white mt-0 mt-md-3 mb-3">Revenue Sources</h6>
+                            <div class="row">
+                              <div class="col-6">
+                                <ul class="list-unstyled mb-0">
+                                  <li class="d-flex mb-4 align-items-center">
+                                    <p class="mb-0 fw-medium me-2 website-analytics-text-bg">268</p>
+                                    <p class="mb-0">Direct</p>
+                                  </li>
+                                  <li class="d-flex align-items-center mb-2">
+                                    <p class="mb-0 fw-medium me-2 website-analytics-text-bg">62</p>
+                                    <p class="mb-0">Referral</p>
+                                  </li>
+                                </ul>
+                              </div>
+                              <div class="col-6">
+                                <ul class="list-unstyled mb-0">
+                                  <li class="d-flex mb-4 align-items-center">
+                                    <p class="mb-0 fw-medium me-2 website-analytics-text-bg">890</p>
+                                    <p class="mb-0">Organic</p>
+                                  </li>
+                                  <li class="d-flex align-items-center mb-2">
+                                    <p class="mb-0 fw-medium me-2 website-analytics-text-bg">1.2k</p>
+                                    <p class="mb-0">Campaign</p>
+                                  </li>
+                                </ul>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-lg-5 col-md-3 col-12 order-1 order-md-2 my-4 my-md-0 text-center">
+                            <img
+                              src="../../assets/img/illustrations/card-website-analytics-3.png"
+                              alt="Website Analytics"
+                              width="170"
+                              class="card-website-analytics-img" />
+                          </div>
+                        </div>
                       </div>
                     </div>
-                    <div class="col-4">
-                      <div class="card">
-                        <div class="img-wrraper"><img class="img-fluid bg-img" src="../assets/images/landing/unique-cards/6.jpg" alt=""></div>
+                    <div class="swiper-pagination"></div>
+                  </div>
+                </div>
+                <!--/ Website Analytics -->
+
+                <!-- Sales Overview -->
+                <div class="col-lg-3 col-sm-6 mb-4">
+                  <div class="card">
+                    <div class="card-header">
+                      <div class="d-flex justify-content-between">
+                        <small class="d-block mb-1 text-muted">Sales Overview</small>
+                        <p class="card-text text-success">+18.2%</p>
+                      </div>
+                      <h4 class="card-title mb-1">$42.5k</h4>
+                    </div>
+                    <div class="card-body">
+                      <div class="row">
+                        <div class="col-4">
+                          <div class="d-flex gap-2 align-items-center mb-2">
+                            <span class="badge bg-label-info p-1 rounded"
+                              ><i class="ti ti-shopping-cart ti-xs"></i
+                            ></span>
+                            <p class="mb-0">Order</p>
+                          </div>
+                          <h5 class="mb-0 pt-1 text-nowrap">62.2%</h5>
+                          <small class="text-muted">6,440</small>
+                        </div>
+                        <div class="col-4">
+                          <div class="divider divider-vertical">
+                            <div class="divider-text">
+                              <span class="badge-divider-bg bg-label-secondary">VS</span>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-4 text-end">
+                          <div class="d-flex gap-2 justify-content-end align-items-center mb-2">
+                            <p class="mb-0">Visits</p>
+                            <span class="badge bg-label-primary p-1 rounded"><i class="ti ti-link ti-xs"></i></span>
+                          </div>
+                          <h5 class="mb-0 pt-1 text-nowrap ms-lg-n3 ms-xl-0">25.5%</h5>
+                          <small class="text-muted">12,749</small>
+                        </div>
+                      </div>
+                      <div class="d-flex align-items-center mt-4">
+                        <div class="progress w-100" style="height: 8px">
+                          <div
+                            class="progress-bar bg-info"
+                            style="width: 70%"
+                            role="progressbar"
+                            aria-valuenow="70"
+                            aria-valuemin="0"
+                            aria-valuemax="100"></div>
+                          <div
+                            class="progress-bar bg-primary"
+                            role="progressbar"
+                            style="width: 30%"
+                            aria-valuenow="30"
+                            aria-valuemin="0"
+                            aria-valuemax="100"></div>
+                        </div>
                       </div>
                     </div>
-                    <div class="col-4">
-                      <div class="card">
-                        <div class="img-wrraper"><img class="img-fluid bg-img" src="../assets/images/landing/unique-cards/7.jpg" alt=""></div>
+                  </div>
+                </div>
+                <!--/ Sales Overview -->
+
+                <!-- Revenue Generated -->
+                <div class="col-lg-3 col-md-6 col-sm-6 mb-4">
+                  <div class="card">
+                    <div class="card-body pb-0">
+                      <div class="card-icon">
+                        <span class="badge bg-label-success rounded-pill p-2">
+                          <i class="ti ti-credit-card ti-sm"></i>
+                        </span>
+                      </div>
+                      <h5 class="card-title mb-0 mt-2">97.5k</h5>
+                      <small>Revenue Generated</small>
+                    </div>
+                    <div id="revenueGenerated"></div>
+                  </div>
+                </div>
+                <!--/ Revenue Generated -->
+
+                <!-- Earning Reports -->
+                <div class="col-lg-6 mb-4">
+                  <div class="card h-100">
+                    <div class="card-header pb-0 d-flex justify-content-between mb-lg-n4">
+                      <div class="card-title mb-0">
+                        <h5 class="mb-0">Earning Reports</h5>
+                        <small class="text-muted">Weekly Earnings Overview</small>
+                      </div>
+                      <div class="dropdown">
+                        <button
+                          class="btn p-0"
+                          type="button"
+                          id="earningReportsId"
+                          data-bs-toggle="dropdown"
+                          aria-haspopup="true"
+                          aria-expanded="false">
+                          <i class="ti ti-dots-vertical ti-sm text-muted"></i>
+                        </button>
+                        <div class="dropdown-menu dropdown-menu-end" aria-labelledby="earningReportsId">
+                          <a class="dropdown-item" href="javascript:void(0);">View More</a>
+                          <a class="dropdown-item" href="javascript:void(0);">Delete</a>
+                        </div>
+                      </div>
+                      <!-- </div> -->
+                    </div>
+                    <div class="card-body">
+                      <div class="row">
+                        <div class="col-12 col-md-4 d-flex flex-column align-self-end">
+                          <div class="d-flex gap-2 align-items-center mb-2 pb-1 flex-wrap">
+                            <h1 class="mb-0">$468</h1>
+                            <div class="badge rounded bg-label-success">+4.2%</div>
+                          </div>
+                          <small>You informed of this week compared to last week</small>
+                        </div>
+                        <div class="col-12 col-md-8">
+                          <div id="weeklyEarningReports"></div>
+                        </div>
+                      </div>
+                      <div class="border rounded p-3 mt-4">
+                        <div class="row gap-4 gap-sm-0">
+                          <div class="col-12 col-sm-4">
+                            <div class="d-flex gap-2 align-items-center">
+                              <div class="badge rounded bg-label-primary p-1">
+                                <i class="ti ti-currency-dollar ti-sm"></i>
+                              </div>
+                              <h6 class="mb-0">Earnings</h6>
+                            </div>
+                            <h4 class="my-2 pt-1">$545.69</h4>
+                            <div class="progress w-75" style="height: 4px">
+                              <div
+                                class="progress-bar"
+                                role="progressbar"
+                                style="width: 65%"
+                                aria-valuenow="65"
+                                aria-valuemin="0"
+                                aria-valuemax="100"></div>
+                            </div>
+                          </div>
+                          <div class="col-12 col-sm-4">
+                            <div class="d-flex gap-2 align-items-center">
+                              <div class="badge rounded bg-label-info p-1"><i class="ti ti-chart-pie-2 ti-sm"></i></div>
+                              <h6 class="mb-0">Profit</h6>
+                            </div>
+                            <h4 class="my-2 pt-1">$256.34</h4>
+                            <div class="progress w-75" style="height: 4px">
+                              <div
+                                class="progress-bar bg-info"
+                                role="progressbar"
+                                style="width: 50%"
+                                aria-valuenow="50"
+                                aria-valuemin="0"
+                                aria-valuemax="100"></div>
+                            </div>
+                          </div>
+                          <div class="col-12 col-sm-4">
+                            <div class="d-flex gap-2 align-items-center">
+                              <div class="badge rounded bg-label-danger p-1">
+                                <i class="ti ti-brand-paypal ti-sm"></i>
+                              </div>
+                              <h6 class="mb-0">Expense</h6>
+                            </div>
+                            <h4 class="my-2 pt-1">$74.19</h4>
+                            <div class="progress w-75" style="height: 4px">
+                              <div
+                                class="progress-bar bg-danger"
+                                role="progressbar"
+                                style="width: 65%"
+                                aria-valuenow="65"
+                                aria-valuemin="0"
+                                aria-valuemax="100"></div>
+                            </div>
+                          </div>
+                        </div>
                       </div>
                     </div>
-                    <div class="col-sm-12">
-                      <div class="card">
-                        <div class="img-wrraper"><img class="img-fluid bg-img" src="../assets/images/landing/unique-cards/8.jpg" alt=""></div>
+                  </div>
+                </div>
+                <!--/ Earning Reports -->
+
+                <!-- Support Tracker -->
+                <div class="col-md-6 mb-4">
+                  <div class="card h-100">
+                    <div class="card-header d-flex justify-content-between pb-0">
+                      <div class="card-title mb-0">
+                        <h5 class="mb-0">Support Tracker</h5>
+                        <small class="text-muted">Last 7 Days</small>
+                      </div>
+                      <div class="dropdown">
+                        <button
+                          class="btn p-0"
+                          type="button"
+                          id="supportTrackerMenu"
+                          data-bs-toggle="dropdown"
+                          aria-haspopup="true"
+                          aria-expanded="false">
+                          <i class="ti ti-dots-vertical ti-sm text-muted"></i>
+                        </button>
+                        <div class="dropdown-menu dropdown-menu-end" aria-labelledby="supportTrackerMenu">
+                          <a class="dropdown-item" href="javascript:void(0);">View More</a>
+                          <a class="dropdown-item" href="javascript:void(0);">Delete</a>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="card-body">
+                      <div class="row">
+                        <div class="col-12 col-sm-4 col-md-12 col-lg-4">
+                          <div class="mt-lg-4 mt-lg-2 mb-lg-4 mb-2 pt-1">
+                            <h1 class="mb-0">164</h1>
+                            <p class="mb-0">Total Tickets</p>
+                          </div>
+                          <ul class="p-0 m-0">
+                            <li class="d-flex gap-3 align-items-center mb-lg-3 pt-2 pb-1">
+                              <div class="badge rounded bg-label-primary p-1"><i class="ti ti-ticket ti-sm"></i></div>
+                              <div>
+                                <h6 class="mb-0 text-nowrap">New Tickets</h6>
+                                <small class="text-muted">142</small>
+                              </div>
+                            </li>
+                            <li class="d-flex gap-3 align-items-center mb-lg-3 pb-1">
+                              <div class="badge rounded bg-label-info p-1">
+                                <i class="ti ti-circle-check ti-sm"></i>
+                              </div>
+                              <div>
+                                <h6 class="mb-0 text-nowrap">Open Tickets</h6>
+                                <small class="text-muted">28</small>
+                              </div>
+                            </li>
+                            <li class="d-flex gap-3 align-items-center pb-1">
+                              <div class="badge rounded bg-label-warning p-1"><i class="ti ti-clock ti-sm"></i></div>
+                              <div>
+                                <h6 class="mb-0 text-nowrap">Response Time</h6>
+                                <small class="text-muted">1 Day</small>
+                              </div>
+                            </li>
+                          </ul>
+                        </div>
+                        <div class="col-12 col-sm-8 col-md-12 col-lg-8">
+                          <div id="supportTracker"></div>
+                        </div>
                       </div>
                     </div>
                   </div>
                 </div>
-                <div class="col-sm-12">
+                <!--/ Support Tracker -->
+
+                <!-- Sales By Country -->
+                <div class="col-xl-4 col-md-6 mb-4">
+                  <div class="card h-100">
+                    <div class="card-header d-flex justify-content-between">
+                      <div class="card-title mb-0">
+                        <h5 class="m-0 me-2">Sales by Countries</h5>
+                        <small class="text-muted">Monthly Sales Overview</small>
+                      </div>
+                      <div class="dropdown">
+                        <button
+                          class="btn p-0"
+                          type="button"
+                          id="salesByCountry"
+                          data-bs-toggle="dropdown"
+                          aria-haspopup="true"
+                          aria-expanded="false">
+                          <i class="ti ti-dots-vertical ti-sm text-muted"></i>
+                        </button>
+                        <div class="dropdown-menu dropdown-menu-end" aria-labelledby="salesByCountry">
+                          <a class="dropdown-item" href="javascript:void(0);">Download</a>
+                          <a class="dropdown-item" href="javascript:void(0);">Refresh</a>
+                          <a class="dropdown-item" href="javascript:void(0);">Share</a>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="card-body">
+                      <ul class="p-0 m-0">
+                        <li class="d-flex align-items-center mb-4">
+                          <img src="../../assets/svg/flags/us.svg" alt="User" class="rounded-circle me-3" width="34" />
+                          <div class="d-flex w-100 flex-wrap align-items-center justify-content-between gap-2">
+                            <div class="me-2">
+                              <div class="d-flex align-items-center">
+                                <h6 class="mb-0 me-1">$8,567k</h6>
+                              </div>
+                              <small class="text-muted">United states</small>
+                            </div>
+                            <div class="user-progress">
+                              <p class="text-success fw-medium mb-0 d-flex justify-content-center gap-1">
+                                <i class="ti ti-chevron-up"></i>
+                                25.8%
+                              </p>
+                            </div>
+                          </div>
+                        </li>
+                        <li class="d-flex align-items-center mb-4">
+                          <img src="../../assets/svg/flags/br.svg" alt="User" class="rounded-circle me-3" width="34" />
+                          <div class="d-flex w-100 flex-wrap align-items-center justify-content-between gap-2">
+                            <div class="me-2">
+                              <div class="d-flex align-items-center">
+                                <h6 class="mb-0 me-1">$2,415k</h6>
+                              </div>
+                              <small class="text-muted">Brazil</small>
+                            </div>
+                            <div class="user-progress">
+                              <p class="text-danger fw-medium mb-0 d-flex justify-content-center gap-1">
+                                <i class="ti ti-chevron-down"></i>
+                                6.2%
+                              </p>
+                            </div>
+                          </div>
+                        </li>
+                        <li class="d-flex align-items-center mb-4">
+                          <img src="../../assets/svg/flags/in.svg" alt="User" class="rounded-circle me-3" width="34" />
+                          <div class="d-flex w-100 flex-wrap align-items-center justify-content-between gap-2">
+                            <div class="me-2">
+                              <div class="d-flex align-items-center">
+                                <h6 class="mb-0 me-1">$865k</h6>
+                              </div>
+                              <small class="text-muted">India</small>
+                            </div>
+                            <div class="user-progress">
+                              <p class="text-success fw-medium mb-0 d-flex align-items-center gap-1">
+                                <i class="ti ti-chevron-up"></i>
+                                12.4%
+                              </p>
+                            </div>
+                          </div>
+                        </li>
+                        <li class="d-flex align-items-center mb-4">
+                          <img src="../../assets/svg/flags/au.svg" alt="User" class="rounded-circle me-3" width="34" />
+                          <div class="d-flex w-100 flex-wrap align-items-center justify-content-between gap-2">
+                            <div class="me-2">
+                              <div class="d-flex align-items-center">
+                                <h6 class="mb-0 me-1">$745k</h6>
+                              </div>
+                              <small class="text-muted">Australia</small>
+                            </div>
+                            <div class="user-progress">
+                              <p class="text-danger fw-medium mb-0 d-flex justify-content-center gap-1">
+                                <i class="ti ti-chevron-down"></i>
+                                11.9%
+                              </p>
+                            </div>
+                          </div>
+                        </li>
+                        <li class="d-flex align-items-center mb-4">
+                          <img src="../../assets/svg/flags/fr.svg" alt="User" class="rounded-circle me-3" width="34" />
+                          <div class="d-flex w-100 flex-wrap align-items-center justify-content-between gap-2">
+                            <div class="me-2">
+                              <div class="d-flex align-items-center">
+                                <h6 class="mb-0 me-1">$45</h6>
+                              </div>
+                              <small class="text-muted">France</small>
+                            </div>
+                            <div class="user-progress">
+                              <p class="text-success fw-medium mb-0 d-flex justify-content-center gap-1">
+                                <i class="ti ti-chevron-up"></i>
+                                16.2%
+                              </p>
+                            </div>
+                          </div>
+                        </li>
+                        <li class="d-flex align-items-center">
+                          <img src="../../assets/svg/flags/cn.svg" alt="User" class="rounded-circle me-3" width="34" />
+                          <div class="d-flex w-100 flex-wrap align-items-center justify-content-between gap-2">
+                            <div class="me-2">
+                              <div class="d-flex align-items-center">
+                                <h6 class="mb-0 me-1">$12k</h6>
+                              </div>
+                              <small class="text-muted">China</small>
+                            </div>
+                            <div class="user-progress">
+                              <p class="text-success fw-medium mb-0 d-flex justify-content-center gap-1">
+                                <i class="ti ti-chevron-up"></i>
+                                14.8%
+                              </p>
+                            </div>
+                          </div>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <!--/ Sales By Country -->
+
+                <!-- Total Earning -->
+                <div class="col-12 col-xl-4 mb-4 col-md-6">
                   <div class="card">
-                    <div class="img-wrraper"><img class="img-fluid bg-img" src="../assets/images/landing/unique-cards/9.jpg" alt=""></div>
+                    <div class="card-header d-flex justify-content-between pb-1">
+                      <h5 class="mb-0 card-title">Total Earning</h5>
+                      <div class="dropdown">
+                        <button
+                          class="btn p-0"
+                          type="button"
+                          id="totalEarning"
+                          data-bs-toggle="dropdown"
+                          aria-haspopup="true"
+                          aria-expanded="false">
+                          <i class="ti ti-dots-vertical ti-sm text-muted"></i>
+                        </button>
+                        <div class="dropdown-menu dropdown-menu-end" aria-labelledby="totalEarning">
+                          <a class="dropdown-item" href="javascript:void(0);">View More</a>
+                          <a class="dropdown-item" href="javascript:void(0);">Delete</a>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="card-body">
+                      <div class="d-flex align-items-center">
+                        <h1 class="mb-0 me-2">87%</h1>
+                        <i class="ti ti-chevron-up text-success me-1"></i>
+                        <p class="text-success mb-0">25.8%</p>
+                      </div>
+                      <div id="totalEarningChart"></div>
+                      <div class="d-flex align-items-start my-4">
+                        <div class="badge rounded bg-label-primary p-2 me-3 rounded">
+                          <i class="ti ti-currency-dollar ti-sm"></i>
+                        </div>
+                        <div class="d-flex justify-content-between w-100 gap-2 align-items-center">
+                          <div class="me-2">
+                            <h6 class="mb-0">Total Sales</h6>
+                            <small class="text-muted">Refund</small>
+                          </div>
+                          <p class="mb-0 text-success">+$98</p>
+                        </div>
+                      </div>
+                      <div class="d-flex align-items-start">
+                        <div class="badge rounded bg-label-secondary p-2 me-3 rounded">
+                          <i class="ti ti-brand-paypal ti-sm"></i>
+                        </div>
+                        <div class="d-flex justify-content-between w-100 gap-2 align-items-center">
+                          <div class="me-2">
+                            <h6 class="mb-0">Total Revenue</h6>
+                            <small class="text-muted">Client Payment</small>
+                          </div>
+                          <p class="mb-0 text-success">+$126</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!--/ Total Earning -->
+
+                <!-- Monthly Campaign State -->
+                <div class="col-xl-4 col-md-6 mb-4">
+                  <div class="card h-100">
+                    <div class="card-header d-flex justify-content-between">
+                      <div class="card-title mb-0">
+                        <h5 class="mb-0">Monthly Campaign State</h5>
+                        <small class="text-muted">8.52k Social Visiters</small>
+                      </div>
+                      <div class="dropdown">
+                        <button
+                          class="btn p-0"
+                          type="button"
+                          id="MonthlyCampaign"
+                          data-bs-toggle="dropdown"
+                          aria-haspopup="true"
+                          aria-expanded="false">
+                          <i class="ti ti-dots-vertical ti-sm text-muted"></i>
+                        </button>
+                        <div class="dropdown-menu dropdown-menu-end" aria-labelledby="MonthlyCampaign">
+                          <a class="dropdown-item" href="javascript:void(0);">Refresh</a>
+                          <a class="dropdown-item" href="javascript:void(0);">Download</a>
+                          <a class="dropdown-item" href="javascript:void(0);">View All</a>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="card-body">
+                      <ul class="p-0 m-0">
+                        <li class="mb-4 pb-1 d-flex justify-content-between align-items-center">
+                          <div class="badge bg-label-success rounded p-2"><i class="ti ti-mail ti-sm"></i></div>
+                          <div class="d-flex justify-content-between w-100 flex-wrap">
+                            <h6 class="mb-0 ms-3">Emails</h6>
+                            <div class="d-flex">
+                              <p class="mb-0 fw-medium">12,346</p>
+                              <p class="ms-3 text-success mb-0">0.3%</p>
+                            </div>
+                          </div>
+                        </li>
+                        <li class="mb-4 pb-1 d-flex justify-content-between align-items-center">
+                          <div class="badge bg-label-info rounded p-2"><i class="ti ti-link ti-sm"></i></div>
+                          <div class="d-flex justify-content-between w-100 flex-wrap">
+                            <h6 class="mb-0 ms-3">Opened</h6>
+                            <div class="d-flex">
+                              <p class="mb-0 fw-medium">8,734</p>
+                              <p class="ms-3 text-success mb-0">2.1%</p>
+                            </div>
+                          </div>
+                        </li>
+                        <li class="mb-4 pb-1 d-flex justify-content-between align-items-center">
+                          <div class="badge bg-label-warning rounded p-2"><i class="ti ti-click ti-sm"></i></div>
+                          <div class="d-flex justify-content-between w-100 flex-wrap">
+                            <h6 class="mb-0 ms-3">Clicked</h6>
+                            <div class="d-flex">
+                              <p class="mb-0 fw-medium">967</p>
+                              <p class="ms-3 text-success mb-0">1.4%</p>
+                            </div>
+                          </div>
+                        </li>
+                        <li class="mb-4 pb-1 d-flex justify-content-between align-items-center">
+                          <div class="badge bg-label-primary rounded p-2"><i class="ti ti-users ti-sm"></i></div>
+                          <div class="d-flex justify-content-between w-100 flex-wrap">
+                            <h6 class="mb-0 ms-3">Subscribe</h6>
+                            <div class="d-flex">
+                              <p class="mb-0 fw-medium">345</p>
+                              <p class="ms-3 text-success mb-0">8.5k</p>
+                            </div>
+                          </div>
+                        </li>
+                        <li class="mb-4 pb-1 d-flex justify-content-between align-items-center">
+                          <div class="badge bg-label-secondary rounded p-2">
+                            <i class="ti ti-alert-triangle ti-sm text-body"></i>
+                          </div>
+                          <div class="d-flex justify-content-between w-100 flex-wrap">
+                            <h6 class="mb-0 ms-3">Complaints</h6>
+                            <div class="d-flex">
+                              <p class="mb-0 fw-medium">10</p>
+                              <p class="ms-3 text-success mb-0">1.5%</p>
+                            </div>
+                          </div>
+                        </li>
+                        <li class="d-flex justify-content-between align-items-center">
+                          <div class="badge bg-label-danger rounded p-2"><i class="ti ti-ban ti-sm"></i></div>
+                          <div class="d-flex justify-content-between w-100 flex-wrap">
+                            <h6 class="mb-0 ms-3">Unsubscribe</h6>
+                            <div class="d-flex">
+                              <p class="mb-0 fw-medium">86</p>
+                              <p class="ms-3 text-success mb-0">0.8%</p>
+                            </div>
+                          </div>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <!--/ Monthly Campaign State -->
+
+                <!-- Source Visit -->
+                <div class="col-xl-4 col-md-6 order-2 order-lg-1 mb-4">
+                  <div class="card">
+                    <div class="card-header d-flex justify-content-between">
+                      <div class="card-title mb-0">
+                        <h5 class="mb-0">Source Visits</h5>
+                        <small class="text-muted">38.4k Visitors</small>
+                      </div>
+                      <div class="dropdown">
+                        <button
+                          class="btn p-0"
+                          type="button"
+                          id="sourceVisits"
+                          data-bs-toggle="dropdown"
+                          aria-haspopup="true"
+                          aria-expanded="false">
+                          <i class="ti ti-dots-vertical ti-sm text-muted"></i>
+                        </button>
+                        <div class="dropdown-menu dropdown-menu-end" aria-labelledby="sourceVisits">
+                          <a class="dropdown-item" href="javascript:void(0);">Refresh</a>
+                          <a class="dropdown-item" href="javascript:void(0);">Download</a>
+                          <a class="dropdown-item" href="javascript:void(0);">View All</a>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="card-body">
+                      <ul class="list-unstyled mb-0">
+                        <li class="mb-3 pb-1">
+                          <div class="d-flex align-items-start">
+                            <div class="badge bg-label-secondary p-2 me-3 rounded">
+                              <i class="ti ti-shadow ti-sm"></i>
+                            </div>
+                            <div class="d-flex justify-content-between w-100 flex-wrap gap-2">
+                              <div class="me-2">
+                                <h6 class="mb-0">Direct Source</h6>
+                                <small class="text-muted">Direct link click</small>
+                              </div>
+                              <div class="d-flex align-items-center">
+                                <p class="mb-0">1.2k</p>
+                                <div class="ms-3 badge bg-label-success">+4.2%</div>
+                              </div>
+                            </div>
+                          </div>
+                        </li>
+                        <li class="mb-3 pb-1">
+                          <div class="d-flex align-items-start">
+                            <div class="badge bg-label-secondary p-2 me-3 rounded">
+                              <i class="ti ti-globe ti-sm"></i>
+                            </div>
+                            <div class="d-flex justify-content-between w-100 flex-wrap gap-2">
+                              <div class="me-2">
+                                <h6 class="mb-0">Social Network</h6>
+                                <small class="text-muted">Social Channels</small>
+                              </div>
+                              <div class="d-flex align-items-center">
+                                <p class="mb-0">31.5k</p>
+                                <div class="ms-3 badge bg-label-success">+8.2%</div>
+                              </div>
+                            </div>
+                          </div>
+                        </li>
+                        <li class="mb-3 pb-1">
+                          <div class="d-flex align-items-start">
+                            <div class="badge bg-label-secondary p-2 me-3 rounded">
+                              <i class="ti ti-mail ti-sm"></i>
+                            </div>
+                            <div class="d-flex justify-content-between w-100 flex-wrap gap-2">
+                              <div class="me-2">
+                                <h6 class="mb-0">Email Newsletter</h6>
+                                <small class="text-muted">Mail Campaigns</small>
+                              </div>
+                              <div class="d-flex align-items-center">
+                                <p class="mb-0">893</p>
+                                <div class="ms-3 badge bg-label-success">+2.4%</div>
+                              </div>
+                            </div>
+                          </div>
+                        </li>
+                        <li class="mb-3 pb-1">
+                          <div class="d-flex align-items-start">
+                            <div class="badge bg-label-secondary p-2 me-3 rounded">
+                              <i class="ti ti-external-link ti-sm"></i>
+                            </div>
+                            <div class="d-flex justify-content-between w-100 flex-wrap gap-2">
+                              <div class="me-2">
+                                <h6 class="mb-0">Referrals</h6>
+                                <small class="text-muted">Impact Radius Visits</small>
+                              </div>
+                              <div class="d-flex align-items-center">
+                                <p class="mb-0">342</p>
+                                <div class="ms-3 badge bg-label-danger">-0.4%</div>
+                              </div>
+                            </div>
+                          </div>
+                        </li>
+                        <li class="mb-3 pb-1">
+                          <div class="d-flex align-items-start">
+                            <div class="badge bg-label-secondary p-2 me-3 rounded">
+                              <i class="ti ti-discount-2 ti-sm"></i>
+                            </div>
+                            <div class="d-flex justify-content-between w-100 flex-wrap gap-2">
+                              <div class="me-2">
+                                <h6 class="mb-0">ADVT</h6>
+                                <small class="text-muted">Google ADVT</small>
+                              </div>
+                              <div class="d-flex align-items-center">
+                                <p class="mb-0">2.15k</p>
+                                <div class="ms-3 badge bg-label-success">+9.1%</div>
+                              </div>
+                            </div>
+                          </div>
+                        </li>
+                        <li class="mb-2">
+                          <div class="d-flex align-items-start">
+                            <div class="badge bg-label-secondary p-2 me-3 rounded">
+                              <i class="ti ti-star ti-sm"></i>
+                            </div>
+                            <div class="d-flex justify-content-between w-100 flex-wrap gap-2">
+                              <div class="me-2">
+                                <h6 class="mb-0">Other</h6>
+                                <small class="text-muted">Many Sources</small>
+                              </div>
+                              <div class="d-flex align-items-center">
+                                <p class="mb-0">12.5k</p>
+                                <div class="ms-3 badge bg-label-success">+6.2%</div>
+                              </div>
+                            </div>
+                          </div>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <!--/ Source Visit -->
+
+                <!-- Projects table -->
+                <div class="col-12 col-xl-8 col-sm-12 order-1 order-lg-2 mb-4 mb-lg-0">
+                  <div class="card">
+                    <div class="card-datatable table-responsive">
+                      <table class="datatables-projects table border-top">
+                        <thead>
+                          <tr>
+                            <th></th>
+                            <th></th>
+                            <th>Name</th>
+                            <th>Leader</th>
+                            <th>Team</th>
+                            <th class="w-px-200">Status</th>
+                            <th>Action</th>
+                          </tr>
+                        </thead>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+                <!--/ Projects table -->
+              </div>
+            </div>
+            <!-- / Content -->
+
+            <!-- Footer -->
+            <footer class="content-footer footer bg-footer-theme">
+              <div class="container-xxl">
+                <div
+                  class="footer-container d-flex align-items-center justify-content-between py-2 flex-md-row flex-column">
+                  <div>
+                    ©
+                    <script>
+                      document.write(new Date().getFullYear());
+                    </script>
+                    , made with ❤️ by <a href="https://pixinvent.com" target="_blank" class="fw-medium">Pixinvent</a>
+                  </div>
+                  <div class="d-none d-lg-inline-block">
+                    <a href="https://themeforest.net/licenses/standard" class="footer-link me-4" target="_blank"
+                      >License</a
+                    >
+                    <a href="https://1.envato.market/pixinvent_portfolio" target="_blank" class="footer-link me-4"
+                      >More Themes</a
+                    >
+
+                    <a
+                      href="https://demos.pixinvent.com/vuexy-html-admin-template/documentation/"
+                      target="_blank"
+                      class="footer-link me-4"
+                      >Documentation</a
+                    >
+
+                    <a href="https://pixinvent.ticksy.com/" target="_blank" class="footer-link d-none d-sm-inline-block"
+                      >Support</a
+                    >
                   </div>
                 </div>
               </div>
-            </div>
-            <div class="col-lg-3">
-              <div class="row">
-                <div class="col-lg-12 col-sm-4 lan-col-50">
-                  <div class="card">
-                    <div class="img-wrraper"><img class="img-fluid bg-img" src="../assets/images/landing/unique-cards/10.jpg" alt=""></div>
-                  </div>
-                </div>
-                <div class="col-lg-12 col-sm-4 lan-col-50">
-                  <div class="card">
-                    <div class="img-wrraper"><img class="img-fluid bg-img" src="../assets/images/landing/unique-cards/11.jpg" alt=""></div>
-                  </div>
-                </div>
-                <div class="col-lg-12 col-sm-4">
-                  <div class="card">
-                    <div class="img-wrraper"><img class="img-fluid bg-img" src="../assets/images/landing/unique-cards/12.jpg" alt=""></div>
-                  </div>
-                </div>
-              </div>
-            </div>
+            </footer>
+            <!-- / Footer -->
+
+            <div class="content-backdrop fade"></div>
           </div>
+          <!-- Content wrapper -->
         </div>
-      </section>
-      <!-- unic-cards end-->
-      <!--Applications start-->
-      <section class="demo-section section-py-space" id="Applications">
-        <div class="title">
-          <div class="logo-wrraper"><img class="img-fluid bg-img" src="../assets/images/logo/logo-icon.png" alt=""></div>
-          <h2>Usefull application</h2>
-        </div>
-        <div class="container-fluid apps">
-          <div class="row demo-block">
-            <div class="col-xl-3 col-lg-4 col-sm-6 wow pulse">
-              <div class="demo-box"><a href="social-app.html">
-                  <div class="img-wrraper"><img class="img-fluid" src="../assets/images/landing/application/1.jpg" alt=""></div>
-                  <div class="demo-detail">                       
-                    <div class="demo-title">
-                      <h3>Social App</h3>
-                    </div>
-                  </div></a></div>
-            </div>
-            <div class="col-xl-3 col-lg-4 col-sm-6 wow pulse">
-              <div class="demo-box"><a href="knowledgebase.html">
-                  <div class="img-wrraper"><img class="img-fluid" src="../assets/images/landing/application/2.jpg" alt=""></div>
-                  <div class="demo-detail">                       
-                    <div class="demo-title">
-                      <h3>Knowledgebase</h3>
-                    </div>
-                  </div></a></div>
-            </div>
-            <div class="col-xl-3 col-lg-4 col-sm-6 wow pulse">
-              <div class="demo-box"><a href="support-ticket.html">
-                  <div class="img-wrraper"><img class="img-fluid" src="../assets/images/landing/application/3.jpg" alt=""></div>
-                  <div class="demo-detail">                       
-                    <div class="demo-title">
-                      <h3>Support Ticket</h3>
-                    </div>
-                  </div></a></div>
-            </div>
-            <div class="col-xl-3 col-lg-4 col-sm-6 wow pulse">
-              <div class="demo-box"><a href="email-application.html">
-                  <div class="img-wrraper"><img class="img-fluid" src="../assets/images/landing/application/4.jpg" alt=""></div>
-                  <div class="demo-detail">                       
-                    <div class="demo-title">
-                      <h3>Email Dashboard</h3>
-                    </div>
-                  </div></a></div>
-            </div>
-            <div class="col-xl-3 col-lg-4 col-sm-6 wow pulse">
-              <div class="demo-box"><a href="to-do.html">
-                  <div class="img-wrraper"><img class="img-fluid" src="../assets/images/landing/application/5.jpg" alt=""></div>
-                  <div class="demo-detail">                       
-                    <div class="demo-title">
-                      <h3>To-Do</h3>
-                    </div>
-                  </div></a></div>
-            </div>
-            <div class="col-xl-3 col-lg-4 col-sm-6 wow pulse">
-              <div class="demo-box"><a href="job-cards-view.html">
-                  <div class="img-wrraper"><img class="img-fluid" src="../assets/images/landing/application/6.jpg" alt=""></div>
-                  <div class="demo-detail">                       
-                    <div class="demo-title">
-                      <h3>Job Search</h3>
-                    </div>
-                  </div></a></div>
-            </div>
-            <div class="col-xl-3 col-lg-4 col-sm-6 wow pulse">
-              <div class="demo-box"><a href="product-page.html">
-                  <div class="img-wrraper"><img class="img-fluid" src="../assets/images/landing/application/7.jpg" alt=""></div>
-                  <div class="demo-detail">                       
-                    <div class="demo-title">
-                      <h3>Ecommerce</h3>
-                    </div>
-                  </div></a></div>
-            </div>
-            <div class="col-xl-3 col-lg-4 col-sm-6 wow pulse">
-              <div class="demo-box"><a href="kanban.html">
-                  <div class="img-wrraper"><img class="img-fluid" src="../assets/images/landing/application/8.jpg" alt=""></div>
-                  <div class="demo-detail">                       
-                    <div class="demo-title">
-                      <h3>Kanban</h3>
-                    </div>
-                  </div></a></div>
-            </div>
-            <div class="col-xl-3 col-lg-4 col-sm-6 wow pulse">
-              <div class="demo-box"><a href="file-manager.html">
-                  <div class="img-wrraper"><img class="img-fluid" src="../assets/images/landing/application/9.jpg" alt=""></div>
-                  <div class="demo-detail">                       
-                    <div class="demo-title">
-                      <h3>File Manager</h3>
-                    </div>
-                  </div></a></div>
-            </div>
-            <div class="col-xl-3 col-lg-4 col-sm-6 wow pulse">
-              <div class="demo-box"><a href="projects.html">
-                  <div class="img-wrraper"><img class="img-fluid" src="../assets/images/landing/application/10.jpg" alt=""></div>
-                  <div class="demo-detail">                       
-                    <div class="demo-title">
-                      <h3>Project</h3>
-                    </div>
-                  </div></a></div>
-            </div>
-            <div class="col-xl-3 col-lg-4 col-sm-6 wow pulse">
-              <div class="demo-box"><a href="contacts.html">
-                  <div class="img-wrraper"><img class="img-fluid" src="../assets/images/landing/application/11.jpg" alt=""></div>
-                  <div class="demo-detail">                       
-                    <div class="demo-title">
-                      <h3>Contacts</h3>
-                    </div>
-                  </div></a></div>
-            </div>
-            <div class="col-xl-3 col-lg-4 col-sm-6 wow pulse">
-              <div class="demo-box"><a href="chat.html">
-                  <div class="img-wrraper"><img class="img-fluid" src="../assets/images/landing/application/12.jpg" alt=""></div>
-                  <div class="demo-detail">                       
-                    <div class="demo-title">
-                      <h3>Chat</h3>
-                    </div>
-                  </div></a></div>
-            </div>
-          </div>
-        </div>
-      </section>
-      <!--Applications end-->
-      <!-- unic-cards start-->
-      <section class="unique-cards">
-        <div class="title">
-          <div class="logo-wrraper"><img class="img-fluid bg-img" src="../assets/images/logo/logo-icon.png" alt=""></div>
-          <h2>email templates</h2>
-        </div>
-        <div class="container">
-          <div class="row">
-            <div class="col-12">
-              <div class="img-wrraper"><img class="img-fluid" src="../assets/images/landing/email-template/1.jpg" alt=""></div>
-            </div>
-          </div>
-        </div>
-      </section>
-      <!-- unic-cards end-->
-      <!--Core Feature start-->
-      <section class="core-feature section-py-space" id="core-feature">
-        <div class="title">
-          <div class="logo-wrraper"><img class="img-fluid bg-img" src="../assets/images/logo/logo-icon.png" alt=""></div>
-          <h2>Core Feature             </h2>
-        </div>
-        <div class="custom-container">
-          <div class="row feature-block">
-            <div class="col-xl-2 col-md-4 col-6">
-              <div class="feature-box">
-                <div>
-                  <div class="icon-wrraper"><i data-feather="alert-octagon"></i></div>
-                  <h6>SweetAlert2</h6>
-                </div>
-              </div>
-            </div>
-            <div class="col-xl-2 col-md-4 col-6">
-              <div class="feature-box">
-                <div>
-                  <div class="icon-wrraper"><i data-feather="users"></i></div>
-                  <h6>Avatar</h6>
-                </div>
-              </div>
-            </div>
-            <div class="col-xl-2 col-md-4 col-6">
-              <div class="feature-box">
-                <div>
-                  <div class="icon-wrraper"><i data-feather="thermometer"></i></div>
-                  <h6>Scrollable</h6>
-                </div>
-              </div>
-            </div>
-            <div class="col-xl-2 col-md-4 col-6">
-              <div class="feature-box">
-                <div>
-                  <div class="icon-wrraper"><i data-feather="command"></i></div>
-                  <h6>Tree view</h6>
-                </div>
-              </div>
-            </div>
-            <div class="col-xl-2 col-md-4 col-6">
-              <div class="feature-box">
-                <div>
-                  <div class="icon-wrraper"><i data-feather="bold">                        </i></div>
-                  <h6>Bootstrap notify</h6>
-                </div>
-              </div>
-            </div>
-            <div class="col-xl-2 col-md-4 col-6">
-              <div class="feature-box">
-                <div>
-                  <div class="icon-wrraper"><i data-feather="star"></i></div>
-                  <h6>Rating </h6>
-                </div>
-              </div>
-            </div>
-            <div class="col-xl-2 col-md-4 col-6">
-              <div class="feature-box">
-                <div>
-                  <div class="icon-wrraper"><i data-feather="droplet"></i></div>
-                  <h6>Dropzone</h6>
-                </div>
-              </div>
-            </div>
-            <div class="col-xl-2 col-md-4 col-6">
-              <div class="feature-box">
-                <div>
-                  <div class="icon-wrraper"><i data-feather="map-pin"></i></div>
-                  <h6>Tour</h6>
-                </div>
-              </div>
-            </div>
-            <div class="col-xl-2 col-md-4 col-6">
-              <div class="feature-box">
-                <div>
-                  <div class="icon-wrraper"><i data-feather="codepen"></i></div>
-                  <h6>Animated modal</h6>
-                </div>
-              </div>
-            </div>
-            <div class="col-xl-2 col-md-4 col-6">
-              <div class="feature-box">
-                <div>
-                  <div class="icon-wrraper"><i data-feather="book-open"></i></div>
-                  <h6>Owl Carousel</h6>
-                </div>
-              </div>
-            </div>
-            <div class="col-xl-2 col-md-4 col-6">
-              <div class="feature-box">
-                <div>
-                  <div class="icon-wrraper"><i data-feather="tag"></i></div>
-                  <h6>Ribbons </h6>
-                </div>
-              </div>
-            </div>
-            <div class="col-xl-2 col-md-4 col-6">
-              <div class="feature-box">
-                <div>
-                  <div class="icon-wrraper"><i data-feather="more-horizontal"></i></div>
-                  <h6>Pagination </h6>
-                </div>
-              </div>
-            </div>
-            <div class="col-xl-2 col-md-4 col-6">
-              <div class="feature-box">
-                <div>
-                  <div class="icon-wrraper"><i data-feather="skip-forward"></i></div>
-                  <h6>Steps </h6>
-                </div>
-              </div>
-            </div>
-            <div class="col-xl-2 col-md-4 col-6">
-              <div class="feature-box">
-                <div>
-                  <div class="icon-wrraper"><i data-feather="bookmark"></i></div>
-                  <h6>Breadcrumb  </h6>
-                </div>
-              </div>
-            </div>
-            <div class="col-xl-2 col-md-4 col-6">
-              <div class="feature-box">
-                <div>
-                  <div class="icon-wrraper"><i data-feather="sliders"></i></div>
-                  <h6>Range Slider </h6>
-                </div>
-              </div>
-            </div>
-            <div class="col-xl-2 col-md-4 col-6">
-              <div class="feature-box">
-                <div>
-                  <div class="icon-wrraper"><i data-feather="crop"></i></div>
-                  <h6>image cropper </h6>
-                </div>
-              </div>
-            </div>
-            <div class="col-xl-2 col-md-4 col-6">
-              <div class="feature-box">
-                <div>
-                  <div class="icon-wrraper"><i data-feather="file"></i></div>
-                  <h6>Sticky </h6>
-                </div>
-              </div>
-            </div>
-            <div class="col-xl-2 col-md-4 col-6">
-              <div class="feature-box">
-                <div>
-                  <div class="icon-wrraper"><i data-feather="loader"></i></div>
-                  <h6>Progress </h6>
-                </div>
-              </div>
-            </div>
-            <div class="col-xl-2 col-md-4 col-6">
-              <div class="feature-box">
-                <div>
-                  <div class="icon-wrraper"><i data-feather="feather"></i></div>
-                  <h6>Tooltip </h6>
-                </div>
-              </div>
-            </div>
-            <div class="col-xl-2 col-md-4 col-6">
-              <div class="feature-box">
-                <div>
-                  <div class="icon-wrraper"><i data-feather="target"></i></div>
-                  <h6>Spinners </h6>
-                </div>
-              </div>
-            </div>
-            <div class="col-xl-2 col-md-4 col-6">
-              <div class="feature-box">
-                <div>
-                  <div class="icon-wrraper"><i data-feather="chevron-down"></i></div>
-                  <h6>Dropdown </h6>
-                </div>
-              </div>
-            </div>
-            <div class="col-xl-2 col-md-4 col-6">
-              <div class="feature-box">
-                <div>
-                  <div class="icon-wrraper"><i data-feather="copy"></i></div>
-                  <h6>Tabs </h6>
-                </div>
-              </div>
-            </div>
-            <div class="col-xl-2 col-md-4 col-6">
-              <div class="feature-box">
-                <div>
-                  <div class="icon-wrraper"><i data-feather="map"></i></div>
-                  <h6>Accordion  </h6>
-                </div>
-              </div>
-            </div>
-            <div class="col-xl-2 col-md-4 col-6">
-              <div class="feature-box">
-                <div>
-                  <div class="icon-wrraper"><i data-feather="align-justify"></i></div>
-                  <h6>Navs</h6>
-                </div>
-              </div>
-            </div>
-            <div class="col-xl-2 col-md-4 col-6">
-              <div class="feature-box">
-                <div>
-                  <div class="icon-wrraper"><i data-feather="airplay"></i></div>
-                  <h6>Shadow</h6>
-                </div>
-              </div>
-            </div>
-            <div class="col-xl-2 col-md-4 col-6">
-              <div class="feature-box">
-                <div>
-                  <div class="icon-wrraper"><i data-feather="gitlab"></i></div>
-                  <h6>state color</h6>
-                </div>
-              </div>
-            </div>
-            <div class="col-xl-2 col-md-4 col-6">
-              <div class="feature-box">
-                <div>
-                  <div class="icon-wrraper"><i data-feather="list"></i></div>
-                  <h6>List  </h6>
-                </div>
-              </div>
-            </div>
-            <div class="col-xl-2 col-md-4 col-6">
-              <div class="feature-box">
-                <div>
-                  <div class="icon-wrraper"><i data-feather="grid"></i></div>
-                  <h6>Grid </h6>
-                </div>
-              </div>
-            </div>
-            <div class="col-xl-2 col-md-4 col-6">
-              <div class="feature-box">
-                <div>
-                  <div class="icon-wrraper"><i data-feather="help-circle"></i></div>
-                  <h6>Helper classes </h6>
-                </div>
-              </div>
-            </div>
-            <div class="col-xl-2 col-md-4 col-6">
-              <div class="feature-box">
-                <div>
-                  <div class="icon-wrraper"><i data-feather="type"></i></div>
-                  <h6>Typography</h6>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      <!--Core Feature end-->
-      <!--footer start-->
-      <section class="landing-footer section-py-space" id="footer">
-        <div class="custom-container">
-          <div class="row">
-            <div class="col-12">
-              <div class="footer-contain">
-                <div class="rating-wrraper">
-                  <svg enable-background="new 0 0 512 512" viewbox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
-                    <g>
-                      <g>
-                        <g>
-                          <g>
-                            <g>
-                              <g>
-                                <path d="m334.916 224.362c-.113-.247-.227-.494-.341-.741-8.178-17.622-12.161-36.899-12.169-56.326l-.016-40.763c0-58.064-37.879-107.273-90.271-124.286-58.89 11.179-103.42 62.912-103.42 125.054l-.016 39.715c-.008 18.928-3.889 37.71-11.857 54.879-.111.24-.222.481-.332.721-17.586 38.495 6.751 83.601 48.679 89.364 4.069.559 8.225.848 12.448.848h120.56c34.68-12.543 52.843-53.205 36.735-88.465z" fill="#e7a561"></path>
-                                <g>
-                                  <path d="m157.864 129.993h24.808v58.374h-24.808c-16.123 0-29.191-13.072-29.187-29.195.004-16.116 13.07-29.179 29.187-29.179z" fill="#ffcbbe"></path>
-                                </g>
-                                <path d="m395.506 222.616c-.11-.241-.221-.481-.332-.722-7.968-17.169-11.849-35.951-11.856-54.879l-.016-39.715c-.001-70.306-56.996-127.3-127.302-127.3-11.822 0-23.265 1.618-34.126 4.633 53.733 14.917 93.174 64.183 93.174 122.667l.016 39.715c.008 18.928 3.888 37.71 11.856 54.879.111.24.222.481.332.722 17.586 38.495-6.751 83.601-48.679 89.363-4.069.559-8.225.848-12.448.848h68.253c4.223 0 8.379-.289 12.448-.848 41.929-5.762 66.265-50.867 48.68-89.363z" fill="#e49542"></path>
-                                <g>
-                                  <g>
-                                    <g>
-                                      <g>
-                                        <g>
-                                          <g>
-                                            <path d="m256 366.332c30.147 0 57.094-13.622 75.068-35.035 6.096-7.263 2.063-18.421-7.249-20.213-11.727-2.257-20.203-12.519-20.203-24.461v-68.417h-95.233v68.418c0 11.942-8.475 22.204-20.202 24.461-9.312 1.792-13.345 12.95-7.249 20.213 17.974 21.412 44.921 35.034 75.068 35.034z" fill="#ffcbbe"></path>
-                                            <path d="m163.424 378.686v124.314l8.437 9h168.278l8.437-9v-124.314c0-8.668-.727-17.291-2.129-25.79-11.383-8.42-24.016-15.323-37.635-20.373-13.81 12.961-32.378 20.907-52.813 20.907-30.023 0-56.025-17.139-68.808-42.157l-9.549 1.838c-9.351 20.574-14.218 42.928-14.218 65.575z" fill="#f9f6f9"></path>
-                                            <path d="m325.322 312.354-.514-1.08c-5.138 10.055-12.415 18.834-21.227 25.742 12.495 4.403 24.155 10.417 34.764 17.768-2.253-14.66-6.62-28.959-13.023-42.43z" fill="#dddaec"></path>
-                                            <g>
-                                              <g fill="#9bc4f9">
-                                                <path d="m42.461 460.623v26.971c0 13.479 10.927 24.406 24.406 24.406h37.974v-3.849h15.453v3.849h51.568v-132.168c0-23.876 5.589-47.42 16.32-68.748l-26.405 5.082c-69.26 13.324-119.316 73.929-119.316 144.457z"></path>
-                                                <path d=""></path>
-                                              </g>
-                                              <path d="m336.799 346.316c2.204 10.4 3.34 21.03 3.34 31.726v133.958h51.567v-3.849h15.453v3.849h1.314v-36.137c0-53.914-28.147-102.238-71.674-129.547z" fill="#9bc4f9"></path>
-                                              <path d="m350.224 316.165-.547-.105-24.868-4.786.514 1.08c6.403 13.471 10.769 27.77 13.024 42.43 38.685 26.804 63.374 71.432 63.374 120.961v32.406h5.439v3.849h37.974c13.479 0 24.406-10.927 24.406-24.406v-26.967c-.001-70.529-50.057-131.135-119.316-144.462z" fill="#7fb2f9"></path>
-                                            </g>
-                                            <g fill="#61a2f9">
-                                              <path d="m120.294 511.738v-46.111c0-4.268-3.459-7.726-7.726-7.726s-7.726 3.459-7.726 7.726v46.111c0 .088.01.174.013.262h15.426c.002-.088.013-.173.013-.262z"></path>
-                                              <path d="m399.433 457.901c-4.268 0-7.726 3.459-7.726 7.726v46.373h15.453v-46.372c-.001-4.268-3.46-7.727-7.727-7.727z"></path>
-                                            </g>
-                                          </g>
-                                        </g>
-                                      </g>
-                                    </g>
-                                  </g>
-                                  <path d="m331.058 198.175h31.231c13.252 0 23.996-10.743 23.996-23.995v-29.999c0-13.252-10.743-23.996-23.996-23.996h-31.231z" fill="#365e7d"></path>
-                                  <path d="m332.96 219.981c-7.085-16.621-10.547-34.588-10.554-52.686l-.016-40.763c0-15.781-2.801-30.906-7.928-44.91-4.385-1.539-9.097-2.385-14.008-2.385-11.332 0-22.19 4.546-30.142 12.62-9.156 9.296-21.658 14.53-34.705 14.53h-38.108c-15.606 0-28.257 12.651-28.257 28.257v46.596c.715 47.318 39.272 85.461 86.76 85.461 33.47 0 62.484-18.963 76.958-46.72z" fill="#ffddce"></path>
-                                  <path d="m342.76 121.544c0-21.559-16.13-39.339-36.978-41.961 5.965 14.738 9.267 30.84 9.267 47.717l.016 39.715c.008 18.928 3.888 37.71 11.856 54.879.111.24.222.481.332.722.636 1.392 1.211 2.794 1.738 4.202 8.483-13.181 13.515-28.796 13.769-45.578z" fill="#ffcbbe"></path>
-                                </g>
-                              </g>
-                            </g>
-                          </g>
-                        </g>
-                      </g>
-                      <path d="m362.29 198.175h-8.346v23.029c0 6.081-4.947 11.028-11.029 11.028h-29.892c-4.143 0-7.5 3.357-7.5 7.5s3.357 7.5 7.5 7.5h29.892c14.353 0 26.029-11.676 26.029-26.028v-23.971c-2.114.609-4.345.942-6.654.942z" fill="#f9f6f9"></path>
-                      <g>
-                        <path d="m306.076 255.927h-23.434c-8.944 0-16.194-7.25-16.194-16.194 0-8.944 7.25-16.194 16.194-16.194h23.434c8.944 0 16.194 7.25 16.194 16.194 0 8.943-7.25 16.194-16.194 16.194z" fill="#475959"></path>
-                      </g>
-                    </g>
-                  </svg>
-                </div>
-                <h2>Have Any Problem ?</h2>
-                <p>No Worries-Support Service is Always To Support To You</p>
-                <ul class="star-rate">
-                  <li><i class="fa fa-star font-warning"></i></li>
-                  <li><i class="fa fa-star font-warning"></i></li>
-                  <li><i class="fa fa-star font-warning"></i></li>
-                  <li><i class="fa fa-star font-warning"></i></li>
-                  <li><i class="fa fa-star font-warning"></i></li>
-                </ul>
-                <div class="btn-footer"><a class="btn btn-lg btn-primary btn-pill" href="https://pixelstrap.freshdesk.com" role="button" target="_blank">Get Support</a><a class="btn btn-lg btn-secondary btn-pill" target="_blank" href="https://themeforest.net/user/pixelstrap/portfolio" data-bs-original-title="" title="">Check Now</a><a class="btn btn-lg btn-warning btn-pill" target="_blank" href="https://themeforest.net/user/pixelstrap/portfolio" data-bs-original-title="" title="">Buy Now</a></div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      <!--footer end-->
+        <!-- / Layout page -->
+      </div>
+
+      <!-- Overlay -->
+      <div class="layout-overlay layout-menu-toggle"></div>
+
+      <!-- Drag Target Area To SlideIn Menu On Small Screens -->
+      <div class="drag-target"></div>
     </div>
-    <!-- tap on top starts-->
-    <div class="tap-top"><i class="icon-control-eject"></i></div>
-    <!-- tap on tap ends-->
-    <!-- latest jquery-->
-    <script src="../assets/js/jquery-3.5.1.min.js"></script>
-    <!-- feather icon js-->
-    <script src="../assets/js/icons/feather-icon/feather.min.js"></script>
-    <script src="../assets/js/icons/feather-icon/feather-icon.js"></script>
-    <!-- Sidebar jquery-->
-    <script src="../assets/js/sidebar-menu.js"></script>
-    <script src="../assets/js/config.js">   </script>
-    <!-- Bootstrap js-->
-    <script src="../assets/js/bootstrap/popper.min.js"></script>
-    <script src="../assets/js/bootstrap/bootstrap.min.js"></script>
-    <!-- Plugins JS start-->
-    <script src="../assets/js/animation/wow/wow.min.js"></script>
-    <!-- Plugins JS Ends-->
-    <!-- Theme js-->
-    <script src="../assets/js/script.js"></script>
-    <!-- login js-->
-    <!-- Plugin used-->
-    <script>
-      wow = new WOW({
-          mobile: false
-      })
-      wow.init();
-    </script>
+    <!-- / Layout wrapper -->
+
+    <!-- Core JS -->
+    <!-- build:js assets/vendor/js/core.js -->
+
+    <script src="../../assets/vendor/libs/jquery/jquery.js"></script>
+    <script src="../../assets/vendor/libs/popper/popper.js"></script>
+    <script src="../../assets/vendor/js/bootstrap.js"></script>
+    <script src="../../assets/vendor/libs/node-waves/node-waves.js"></script>
+    <script src="../../assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.js"></script>
+    <script src="../../assets/vendor/libs/hammer/hammer.js"></script>
+    <script src="../../assets/vendor/libs/i18n/i18n.js"></script>
+    <script src="../../assets/vendor/libs/typeahead-js/typeahead.js"></script>
+    <script src="../../assets/vendor/js/menu.js"></script>
+
+    <!-- endbuild -->
+
+    <!-- Vendors JS -->
+    <script src="../../assets/vendor/libs/apex-charts/apexcharts.js"></script>
+    <script src="../../assets/vendor/libs/swiper/swiper.js"></script>
+    <script src="../../assets/vendor/libs/datatables-bs5/datatables-bootstrap5.js"></script>
+
+    <!-- Main JS -->
+    <script src="../../assets/js/main.js"></script>
+
+    <!-- Page JS -->
+    <script src="../../assets/js/dashboards-analytics.js"></script>
   </body>
 </html>

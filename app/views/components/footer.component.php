@@ -1,15 +1,26 @@
-<footer class="footer">
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col-md-6 footer-copyright">
-            <p class="mb-0">
-                <script>
-                    document.write(new Date().getFullYear())
-                </script> © <?= site_settings("site_name") ?>
-            </p>
+<footer class="content-footer footer bg-footer-theme">
+    <div class="container-xxl">
+        <div
+            class="footer-container d-flex align-items-center justify-content-between py-2 flex-md-row flex-column">
+            <div>
+            ©
+            <script>
+                document.write(new Date().getFullYear());
+            </script>
+            , made with ❤️ by <a href="https://pixinvent.com" target="_blank" class="fw-medium">nDBac</a>
             </div>
-            <div class="col-md-6">
-            <p class="pull-right mb-0">From nDBac with love <i class="fa fa-heart font-secondary"></i></p>
+            <div class="d-none d-lg-inline-block">
+
+            <a
+                href="https://demos.pixinvent.com/vuexy-html-admin-template/documentation/"
+                target="_blank"
+                class="footer-link me-4"
+                >Documentation</a
+            >
+
+            <a href="https://pixinvent.ticksy.com/" target="_blank" class="footer-link d-none d-sm-inline-block"
+                >Support</a
+            >
             </div>
         </div>
     </div>

@@ -1,123 +1,243 @@
 
+<?php if (!defined('APP_VERSION')) die("Yo, what's up?"); ?>
 <!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="description" content="wingo admin is super flexible, powerful, clean &amp; modern responsive bootstrap 4 admin template with unlimited possibilities.">
-        <meta name="keywords" content="admin template, wingo admin template, dashboard template, flat admin template, responsive admin template, web app">
-        <meta name="author" content="pixelstrap">
-        <link rel="icon" href="../assets/images/favicon.png" type="image/x-icon">
-        <link rel="shortcut icon" href="../assets/images/favicon.png" type="image/x-icon">
-        <title><?= __("Dashboard") ?> | <?= site_settings("site_name") . " - " . site_settings("site_slogan") ?></title>
-        <!-- Google font-->
-        <link rel="preconnect" href="https://fonts.gstatic.com">
-        <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&amp;display=swap" rel="stylesheet">
-        <!-- Font Awesome-->
-        <link rel="stylesheet" type="text/css" href="<?= APPURL . "/assets/css/vendors/font-awesome.css?v=" . VERSION ?>">
-        <!-- ico-font-->
-        <link rel="stylesheet" type="text/css" href="<?= APPURL . "/assets/css/vendors/icofont.css?v=" . VERSION ?>">
-        <!-- Themify icon-->
-        <link rel="stylesheet" type="text/css" href="<?= APPURL . "/assets/css/vendors/themify.css?v=" . VERSION ?>">
-        <!-- Flag icon-->
-        <link rel="stylesheet" type="text/css" href="<?= APPURL . "/assets/css/vendors/flag-icon.css?v=" . VERSION ?>">
-        <!-- Feather icon-->
-        <link rel="stylesheet" type="text/css" href="<?= APPURL . "/assets/css/vendors/feather-icon.css?v=" . VERSION ?>">
-        <!-- Plugins css start-->
-        <link rel="stylesheet" type="text/css" href="<?= APPURL . "/assets/css/vendors/animate.css?v=" . VERSION ?>">
-        <link rel="stylesheet" type="text/css" href="<?= APPURL . "/assets/css/vendors/chartist.css?v=" . VERSION ?>">
-        <link rel="stylesheet" type="text/css" href="<?= APPURL . "/assets/css/vendors/prism.css?v=" . VERSION ?>">
-        <!-- Plugins css Ends-->
-        <!-- Bootstrap css-->
-        <link rel="stylesheet" type="text/css" href="<?= APPURL . "/assets/css/vendors/bootstrap.css?v=" . VERSION ?>">
-        <!-- App css-->
-        <link rel="stylesheet" type="text/css" href="<?= APPURL . "/assets/css/style.css?v=" . VERSION ?>">
-        <link id="color" rel="stylesheet" href="<?= APPURL . "assets/css/color-1.css?v=" . VERSION ?>" media="screen">
-        <!-- Responsive css-->
-        <link rel="stylesheet" type="text/css" href="<?= APPURL . "/assets/css/responsive.css?v=" . VERSION ?>">
 
-        <link rel="stylesheet" type="text/css" href="<?= APPURL . "/assets/css/vendors/datatables.css?v=" . VERSION ?>">
+<html lang="en" class="light-style layout-navbar-fixed layout-menu-fixed layout-compact" dir="ltr" data-theme="theme-default" data-assets-path="../../assets/" data-template="vertical-menu-template">
+    <head>
+        <meta charset="utf-8" />
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0" />
+
+            <title>Người dùng | <?= site_settings("site_name") . " - " . site_settings("site_slogan") ?></title>
+
+        <meta name="description" content="" />
+
+        <!-- Favicon -->
+        <link rel="icon" type="image/x-icon" href="../../assets/img/favicon/favicon.ico" />
+
+        <!-- Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&ampdisplay=swap"
+            rel="stylesheet" />
+
+        <!-- Icons -->
+        <link rel="stylesheet" href="<?= APPURL . "/assets/vendor/fonts/fontawesome.css?v=" . VERSION ?>" />
+        <link rel="stylesheet" href="<?= APPURL . "/assets/vendor/fonts/tabler-icons.css?v=" . VERSION ?>" />
+        <link rel="stylesheet" href="<?= APPURL . "/assets/vendor/fonts/flag-icons.css?v=" . VERSION ?>" />
+        <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/themify-icons/0.1.2/css/themify-icons.css"> -->
+
+
+        <!-- Core CSS -->
+        <link rel="stylesheet" href="<?= APPURL . "/assets/vendor/css/rtl/core.css?v=" . VERSION ?>" class="template-customizer-core-css" />
+        <link rel="stylesheet" href="<?= APPURL . "/assets/vendor/css/rtl/theme-default.css?v=" . VERSION ?>" class="template-customizer-theme-css" />
+        <link rel="stylesheet" href="<?= APPURL . "/assets/css/demo.css?v=" . VERSION ?>" />
+
+        <!-- Vendors CSS -->
+        <link rel="stylesheet" href="<?= APPURL . "/assets/vendor/libs/node-waves/node-waves.css?v=" . VERSION ?>" />
+        <link rel="stylesheet" href="<?= APPURL . "/assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.css?v=" . VERSION ?>" />
+        <link rel="stylesheet" href="<?= APPURL . "/assets/vendor/libs/typeahead-js/typeahead.css?v=" . VERSION ?>" />
+        <link rel="stylesheet" href="<?= APPURL . "/assets/vendor/libs/apex-charts/apex-charts.css?v=" . VERSION ?>" />
+        <link rel="stylesheet" href="<?= APPURL . "/assets/vendor/libs/datatables-bs5/datatables.bootstrap5.css?v=" . VERSION ?>" />
+        <link rel="stylesheet" href="<?= APPURL . "/assets/vendor/libs/datatables-responsive-bs5/responsive.bootstrap5.css?v=" . VERSION ?>" />
+        <link rel="stylesheet" href="<?= APPURL . "/assets/vendor/libs/sweetalert2/sweetalert2.css?v=" . VERSION ?>" />
+
+        <link rel="stylesheet" href="<?= APPURL . "/assets/vendor/libs/datatables-responsive-bs5/responsive.bootstrap5.css?v=" . VERSION ?>">
+        <link rel="stylesheet" href="<?= APPURL . "/assets/vendor/libs/datatables-checkboxes-jquery/datatables.checkboxes.css?v=" . VERSION ?>">
+        <link rel="stylesheet" href="<?= APPURL . "/assets/vendor/libs/datatables-buttons-bs5/buttons.bootstrap5.css?v=" . VERSION ?>">
+
+
+        <link rel="stylesheet" href="<?= APPURL . "/assets/vendor/libs/select2/select2.css?v=" . VERSION ?>" />
+        <link rel="stylesheet" href="<?= APPURL . "/assets/vendor/libs/bootstrap-select/bootstrap-select.css?v=" . VERSION ?>" />
+
+        <!-- Page CSS -->
+
+        <link rel="stylesheet" href="<?= APPURL . "/assets/vendor/css/pages/app-logistics-dashboard.css?v=" . VERSION ?>" />
+
+        <!-- Helpers -->
+        <script src="<?= APPURL . "/assets/vendor/js/helpers.js?v=" . VERSION ?>"></script>
+        <!--! Template customizer & Theme config files MUST be included after core stylesheets and helpers.js in the <head> section -->
+        <!--? Template customizer: To hide customizer set displayCustomizer value false in config.js.  -->
+        <script src="<?= APPURL . "/assets/vendor/js/template-customizer.js?v=" . VERSION ?>"></script>
+        <!--? Config:  Mandatory theme config file contain global vars & default theme options, Set your preferred theme option in this file.  -->
+        <script src="<?= APPURL . "/assets/js/config.js?v=" . VERSION ?>"></script>
     </head>
+
     <body>
-        <!-- Loader starts-->
-        <div class="loader-wrapper">
-        <div class="main-loader">
-            <div class="bar-0"></div>
-            <div class="bar-1"></div>
-            <div class="bar-2"></div>
-            <div class="bar-3"></div>
-            <div class="bar-4"></div>
-        </div>
-        <div class="loading">Loading...    </div>
-        </div>
-        <!-- Loader ends-->
-        <!-- page-wrapper Start-->
-        <div class="page-wrapper compact-wrapper" id="pageWrapper">
-        <!-- Page Header Start-->
-        <?php require_once(APPPATH . '/views/components/topbar.component.php'); ?>
-        <!-- Page Header Ends                              -->
-        <!-- Page Body Start-->
-        <div class="page-body-wrapper sidebar-icon">
-            <!-- Page Sidebar Start-->
-            <?php
-            $Nav = new stdClass;
-            $Nav->activeMenu = "dashboard";
-            require_once(APPPATH . '/views/components/navigation.component.php');
-            ?>
-            <!-- Page Sidebar Ends-->
-            <div class="page-body">
-            <?php require_once(APPPATH . '/views/users/fragments/users.fragment.php'); ?>
-            <!-- Container-fluid Ends-->
+        <!-- Layout wrapper -->
+        <div class="layout-wrapper layout-content-navbar">
+            <div class="layout-container">
+            <!-- Menu -->
+
+            <?php require_once(APPPATH . '/views/components/navigation.component.php'); ?>
+            <!-- / Menu -->
+
+            <!-- Layout container -->
+            <div class="layout-page">
+                <!-- Navbar -->
+
+                <?php require_once(APPPATH . '/views/components/topbar.component.php'); ?>
+
+                <!-- / Navbar -->
+
+                <!-- Content wrapper -->
+                <div class="content-wrapper">
+                <!-- Content -->
+
+                <?php require_once(APPPATH . '/views/users/fragments/users.fragment.php'); ?>
+                <!-- / Content -->
+
+                <!-- Footer -->
+                <?php require_once(APPPATH . '/views/components/footer.component.php'); ?>
+                <!-- / Footer -->
+
+                <div class="content-backdrop fade"></div>
+                </div>
+
+                <div id="modal_edit_balance" class="modal fade" tabindex="-1">
+                    <div class="modal-dialog">
+                        <div class="modal-content card">
+                        <div class="modal-header bg-primary text-white border-0">
+                            <h5 class="modal-title text-white">Primary header</h5>
+                            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+                        </div>
+                        <form class="js-ajax-form" action="<?= APPURL . "/users" ?>" method="POST">
+                            <div class="modal-body">
+                            <input type="hidden" name="action" value="change_balance">
+                            <input type="hidden" name="user_id" value="0">
+
+                            <div class="mb-3">
+                                <p class="fw-semibold">Loại</label>
+                                <select class="form-control select" name="type_change" data-search-enabled="false">
+                                    <option value="+">Cộng tiền</option>
+                                    <option value="-">Trừ tiền</option>
+                                </select>
+                            </div>
+
+                            <div class="mb-3">
+                                <p class="fw-semibold">Số tiền</label>
+                                <input class="form-control" name="money" value="" type="number">
+                            </div>
+
+                            <div class="mb-3">
+                                <label class="fw-bold form-label">Reference ID</label>
+                                <input type="text" name="reference_id" value="" class="form-control" placeholder="Nhập Reference ID" required>
+                                <div class="form-text">Đây là mã bill thanh toán của vcb. Hãy nhập chính xác tránh cộng đúp tiền</div>
+                            </div>
+
+                            <div class="mb-3">
+                                <label class="form-check form-check-inline">
+                                <input type="checkbox" class="form-check-input" id="change_deposit" name="change_deposit" value="1">
+                                <span class="form-check-label">Thay đổi luôn tổng nạp</span>
+                                </label>
+                                <div class="form-text">Khi tích thì sẽ tổng tiền nạp sẽ thay đổi theo</div>
+                            </div>
+
+                            </div>
+                            <div class="modal-footer">
+                            <button type="button" class="btn btn-link" data-bs-dismiss="modal">Close</button>
+                            <button type="submit" class="btn btn-primary">Save changes</button>
+                            </div>
+                        </form>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="modal_edit_analytics" class="modal fade" tabindex="-1">
+                    <div class="modal-dialog">
+                        <div class="modal-content card">
+                        <div class="modal-header bg-primary text-white border-0">
+                            <h5 class="modal-title text-white">Cấu hình tương tác</h5>
+                            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+                        </div>
+                        <form class="js-ajax-form" action="<?= APPURL . "/users" ?>" method="POST">
+                            <div class="modal-body">
+                            <input type="hidden" name="action" value="change_analytics">
+
+                            <div class="mb-3">
+                                <label class="form-check form-check-inline">
+                                <input type="checkbox" class="form-check-input" id="has-analytics" name="has-analytics" value="1">
+                                <span class="form-check-label">Cho phép xem thống kê tương tác</span>
+                                </label>
+                            </div>
+
+                            </div>
+                            <div class="modal-footer">
+                            <button type="button" class="btn btn-link" data-bs-dismiss="modal">Close</button>
+                            <button type="button" class="btn btn-primary js-change-analytics" data-table="#users_table" data-url="<?= APPURL . "/users" ?>">Save changes</button>
+                            </div>
+                        </form>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="modal_gen_qr" class="modal fade" tabindex="-1">
+                    <div class="modal-dialog">
+                        <div class="modal-content card">
+                        <div class="modal-header bg-primary text-white border-0">
+                            <h5 class="modal-title text-white">QR Code đăng nhập</h5>
+                            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+                        </div>
+
+                        <div class="modal-body text-center">
+                            <h6 class="fw-semibold" id="title_email">Text in a modal</h6>
+                            <img src="" title="Login By QR Code" />
+                        </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Content wrapper -->
             </div>
-            <!-- footer start-->
-            <?php require_once(APPPATH . '/views/components/footer.component.php'); ?>
-            <!-- tap on top starts-->
-            <div class="tap-top"><i class="icon-control-eject"></i></div>
-            <!-- tap on tap ends-->
+            <!-- / Layout page -->
+            </div>
+
+            <!-- Overlay -->
+            <div class="layout-overlay layout-menu-toggle"></div>
+
+            <!-- Drag Target Area To SlideIn Menu On Small Screens -->
+            <div class="drag-target"></div>
         </div>
-        </div>
-        <!-- latest jquery-->
-        <script src="<?= APPURL . "/assets/js/jquery-3.5.1.min.js?v=" . VERSION ?>"></script>
-        <!-- feather icon js-->
-        <script src="<?= APPURL . "/assets/js/icons/feather-icon/feather.min.js?v=" . VERSION ?>"></script>
-        <script src="<?= APPURL . "/assets/js/icons/feather-icon/feather-icon.js?v=" . VERSION ?>"></script>
-        <!-- Sidebar jquery-->
-        <script src="<?= APPURL . "/assets/js/sidebar-menu.js?v=" . VERSION ?>"></script>
-        <script src="<?= APPURL . "/assets/js/config.js?v=" . VERSION ?>">   </script>
-        <!-- Bootstrap js-->
-        <script src="<?= APPURL . "/assets/js/bootstrap/popper.min.js?v=" . VERSION ?>"></script>
-        <script src="<?= APPURL . "/assets/js/bootstrap/bootstrap.min.js?v=" . VERSION ?>"></script>
-        <!-- Plugins JS start-->
-        <script src="<?= APPURL . "/assets/js/chart/chartjs/chart.min.js?v=" . VERSION ?>"></script>
-        <script src="<?= APPURL . "/assets/js/chart/chartist/chartist.js?v=" . VERSION ?>"></script>
-        <script src="<?= APPURL . "/assets/js/chart/chartist/chartist-plugin-tooltip.js?v=" . VERSION ?>"></script>
-        <script src="<?= APPURL . "/assets/js/chart/morris-chart/raphael.js?v=" . VERSION ?>"></script>
-        <script src="<?= APPURL . "/assets/js/chart/morris-chart/morris.js?v=" . VERSION ?>"> </script>
-        <script src="<?= APPURL . "/assets/js/chart/morris-chart/prettify.min.js?v=" . VERSION ?>"></script>
-        <script src="<?= APPURL . "/assets/js/chart/knob/knob.min.js?v=" . VERSION ?>"></script>
-        <script src="<?= APPURL . "/assets/js/chart/apex-chart/apex-chart.js?v=" . VERSION ?>"></script>
-        <script src="<?= APPURL . "/assets/js/chart/apex-chart/stock-prices.js?v=" . VERSION ?>"></script>
-        <script src="<?= APPURL . "/assets/js/prism/prism.min.js?v=" . VERSION ?>"></script>
-        <script src="<?= APPURL . "/assets/js/clipboard/clipboard.min.js?v=" . VERSION ?>"></script>
-        <script src="<?= APPURL . "/assets/js/counter/jquery.waypoints.min.js?v=" . VERSION ?>"></script>
-        <script src="<?= APPURL . "/assets/js/counter/jquery.counterup.min.js?v=" . VERSION ?>"></script>
-        <script src="<?= APPURL . "/assets/js/counter/counter-custom.js?v=" . VERSION ?>"></script>
-        <script src="<?= APPURL . "/assets/js/custom-card/custom-card.js?v=" . VERSION ?>"></script>
-        <script src="<?= APPURL . "/assets/js/notify/bootstrap-notify.min.js?v=" . VERSION ?>"></script>
-        <script src="<?= APPURL . "/assets/js/dashboard/default.js?v=" . VERSION ?>"></script>
-        <script src="<?= APPURL . "/assets/js/notify/index.js?v=" . VERSION ?>"></script>
-        <script src="<?= APPURL . "/assets/js/greeting.js?v=" . VERSION ?>"></script>
-        <!-- Plugins JS Ends-->
-        <!-- Theme js-->
-        <script src="<?= APPURL . "/assets/js/theme-customizer/customizer.js?v=" . VERSION ?>"></script>
-        <script src="<?= APPURL . "/assets/js/script.js?v=" . VERSION ?>"></script>
-        <!-- datatable js-->
-        <script src="<?= APPURL . "/assets/js/datatable/datatables/jquery.dataTables.min.js?v=" . VERSION ?>"></script>
-        <!-- <script src="<?= APPURL . "/assets/js/datatable/datatables/datatable.custom.js?v=" . VERSION ?>"></script> -->
-        <!-- Plugin used-->
+        <!-- / Layout wrapper -->
+
+        <!-- Core JS -->
+        <!-- build:js assets/vendor/js/core.js -->
+
+        <script src="<?= APPURL . "/assets/vendor/libs/jquery/jquery.js?v=" . VERSION ?>"></script>
+        <script src="<?= APPURL . "/assets/vendor/libs/popper/popper.js?v=" . VERSION ?>"></script>
+        <script src="<?= APPURL . "/assets/vendor/js/bootstrap.js?v=" . VERSION ?>"></script>
+        <script src="<?= APPURL . "/assets/vendor/libs/node-waves/node-waves.js?v=" . VERSION ?>"></script>
+        <script src="<?= APPURL . "/assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.js?v=" . VERSION ?>"></script>
+        <script src="<?= APPURL . "/assets/vendor/libs/hammer/hammer.js?v=" . VERSION ?>"></script>
+        <script src="<?= APPURL . "/assets/vendor/libs/i18n/i18n.js?v=" . VERSION ?>"></script>
+        <script src="<?= APPURL . "/assets/vendor/libs/typeahead-js/typeahead.js?v=" . VERSION ?>"></script>
+        <script src="<?= APPURL . "/assets/vendor/js/menu.js?v=" . VERSION ?>"></script>
+
+        <!-- endbuild -->
+
+        <!-- Vendors JS -->
+        <script src="<?= APPURL . "/assets/vendor/libs/apex-charts/apexcharts.js?v=" . VERSION ?>"></script>
+        <script src="<?= APPURL . "/assets/vendor/libs/datatables-bs5/datatables-bootstrap5.js?v=" . VERSION ?>"></script>
+
+        <script src="<?= APPURL . "/assets/vendor/libs/sweetalert2/sweetalert2.js?v=" . VERSION ?>"></script>
+        <script src="<?= APPURL . "/assets/js/extended-ui-sweetalert2.js?v=" . VERSION ?>"></script>
+
+        <script src="<?= APPURL . "/assets/vendor/libs/datatables-bs5/datatables-bootstrap5.js?v=" . VERSION ?>"></script>
+        <!-- <script src="<?= APPURL . "/assets/js/tables-datatables-basic.js?v=" . VERSION ?>"></script> -->
+
         <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/moment.min.js"></script>
-        <script src="<?= APPURL . "/assets/js/app.js?v=" . VERSION ?>"></script>
+
+        <!-- <script src="<?= APPURL . "/assets/js/forms-selects.js?v=" . VERSION ?>"></script> -->
+        <script src="<?= APPURL . "/assets/vendor/libs/select2/select2.js?v=" . VERSION ?>"></script>
+        <script src="<?= APPURL . "/assets/vendor/libs/bootstrap-select/bootstrap-select.js?v=" . VERSION ?>"></script>
+
+        <!-- Main JS -->
+        <script src="<?= APPURL . "/assets/js/main.js?v=" . VERSION ?>"></script>
+
+        <!-- Page JS -->
+        <script src="<?= APPURL . "/assets/js/app-logistics-dashboard.js?v=" . VERSION ?>"></script>
+
         <script src="<?= APPURL . "/assets/js/custom.js?v=" . VERSION ?>"></script>
         <script src="<?= APPURL . "/assets/js/pages/users.js?v=" . VERSION ?>"></script>
     </body>

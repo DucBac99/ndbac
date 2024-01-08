@@ -1,78 +1,99 @@
-<div class="animate__animated p-6">
-    <div class="panel">
-        <div class="mb-5 flex items-center justify-between">
-            <h5 class="text-lg font-semibold dark:text-white-light"><?= __("SMTP") ?></h5>
+<div class="container-fluid">
+    <div class="page-header dash-breadcrumb">
+        <div class="row">
+        <div class="col-6">
+            <h3 class="f-w-600"><?= __("SMTP") ?></h3>
         </div>
-        <div class="mb-5">
-            <form class="space-y-5 js-ajax-form" id="smtp-form"  action="<?= APPURL . "/settings/" . $page ?>" method="POST">
-            <input type="hidden" name="action" value="save">
-                <div class="grid grid-cols-1 gap-4 sm:col-span-2">
-                    <div>
-                        <label for="gridEmail">SMTP Server</label>
-                        <input id="gridEmail" type="text" name="host" value="<?= htmlchars($AuthSite->get("email_settings.smtp.host")) ?>" class="form-input">
-                        <span>Nếu bạn để trống trường này thì các giá trị trường khác sẽ bị bỏ qua và cấu hình mặc định của máy chủ sẽ được sử dụng.</span>
+        <div class="col-6">
+            <div class="breadcrumb-sec">
+            <ul class="breadcrumb">
+                <li class="breadcrumb-item"><a href="index.html"><i data-feather="home"></i></a></li>
+                <li class="breadcrumb-item">Hệ thống</li>
+                <li class="breadcrumb-item active">Cài đặt</li>
+            </ul>
+            </div>
+        </div>
+        </div>
+    </div>
+    </div>
+    <!-- Container-fluid starts-->
+    <div class="container-fluid default-dash">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="card">
+                    <div class="card-header pb-0">
+                        <h5><?= __("SMTP") ?></h5>
                     </div>
-                </div>
-                <div class="grid grid-cols-1 gap-4 sm:col-span-2">
-                    <div>
-                        <label for="gridEmail">From</label>
-                        <input id="gridEmail" type="text" name="from" value="<?= htmlchars($AuthSite->get("email_settings.smtp.from")) ?>" class="form-input">
-                        <span>Tất cả các email sẽ được gửi từ địa chỉ email này.</span>
-                    </div>
-                </div>
-                <div class="grid grid-cols-1 gap-4 sm:grid-cols-2">
-                    <div>
-                        <label for="gridEmail">Port</label>
-                        <select id="gridState" name="port" class="form-select text-white-dark">
-                            <?php $port = $AuthSite->get("email_settings.smtp.port") ?>
-                            <option value="25" <?= $port == "25" ? "selected" : "" ?>>25</option>
-                            <option value="465" <?= $port == "465" ? "selected" : "" ?>>465</option>
-                            <option value="587" <?= $port == "587" ? "selected" : "" ?>>587</option>
-                        </select>
-                    </div>
-                    <div>
-                        <label for="gridEmail">Encryption</label>
-                        <select id="gridState" name="encryption" class="form-select text-white-dark">
-                            <?php $encryption = $AuthSite->get("email_settings.smtp.encryption") ?>
-                            <option value="">Không</option>
-                            <option value="ssl" <?= $encryption == "ssl" ? "selected" : "" ?>>SSL</option>
-                            <option value="tls" <?= $encryption == "tls" ? "selected" : "" ?>>TLS</option>
-                        </select>
-                    </div>
-                </div>
-                <div class="pb-1">
-                    <div>
-                        <label class="inline-flex">
-                            <input type="checkbox" class="form-checkbox" id="auth" name="auth" value="1" <?= $AuthSite->get("email_settings.smtp.auth") ? "checked" : "" ?> />
-                            <span>SMTP Auth</span>
-                        </label>
-                    </div>
-                </div>
-                <div class="grid grid-cols-1 gap-4 sm:grid-cols-2">
-                    <div>
-                        <label for="gridEmail">Auth. username</label>
-                        <input id="gridEmail" type="text" name="username" value="<?= htmlchars($AuthSite->get("email_settings.smtp.username")) ?>" class="form-input">
-                    </div>
-                    <?php
-                        $password = $AuthSite->get("email_settings.smtp.password");
-                        if ($AuthSite->get("email_settings.smtp.password")) {
-                            try {
-                            $password = \Defuse\Crypto\Crypto::decrypt(
-                                $AuthSite->get("email_settings.smtp.password"),
-                                \Defuse\Crypto\Key::loadFromAsciiSafeString(CRYPTO_KEY)
-                            );
-                            } catch (Exception $e) {
-                            }
-                        }
+                    <hr>
+                    <form class="theme-form mega-form js-ajax-form" action="<?= APPURL . "/settings/" . $page ?>" method="POST">
+                    <input type="hidden" name="action" value="save">
+                        <div class="card-body">
+                            <div class="mb-3">
+                                <label class="col-form-label">SMTP Server</label>
+                                <input class="form-control" type="text" name="host" value="<?= htmlchars($AuthSite->get("email_settings.smtp.host")) ?>" maxlength="200">
+                                <div class="form-text">Nếu bạn để trống trường này thì các giá trị trường khác sẽ bị bỏ qua và cấu hình mặc định của máy chủ sẽ được sử dụng.</div>
+                            </div>
+                            <div class="mb-3">
+                                <label class="col-form-label">From</label>
+                                <input class="form-control" type="text" name="from" value="<?= htmlchars($AuthSite->get("email_settings.smtp.from")) ?>">
+                                <div class="form-text">Tất cả các email sẽ được gửi từ địa chỉ email này.</div>
+                            </div>
+                            <div class="mb-3 row">
+                                <div class="col-6">
+                                    <label class="col-form-label">Port</label>
+                                    <select class="form-control" name="port">
+                                        <?php $port = $AuthSite->get("email_settings.smtp.port") ?>
+                                        <option value="25" <?= $port == "25" ? "selected" : "" ?>>25</option>
+                                        <option value="465" <?= $port == "465" ? "selected" : "" ?>>465</option>
+                                        <option value="587" <?= $port == "587" ? "selected" : "" ?>>587</option>
+                                    </select>
+                                </div>
+                                <div class="col-6">
+                                    <label class="col-form-label">Encryption</label>
+                                    <select class="form-control" name="encryption">
+                                        <?php $encryption = $AuthSite->get("email_settings.smtp.encryption") ?>
+                                        <option value="">Không</option>
+                                        <option value="ssl" <?= $encryption == "ssl" ? "selected" : "" ?>>SSL</option>
+                                        <option value="tls" <?= $encryption == "tls" ? "selected" : "" ?>>TLS</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="mb-3">
+                                <div class="checkbox checkbox-primary">
+                                    <input id="checkbox-primary-1" type="checkbox" name="auth" class="form-check-input" value="1" <?= $AuthSite->get("email_settings.smtp.auth") ? "checked" : "" ?>>
+                                    <label for="checkbox-primary-1">SMTP Auth</label>
+                                </div>
+                            </div>
+                            <div class="mb-3 row">
+                                <div class="col-6">
+                                    <label class="col-form-label">Auth. username</label>
+                                    <input class="form-control" type="text" name="username" value="<?= htmlchars($AuthSite->get("email_settings.smtp.username")) ?>">
+                                </div>
+                                <?php
+                                    $password = $AuthSite->get("email_settings.smtp.password");
+                                    if ($AuthSite->get("email_settings.smtp.password")) {
+                                        try {
+                                        $password = \Defuse\Crypto\Crypto::decrypt(
+                                            $AuthSite->get("email_settings.smtp.password"),
+                                            \Defuse\Crypto\Key::loadFromAsciiSafeString(CRYPTO_KEY)
+                                        );
+                                        } catch (Exception $e) {
+                                        }
+                                    }
 
-                    ?>
-                    <div>
-                        <label for="gridEmail">Auth. password</label>
-                        <input id="gridEmail" type="text" name="password" value="<?= $password ?>" class="form-input">
-                    </div>
+                                ?>
+                                <div class="col-6">
+                                    <label class="col-form-label">Auth. password</label>
+                                    <input class="form-control" type="text" name="password" value="<?= $password ?>">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-footer pt-0">
+                            <button type="submit" class="btn btn-primary">Lưu thay đổi</button>
+                        </div>
+                    </form>
                 </div>
-                <button type="submit" class="btn btn-primary !mt-6">Lưu thay đổi</button>
-            </form>
+            </div>
         </div>
     </div>
 </div>
