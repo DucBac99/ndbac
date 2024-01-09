@@ -1,111 +1,295 @@
 
+<?php if (!defined('APP_VERSION')) die("Yo, what's up?"); ?>
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+
+<html lang="en" class="light-style layout-navbar-fixed layout-menu-fixed layout-compact" dir="ltr" data-theme="theme-default" data-assets-path="../../assets/" data-template="vertical-menu-template">
     <head>
         <meta charset="utf-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <title>Dịch vụ | <?= site_settings("site_name") . " - " . site_settings("site_slogan") ?></title>
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="icon" type="image/x-icon" href="favicon.png" />
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0" />
+
+            <title>Dịch vụ | <?= site_settings("site_name") . " - " . site_settings("site_slogan") ?></title>
+
+        <meta name="description" content="" />
+
+        <!-- Favicon -->
+        <link rel="icon" type="image/x-icon" href="../../assets/img/favicon/favicon.ico" />
+
+        <!-- Fonts -->
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-        <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
-        <link rel="stylesheet" type="text/css" media="screen" href="<?= APPURL . "/assets/css/perfect-scrollbar.min.css?v=" . VERSION ?>" />
-        <link rel="stylesheet" type="text/css" media="screen" href="<?= APPURL . "/assets/css/style.css?v=" . VERSION ?>" />
-        <link defer rel="stylesheet" type="text/css" media="screen" href="<?= APPURL . "/assets/css/animate.css?v=" . VERSION ?>" />
-        <script src="<?= APPURL . "/assets/js/perfect-scrollbar.min.js?v=" . VERSION ?>"></script>
-        <script defer src="<?= APPURL . "/assets/js/popper.min.js?v=" . VERSION ?>"></script>
-        <script defer src="<?= APPURL . "/assets/js/tippy-bundle.umd.min.js?v=" . VERSION ?>"></script>
-        <script defer src="<?= APPURL . "/assets/js/sweetalert.min.js?v=" . VERSION ?>"></script>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&ampdisplay=swap"
+            rel="stylesheet" />
+
+        <!-- Icons -->
+        <link rel="stylesheet" href="<?= APPURL . "/assets/vendor/fonts/fontawesome.css?v=" . VERSION ?>" />
+        <link rel="stylesheet" href="<?= APPURL . "/assets/vendor/fonts/tabler-icons.css?v=" . VERSION ?>" />
+        <link rel="stylesheet" href="<?= APPURL . "/assets/vendor/fonts/flag-icons.css?v=" . VERSION ?>" />
+        <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/themify-icons/0.1.2/css/themify-icons.css"> -->
+
+
+        <!-- Core CSS -->
+        <link rel="stylesheet" href="<?= APPURL . "/assets/vendor/css/rtl/core.css?v=" . VERSION ?>" class="template-customizer-core-css" />
+        <link rel="stylesheet" href="<?= APPURL . "/assets/vendor/css/rtl/theme-default.css?v=" . VERSION ?>" class="template-customizer-theme-css" />
+        <link rel="stylesheet" href="<?= APPURL . "/assets/css/demo.css?v=" . VERSION ?>" />
+
+        <!-- Vendors CSS -->
+        <link rel="stylesheet" href="<?= APPURL . "/assets/vendor/libs/node-waves/node-waves.css?v=" . VERSION ?>" />
+        <link rel="stylesheet" href="<?= APPURL . "/assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.css?v=" . VERSION ?>" />
+        <link rel="stylesheet" href="<?= APPURL . "/assets/vendor/libs/typeahead-js/typeahead.css?v=" . VERSION ?>" />
+        <link rel="stylesheet" href="<?= APPURL . "/assets/vendor/libs/apex-charts/apex-charts.css?v=" . VERSION ?>" />
+        <link rel="stylesheet" href="<?= APPURL . "/assets/vendor/libs/datatables-bs5/datatables.bootstrap5.css?v=" . VERSION ?>" />
+        <link rel="stylesheet" href="<?= APPURL . "/assets/vendor/libs/datatables-responsive-bs5/responsive.bootstrap5.css?v=" . VERSION ?>" />
+        <link rel="stylesheet" href="<?= APPURL . "/assets/vendor/libs/sweetalert2/sweetalert2.css?v=" . VERSION ?>" />
+
+        <link rel="stylesheet" href="<?= APPURL . "/assets/vendor/libs/datatables-responsive-bs5/responsive.bootstrap5.css?v=" . VERSION ?>">
+        <link rel="stylesheet" href="<?= APPURL . "/assets/vendor/libs/datatables-checkboxes-jquery/datatables.checkboxes.css?v=" . VERSION ?>">
+        <link rel="stylesheet" href="<?= APPURL . "/assets/vendor/libs/datatables-buttons-bs5/buttons.bootstrap5.css?v=" . VERSION ?>">
+
+
+        <link rel="stylesheet" href="<?= APPURL . "/assets/vendor/libs/select2/select2.css?v=" . VERSION ?>" />
+        <link rel="stylesheet" href="<?= APPURL . "/assets/vendor/libs/bootstrap-select/bootstrap-select.css?v=" . VERSION ?>" />
+
+        <!-- Page CSS -->
+
+        <link rel="stylesheet" href="<?= APPURL . "/assets/vendor/css/pages/app-logistics-dashboard.css?v=" . VERSION ?>" />
+
+        <!-- Helpers -->
+        <script src="<?= APPURL . "/assets/vendor/js/helpers.js?v=" . VERSION ?>"></script>
+        <!--! Template customizer & Theme config files MUST be included after core stylesheets and helpers.js in the <head> section -->
+        <!--? Template customizer: To hide customizer set displayCustomizer value false in config.js.  -->
+        <script src="<?= APPURL . "/assets/vendor/js/template-customizer.js?v=" . VERSION ?>"></script>
+        <!--? Config:  Mandatory theme config file contain global vars & default theme options, Set your preferred theme option in this file.  -->
+        <script src="<?= APPURL . "/assets/js/config.js?v=" . VERSION ?>"></script>
     </head>
 
-    <body
-        x-data="main"
-        class="relative overflow-x-hidden font-nunito text-sm font-normal antialiased"
-        :class="[ $store.app.sidebar ? 'toggle-sidebar' : '', $store.app.theme === 'dark' || $store.app.isDarkMode ?  'dark' : '', $store.app.menu, $store.app.layout,$store.app.rtlClass]"
-    >
-        <!-- sidebar menu overlay -->
-        <div x-cloak class="fixed inset-0 z-50 bg-[black]/60 lg:hidden" :class="{'hidden' : !$store.app.sidebar}" @click="$store.app.toggleSidebar()"></div>
+    <body>
+        <!-- Layout wrapper -->
+        <div class="layout-wrapper layout-content-navbar">
+            <div class="layout-container">
+            <!-- Menu -->
 
-        <!-- screen loader -->
-        <div class="screen_loader animate__animated fixed inset-0 z-[60] grid place-content-center bg-[#fafafa] dark:bg-[#060818]">
-            <svg width="64" height="64" viewBox="0 0 135 135" xmlns="http://www.w3.org/2000/svg" fill="#4361ee">
-                <path
-                    d="M67.447 58c5.523 0 10-4.477 10-10s-4.477-10-10-10-10 4.477-10 10 4.477 10 10 10zm9.448 9.447c0 5.523 4.477 10 10 10 5.522 0 10-4.477 10-10s-4.478-10-10-10c-5.523 0-10 4.477-10 10zm-9.448 9.448c-5.523 0-10 4.477-10 10 0 5.522 4.477 10 10 10s10-4.478 10-10c0-5.523-4.477-10-10-10zM58 67.447c0-5.523-4.477-10-10-10s-10 4.477-10 10 4.477 10 10 10 10-4.477 10-10z"
-                >
-                    <animateTransform attributeName="transform" type="rotate" from="0 67 67" to="-360 67 67" dur="2.5s" repeatCount="indefinite" />
-                </path>
-                <path
-                    d="M28.19 40.31c6.627 0 12-5.374 12-12 0-6.628-5.373-12-12-12-6.628 0-12 5.372-12 12 0 6.626 5.372 12 12 12zm30.72-19.825c4.686 4.687 12.284 4.687 16.97 0 4.686-4.686 4.686-12.284 0-16.97-4.686-4.687-12.284-4.687-16.97 0-4.687 4.686-4.687 12.284 0 16.97zm35.74 7.705c0 6.627 5.37 12 12 12 6.626 0 12-5.373 12-12 0-6.628-5.374-12-12-12-6.63 0-12 5.372-12 12zm19.822 30.72c-4.686 4.686-4.686 12.284 0 16.97 4.687 4.686 12.285 4.686 16.97 0 4.687-4.686 4.687-12.284 0-16.97-4.685-4.687-12.283-4.687-16.97 0zm-7.704 35.74c-6.627 0-12 5.37-12 12 0 6.626 5.373 12 12 12s12-5.374 12-12c0-6.63-5.373-12-12-12zm-30.72 19.822c-4.686-4.686-12.284-4.686-16.97 0-4.686 4.687-4.686 12.285 0 16.97 4.686 4.687 12.284 4.687 16.97 0 4.687-4.685 4.687-12.283 0-16.97zm-35.74-7.704c0-6.627-5.372-12-12-12-6.626 0-12 5.373-12 12s5.374 12 12 12c6.628 0 12-5.373 12-12zm-19.823-30.72c4.687-4.686 4.687-12.284 0-16.97-4.686-4.686-12.284-4.686-16.97 0-4.687 4.686-4.687 12.284 0 16.97 4.686 4.687 12.284 4.687 16.97 0z"
-                >
-                    <animateTransform attributeName="transform" type="rotate" from="0 67 67" to="360 67 67" dur="8s" repeatCount="indefinite" />
-                </path>
-            </svg>
-        </div>
-
-        <!-- scroll to top button -->
-        <div class="fixed bottom-6 z-50 ltr:right-6 rtl:left-6" x-data="scrollToTop">
-            <template x-if="showTopButton">
-                <button
-                    type="button"
-                    class="btn btn-outline-primary animate-pulse rounded-full bg-[#fafafa] p-2 dark:bg-[#060818] dark:hover:bg-primary"
-                    @click="goToTop"
-                >
-                    <svg width="24" height="24" class="h-4 w-4" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path
-                            opacity="0.5"
-                            fill-rule="evenodd"
-                            clip-rule="evenodd"
-                            d="M12 20.75C12.4142 20.75 12.75 20.4142 12.75 20L12.75 10.75L11.25 10.75L11.25 20C11.25 20.4142 11.5858 20.75 12 20.75Z"
-                            fill="currentColor"
-                        />
-                        <path
-                            d="M6.00002 10.75C5.69667 10.75 5.4232 10.5673 5.30711 10.287C5.19103 10.0068 5.25519 9.68417 5.46969 9.46967L11.4697 3.46967C11.6103 3.32902 11.8011 3.25 12 3.25C12.1989 3.25 12.3897 3.32902 12.5304 3.46967L18.5304 9.46967C18.7449 9.68417 18.809 10.0068 18.6929 10.287C18.5768 10.5673 18.3034 10.75 18 10.75L6.00002 10.75Z"
-                            fill="currentColor"
-                        />
-                    </svg>
-                </button>
-            </template>
-        </div>
-
-        <!-- start theme customizer section -->
-        <?php require_once(APPPATH . '/views/components/configurator.component.php'); ?>
-        <!-- end theme customizer section -->
-
-        <div class="main-container min-h-screen text-black dark:text-white-dark" :class="[$store.app.navbar]">
-            <!-- start sidebar section -->
             <?php require_once(APPPATH . '/views/components/navigation.component.php'); ?>
-            <!-- end sidebar section -->
+            <!-- / Menu -->
 
-            <div class="main-content flex flex-col min-h-screen">
-                <!-- start header section -->
+            <!-- Layout container -->
+            <div class="layout-page">
+                <!-- Navbar -->
+
                 <?php require_once(APPPATH . '/views/components/topbar.component.php'); ?>
-                <!-- end header section -->
+
+                <!-- / Navbar -->
+
+                <!-- Content wrapper -->
+                <div class="content-wrapper">
+                <!-- Content -->
 
                 <?php require_once(APPPATH . '/views/services/fragments/services.fragment.php'); ?>
+                <!-- / Content -->
 
-                <!-- start footer section -->
-                <?php require_once(APPPATH . '/views/components/footer.component.php') ?>
-                <!-- end footer section -->
+                <!-- Footer -->
+                <?php require_once(APPPATH . '/views/components/footer.component.php'); ?>
+                <!-- / Footer -->
+
+                <div class="content-backdrop fade"></div>
+                </div>
+                <!-- Content wrapper -->
             </div>
+            <!-- / Layout page -->
+            </div>
+
+            <!-- Overlay -->
+            <div class="layout-overlay layout-menu-toggle"></div>
+
+            <!-- Drag Target Area To SlideIn Menu On Small Screens -->
+            <div class="drag-target"></div>
         </div>
+        <!-- / Layout wrapper -->
 
-        <script src="<?= APPURL . "/assets/libs/jquery/jquery.min.js?v=" . VERSION ?>"></script>
+        <!-- Core JS -->
+        <!-- build:js assets/vendor/js/core.js -->
 
-        <!-- Required datatable js -->
-        <script src="<?= APPURL . "/assets/libs/datatables.net/js/jquery.dataTables.min.js?v=" . VERSION ?>"></script>
-        <script src="<?= APPURL . "/assets/libs/datatables.net-bs4/js/dataTables.bootstrap4.min.js?v=" . VERSION ?>"></script>
+        <script src="<?= APPURL . "/assets/vendor/libs/jquery/jquery.js?v=" . VERSION ?>"></script>
+        <script src="<?= APPURL . "/assets/vendor/libs/popper/popper.js?v=" . VERSION ?>"></script>
+        <script src="<?= APPURL . "/assets/vendor/js/bootstrap.js?v=" . VERSION ?>"></script>
+        <script src="<?= APPURL . "/assets/vendor/libs/node-waves/node-waves.js?v=" . VERSION ?>"></script>
+        <script src="<?= APPURL . "/assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.js?v=" . VERSION ?>"></script>
+        <script src="<?= APPURL . "/assets/vendor/libs/hammer/hammer.js?v=" . VERSION ?>"></script>
+        <script src="<?= APPURL . "/assets/vendor/libs/i18n/i18n.js?v=" . VERSION ?>"></script>
+        <script src="<?= APPURL . "/assets/vendor/libs/typeahead-js/typeahead.js?v=" . VERSION ?>"></script>
+        <script src="<?= APPURL . "/assets/vendor/js/menu.js?v=" . VERSION ?>"></script>
 
-        <script src="<?= APPURL . "/assets/js/alpine-collaspe.min.js?v=" . VERSION ?>"></script>
-        <script src="<?= APPURL . "/assets/js/alpine-persist.min.js?v=" . VERSION ?>"></script>
-        <script defer src="<?= APPURL . "/assets/js/alpine-ui.min.js?v=" . VERSION ?>"></script>
-        <script defer src="<?= APPURL . "/assets/js/alpine-focus.min.js?v=" . VERSION ?>"></script>
-        <script defer src="<?= APPURL . "/assets/js/alpine.min.js?v=" . VERSION ?>"></script>
+        <!-- endbuild -->
+
+        <!-- Vendors JS -->
+        <script src="<?= APPURL . "/assets/vendor/libs/apex-charts/apexcharts.js?v=" . VERSION ?>"></script>
+        <script src="<?= APPURL . "/assets/vendor/libs/datatables-bs5/datatables-bootstrap5.js?v=" . VERSION ?>"></script>
+
+        <script src="<?= APPURL . "/assets/vendor/libs/sweetalert2/sweetalert2.js?v=" . VERSION ?>"></script>
+        <script src="<?= APPURL . "/assets/js/extended-ui-sweetalert2.js?v=" . VERSION ?>"></script>
+
+        <script src="<?= APPURL . "/assets/vendor/libs/datatables-bs5/datatables-bootstrap5.js?v=" . VERSION ?>"></script>
+        <!-- <script src="<?= APPURL . "/assets/js/tables-datatables-basic.js?v=" . VERSION ?>"></script> -->
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/moment.min.js"></script>
+
+        <!-- <script src="<?= APPURL . "/assets/js/forms-selects.js?v=" . VERSION ?>"></script> -->
+        <script src="<?= APPURL . "/assets/vendor/libs/select2/select2.js?v=" . VERSION ?>"></script>
+        <script src="<?= APPURL . "/assets/vendor/libs/bootstrap-select/bootstrap-select.js?v=" . VERSION ?>"></script>
+
+        <!-- Main JS -->
+        <script src="<?= APPURL . "/assets/js/main.js?v=" . VERSION ?>"></script>
+
+        <!-- Page JS -->
+        <script src="<?= APPURL . "/assets/js/app-logistics-dashboard.js?v=" . VERSION ?>"></script>
+
         <script src="<?= APPURL . "/assets/js/custom.js?v=" . VERSION ?>"></script>
-        <script defer src="<?= APPURL . "/assets/js/apexcharts.js?v=" . VERSION ?>"></script>
 
-        <script src="<?= APPURL . "/assets/js/pages/base.js?v=" . VERSION ?>"></script>
-        <script src="<?= APPURL . "/assets/js/pages/services.js?v=" . VERSION ?>"></script>
-        <script src="<?= APPURL . "/assets/js/pages/custom.js?v=" . VERSION ?>"></script>
+        <script type="text/javascript">
+            $(function() {
+                $table = $("#services_table");
+                $card = $table.parent(".card:first");
+                table_data = $table.on("preXhr.dt", function(t, a, e) {
+                    addLoading($table);
+                }).DataTable({
+                    responsive: true,
+                    processing: true,
+                    serverSide: true,
+                    ajax: {
+                    url: $table.data("url"),
+                    data: function(d) {
+                        d.search = d.search.value;
+                        d.order = {
+                        column: d.columns[d.order[0].column].data,
+                        dir: d.order[0].dir
+                        }
+                        delete d.columns;
+                    },
+                    dataFilter: function(d) {
+                        var json = JSON.parse(d);
+                        var data = {};
+                        if (json.result) {
+                            for (const i in json.data) {
+                                json.data[i].DT_RowAttr = {
+                                "data-id": json.data[i].id,
+                                }
+                                json.data[i].id = parseInt(json.data[i].id);
+                                json.data[i].warranty = parseInt(json.data[i].warranty);
+                                json.data[i].is_public = json.data[i].is_public == "1";
+                                json.data[i].is_maintaince = json.data[i].is_maintaince == "1";
+                            }
+                            data.data = json.data;
+                            data.recordsTotal = 5000000;
+                            data.recordsFiltered = 5000000;
+                        } else {
+                            data.data = [];
+                            data.recordsTotal = 0;
+                            data.recordsFiltered = 0;
+                            Swal.fire({
+                                title: "Oops...",
+                                text: "Oops! Đã xảy ra lỗi. Vui lòng thử lại sau!!",
+                                icon: "error",
+                                customClass: {
+                                    confirmButton: "btn btn-primary waves-effect waves-light"
+                                },
+                                buttonsStyling: !1
+                            });
+                        }
+                        return JSON.stringify(data);
+                    }
+                    },
+                    order: [
+                        [1, "desc"]
+                    ],
+                    oLanguage: {
+                        sInfo: "",
+                    },
+                    pagingType: "simple",
+                    pageLength: 20,
+                    lengthMenu: [
+                        [20, 30, 40, 50],
+                        [20, 30, 40, 50]
+                    ],
+                    columnDefs: [{
+                        orderable: false,
+                        data: "id",
+                        render: function(t, a, e) {
+                            return `  <label class="form-check">
+                                                    <input class="form-check-input" type="checkbox" name="customCheck" id="data_id_${e.id}" value="${e.id}">
+                                                    <span class="form-check-label">&nbsp;</span>
+                                                </label>`
+                        },
+                    }, {
+                    data: "id",
+                        render: function(t, a, e) {
+                            return `#${e.id}`
+                        },
+                    }, {
+                        data: "title",
+                    }, {
+                        data: "title_extra",
+                    }, {
+                        data: "group",
+                    }, {
+                        data: "warranty",
+                        render: function(t, a, e) {
+                            return `${t} ngày`;
+                        },
+                    }, {
+                        data: "is_public",
+                        render: function(t, a, e) {
+                            if (t) {
+                            return `<span class="font-size-12 badge bg-success rounded-pill">Hiện thị</span>`;
+                            }
+                            return `<span class="font-size-12 badge bg-danger rounded-pill">Ẩn</span>`;
+                        },
+                    }, {
+                        data: "is_maintaince",
+                        render: function(t, a, e) {
+                            if (t) {
+                            return `<span class="font-size-12 badge bg-danger bg-opacity-10 text-danger">Bảo trì</span>`;
+                            }
+                            return `<span class="font-size-12 badge bg-success bg-opacity-10 text-success">Hoạt động</span>`;
+                        },
+                    }, {
+                        orderable: false,
+                        data: "id",
+                        render: function(t, a, e) {
+                            return `<div class="d-flex gap-2">
+                                        <div class="price">
+                                            <a href="${$table.data("url")}/${t}/price" class="btn btn-sm waves-effect waves-light btn-outline-warning btn-icon"  data-bs-popup="tooltip" title="Giá"><i class="font-size-16 align-middle ti ti-coin"></i></a>
+                                        </div>
+                                        <div class="edit">
+                                            <a href="${$table.data("url")}/${t}" class="btn btn-sm waves-effect waves-light btn-outline-primary btn-icon edit-item-btn" data-bs-popup="tooltip" title="Sửa"><i class="font-size-16 align-middle ti ti-edit"></i></a>
+                                        </div>
+                                        <div class="remove">
+                                            <button class="btn btn-sm waves-effect waves-light btn-outline-danger js-remove-item btn-icon" data-table="#services_table" data-url="${$table.data("url")}" data-id="${t}" data-bs-popup="tooltip" title="Xoá"><i class="font-size-16 align-middle ti ti-trash"></i></button>
+                                        </div>
+                                    </div>`;
+                        },
+                    }].map((item, index) => {
+                        item.targets = index;
+                        return item;
+                    }),
+                    drawCallback: function() {
+                        Sub99.initToolTips();
+                        if (table_data.data().length == 0) {
+                            $(".next").addClass("disabled");
+                        }
+                        removeLoading($table);
+                    },
+                    initComplete: function(a, e) {
+                        $("#users_table_filter input").unbind(), $("#users_table_filter input").bind(
+                            "keyup",
+                            function(a) {
+                                13 == a.keyCode && table_data.search(this.value).draw()
+                            })
+                    }
+                })
+            })
+        </script>
+
     </body>
 </html>

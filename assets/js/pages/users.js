@@ -42,6 +42,7 @@ $("body").on("click", ".btn-gen-qr", function () {
             });
         },
         success: function (resp) {
+            console.log("11111");
             removeLoading(card);
             if (resp.result == 1) {
                 console.log(resp);

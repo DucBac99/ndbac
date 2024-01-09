@@ -97,50 +97,45 @@
                 </div>
 
                 <div id="modal_edit_balance" class="modal fade" tabindex="-1">
-                    <div class="modal-dialog">
-                        <div class="modal-content card">
-                        <div class="modal-header bg-primary text-white border-0">
-                            <h5 class="modal-title text-white">Primary header</h5>
-                            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
-                        </div>
-                        <form class="js-ajax-form" action="<?= APPURL . "/users" ?>" method="POST">
-                            <div class="modal-body">
-                            <input type="hidden" name="action" value="change_balance">
-                            <input type="hidden" name="user_id" value="0">
-
-                            <div class="mb-3">
-                                <p class="fw-semibold">Loại</label>
-                                <select class="form-control select" name="type_change" data-search-enabled="false">
-                                    <option value="+">Cộng tiền</option>
-                                    <option value="-">Trừ tiền</option>
-                                </select>
+                    <div class="modal-dialog modal-dialog-centered" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="modalCenterTitle">Modal title</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                             </div>
-
-                            <div class="mb-3">
-                                <p class="fw-semibold">Số tiền</label>
-                                <input class="form-control" name="money" value="" type="number">
-                            </div>
-
-                            <div class="mb-3">
-                                <label class="fw-bold form-label">Reference ID</label>
-                                <input type="text" name="reference_id" value="" class="form-control" placeholder="Nhập Reference ID" required>
-                                <div class="form-text">Đây là mã bill thanh toán của vcb. Hãy nhập chính xác tránh cộng đúp tiền</div>
-                            </div>
-
-                            <div class="mb-3">
-                                <label class="form-check form-check-inline">
-                                <input type="checkbox" class="form-check-input" id="change_deposit" name="change_deposit" value="1">
-                                <span class="form-check-label">Thay đổi luôn tổng nạp</span>
-                                </label>
-                                <div class="form-text">Khi tích thì sẽ tổng tiền nạp sẽ thay đổi theo</div>
-                            </div>
-
-                            </div>
-                            <div class="modal-footer">
-                            <button type="button" class="btn btn-link" data-bs-dismiss="modal">Close</button>
-                            <button type="submit" class="btn btn-primary">Save changes</button>
-                            </div>
-                        </form>
+                            <form class="js-ajax-form" action="<?= APPURL . "/users" ?>" method="POST">
+                                <div class="modal-body">
+                                    <input type="hidden" name="action" value="change_balance">
+                                    <input type="hidden" name="user_id" value="0">
+                                    <div class="row mb-3">
+                                        <label for="nameWithTitle" class="form-label">Loại</label>
+                                        <select class="form-control select" name="type_change" data-search-enabled="false">
+                                            <option value="+">Cộng tiền</option>
+                                            <option value="-">Trừ tiền</option>
+                                        </select>
+                                    </div>
+                                    <div class="row mb-3">
+                                        <label for="emailWithTitle" class="form-label">Số tiền</label>
+                                        <input type="number" name="money" class="form-control">
+                                    </div>
+                                    <div class="row mb-3">
+                                        <label for="dobWithTitle" class="form-label">Reference ID</label>
+                                        <input type="text" name="reference_id" value="" class="form-control" placeholder="Nhập Reference ID" required>
+                                        <div class="form-text">Đây là mã bill thanh toán của vcb. Hãy nhập chính xác tránh cộng đúp tiền</div>
+                                    </div>
+                                    <div class="row mb-3">
+                                        <div class="form-check mt-3">
+                                            <input class="form-check-input" type="checkbox" value="1" name="change_deposit" id="change_deposit" wfd-id="id11">
+                                            <label class="form-check-label" for="defaultCheck1">Thay đổi luôn tổng nạp</label>
+                                        </div>
+                                        <div class="form-text">Khi tích thì sẽ tổng tiền nạp sẽ thay đổi theo</div>
+                                    </div>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-label-secondary waves-effect" data-bs-dismiss="modal">Close</button>
+                                    <button type="button" class="btn btn-primary waves-effect waves-light">Save changes</button>
+                                </div>
+                            </form>
                         </div>
                     </div>
                 </div>
@@ -174,17 +169,16 @@
                 </div>
 
                 <div id="modal_gen_qr" class="modal fade" tabindex="-1">
-                    <div class="modal-dialog">
-                        <div class="modal-content card">
-                        <div class="modal-header bg-primary text-white border-0">
-                            <h5 class="modal-title text-white">QR Code đăng nhập</h5>
-                            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
-                        </div>
-
-                        <div class="modal-body text-center">
-                            <h6 class="fw-semibold" id="title_email">Text in a modal</h6>
-                            <img src="" title="Login By QR Code" />
-                        </div>
+                    <div class="modal-dialog modal-dialog-centered" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="modalCenterTitle">QR Code đăng nhập</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body text-center">
+                                <h6 class="fw-semibold" id="title_email">Text in a modal</h6>
+                                <img src="" title="Login By QR Code" />
+                            </div>
                         </div>
                     </div>
                 </div>

@@ -268,7 +268,7 @@ Sub99.AjaxForms = function () {
         .not(":disabled")
         .each(function () {
             if (!$(this).val()) {
-            submitable = false;
+                submitable = false;
             }
         });
 
@@ -314,7 +314,6 @@ Sub99.AjaxForms = function () {
                         },
                         buttonsStyling: !1
                     })
-                    // Swal.fire("Success", resp.msg, "success");
                     if (reset) {
                         $form[0].reset();
                     }
