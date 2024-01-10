@@ -347,7 +347,7 @@ Sub99.AjaxForms = function () {
                             confirmButton: "btn btn-primary waves-effect waves-light"
                         },
                         buttonsStyling: !1
-                    })
+                    });
                     break;
                 }
                 removeLoading($card);
@@ -444,14 +444,17 @@ Sub99.RemoveListItem = function () {
         }
 
         Swal.fire({
-        title: "Bạn có chắc không?",
-        text: "Xoá rồi không thể lấy lại dữ liệu!",
-        icon: "warning",
-        showCancelButton: !0,
-        confirmButtonColor: "#34c38f",
-        cancelButtonColor: "#f46a6a",
-        confirmButtonText: "Có, Xoá",
-        cancelButtonText: "Huỷ",
+            title: "Bạn có chắc không?",
+            text: "Xoá rồi không thể lấy lại dữ liệu!",
+            icon: "warning",
+            showCancelButton: !0,
+            confirmButtonText: "Có, Xoá",
+            cancelButtonText: "Huỷ",
+            customClass: {
+                confirmButton: "btn btn-primary me-3 waves-effect waves-light",
+                cancelButton: "btn btn-label-secondary waves-effect waves-light"
+            },
+            buttonsStyling: !1
         }).then(function (t) {
         if (t.value) {
             addLoading(card);
@@ -465,11 +468,15 @@ Sub99.RemoveListItem = function () {
             },
             error: function () {
                 removeLoading(card);
-                Swal.fire(
-                "Oops...",
-                "Oops! Đã xảy ra lỗi. Vui lòng thử lại sau!",
-                "error"
-                );
+                Swal.fire({
+                    title: "Error",
+                    text: "Oops! Đã xảy ra lỗi. Vui lòng thử lại sau!",
+                    icon: "error",
+                    customClass: {
+                        confirmButton: "btn btn-primary waves-effect waves-light"
+                    },
+                    buttonsStyling: !1
+                });
             },
             success: function (resp) {
                 removeLoading(card);
@@ -482,7 +489,15 @@ Sub99.RemoveListItem = function () {
                     });
                 });
                 } else {
-                Swal.fire("Oops...", resp.msg, "error");
+                    Swal.fire({
+                        title: "Error",
+                        text: resp.msg,
+                        icon: "error",
+                        customClass: {
+                            confirmButton: "btn btn-primary waves-effect waves-light"
+                        },
+                        buttonsStyling: !1
+                    });
                 }
             },
             });
@@ -499,52 +514,71 @@ Sub99.RemoveItem = function () {
         var card = $(this).parents("block-mode-loading-refresh");
 
         Swal.fire({
-        title: "Bạn có chắc không?",
-        text: "Xoá rồi không thể lấy lại dữ liệu!",
-        icon: "warning",
-        showCancelButton: !0,
-        confirmButtonColor: "#34c38f",
-        cancelButtonColor: "#f46a6a",
-        confirmButtonText: "Có, Xoá",
-        cancelButtonText: "Huỷ",
-        }).then(function (t) {
-        if (t.value) {
-            addLoading(card);
-            $.ajax({
-            url: url,
-            type: "POST",
-            dataType: "jsonp",
-            data: {
-                action: "remove",
-                id: id,
+            title: "Bạn có chắc không?",
+            text: "Xoá rồi không thể lấy lại dữ liệu!",
+            icon: "warning",
+            showCancelButton: !0,
+            confirmButtonText: "Có, Xoá",
+            cancelButtonText: "Huỷ",
+            customClass: {
+                confirmButton: "btn btn-primary me-3 waves-effect waves-light",
+                cancelButton: "btn btn-label-secondary waves-effect waves-light"
             },
-            error: function () {
-                removeLoading(card);
-                Swal.fire(
-                "Error",
-                "Oops! Đã xảy ra lỗi. Vui lòng thử lại sau!!",
-                "error"
-                );
-            },
-            success: function (resp) {
-                removeLoading(card);
-                if (resp.result == 1) {
-                Swal.fire("Success", resp.msg, "success");
-                var item = $(table + " tr[data-id='" + id + "']");
-                item.fadeOut(500, function () {
-                    item.remove();
-                });
+            buttonsStyling: !1
+            }).then(function (t) {
+            if (t.value) {
+                addLoading(card);
+                $.ajax({
+                url: url,
+                type: "POST",
+                dataType: "jsonp",
+                data: {
+                    action: "remove",
+                    id: id,
+                },
+                error: function () {
+                    removeLoading(card);
+                    Swal.fire(
+                    "Error",
+                    "Oops! Đã xảy ra lỗi. Vui lòng thử lại sau!!",
+                    "error"
+                    );
+                },
+                success: function (resp) {
+                    removeLoading(card);
+                    if (resp.result == 1) {
+                        Swal.fire({
+                            title: "Success",
+                            text: resp.msg,
+                            icon: "success",
+                            customClass: {
+                                confirmButton: "btn btn-primary waves-effect waves-light"
+                            },
+                            buttonsStyling: !1
+                        });
+                        var item = $(table + " tr[data-id='" + id + "']");
+                        item.fadeOut(500, function () {
+                            item.remove();
+                        });
 
-                var item = $("#postid-" + id);
-                item.fadeOut(500, function () {
-                    item.remove();
+                        var item = $("#postid-" + id);
+                        item.fadeOut(500, function () {
+                            item.remove();
+                        });
+                    } else {
+                        Swal.fire({
+                            title: "Error",
+                            text: resp.msg,
+                            icon: "error",
+                            customClass: {
+                                confirmButton: "btn btn-primary waves-effect waves-light"
+                            },
+                            buttonsStyling: !1
+                        });
+                    }
+                },
                 });
-                } else {
-                Swal.fire("Error", resp.msg, "error");
-                }
-            },
-            });
-        }
+            }
         });
     });
 };

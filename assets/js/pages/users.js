@@ -194,32 +194,32 @@ $(function () {
                     data: "id",
                     render: function (t, a, e) {
                         return `<div class="d-flex gap-2">
-                                <div class="edit">
-                                    <a href="${$table.data(
-                                        "url"
-                                    )}/${t}" class="btn btn-icon btn-sm waves-effect waves-light btn-outline-primary edit-item-btn"  data-bs-popup="tooltip" title="Sửa"><i class="ti ti-edit font-size-16 align-middle "></i></a>
-                                </div>
-                                <div class="statistic">
-                                    <a href="${$table.data(
-                                        "url"
-                                    )}/${t}/statistic" class="btn btn-icon btn-sm waves-effect waves-light btn-outline-success"  data-bs-popup="tooltip" title="Thống kê"><i class="ti ti-chart-bar font-size-16 align-middle "></i></a>
-                                </div>
-                                <div class="balance">
-                                    <button data-url="${$table.data(
-                                        "url"
-                                    )}" data-id="${t}" class="btn btn-icon btn-sm waves-effect waves-light btn-outline-warning btn-edit-balance" data-bs-popup="tooltip" title="Thay đổi số dư"><i class="ti ti-coins font-size-16 align-middle "></i></button>
-                                </div>
-                                <div class="login">
-                                    <button data-url="${$table.data(
-                                        "url"
-                                    )}" data-id="${t}" class="btn btn-icon btn-sm waves-effect waves-light btn-outline-secondary btn-gen-qr" data-bs-popup="tooltip" title="Tạo code đăng nhập"><i class="ti ti-qrcode font-size-16 align-middle "></i></button>
-                                </div>
-                                <div class="remove">
-                                    <button class="btn btn-icon btn-sm waves-effect waves-light btn-outline-danger js-remove-item" data-table="#users_table" data-url="${$table.data(
-                                        "url"
-                                    )}" data-id="${t}" data-bs-popup="tooltip" title="Xoá"><i class="ti ti-trash font-size-16 align-middle "></i></button>
-                                </div>
-                            </div>`;
+                                    <div class="edit">
+                                        <a href="${$table.data(
+                                            "url"
+                                        )}/${t}" class="btn btn-icon btn-sm waves-effect waves-light btn-outline-primary edit-item-btn"  data-bs-popup="tooltip" title="Sửa"><i class="ti ti-edit font-size-16 align-middle "></i></a>
+                                    </div>
+                                    <div class="statistic">
+                                        <a href="${$table.data(
+                                            "url"
+                                        )}/${t}/statistic" class="btn btn-icon btn-sm waves-effect waves-light btn-outline-success"  data-bs-popup="tooltip" title="Thống kê"><i class="ti ti-chart-bar font-size-16 align-middle "></i></a>
+                                    </div>
+                                    <div class="balance">
+                                        <button data-url="${$table.data(
+                                            "url"
+                                        )}" data-id="${t}" class="btn btn-icon btn-sm waves-effect waves-light btn-outline-warning btn-edit-balance" data-bs-popup="tooltip" title="Thay đổi số dư"><i class="ti ti-coins font-size-16 align-middle "></i></button>
+                                    </div>
+                                    <div class="login">
+                                        <button data-url="${$table.data(
+                                            "url"
+                                        )}" data-id="${t}" class="btn btn-icon btn-sm waves-effect waves-light btn-outline-secondary btn-gen-qr" data-bs-popup="tooltip" title="Tạo code đăng nhập"><i class="ti ti-qrcode font-size-16 align-middle "></i></button>
+                                    </div>
+                                    <div class="remove">
+                                        <button class="btn btn-icon btn-sm waves-effect waves-light btn-outline-danger js-remove-item" data-table="#users_table" data-url="${$table.data(
+                                            "url"
+                                        )}" data-id="${t}" data-bs-popup="tooltip" title="Xoá"><i class="ti ti-trash font-size-16 align-middle "></i></button>
+                                    </div>
+                                </div>`;
                     },
                 },
             ].map((item, index) => {

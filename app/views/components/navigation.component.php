@@ -286,7 +286,7 @@
                                 </a>
                             </li>
                             <li class="menu-item">
-                                <a href="<?= APPURL . "/proxy/vitechcheap" ?>app-user-view-security.html" class="menu-link">
+                                <a href="<?= APPURL . "/proxy/vitechcheap" ?>" class="menu-link">
                                     <div data-i18n="VitechCheap">VitechCheap</div>
                                 </a>
                             </li>
