@@ -1,71 +1,134 @@
-<div class="animate__animated p-6">
-    <div class="grid grid-cols-1 gap-6 pt-5 lg:grid-cols-2">
-        <div class="panel">
-            <div class="mb-5 flex items-center justify-between">
-                <h5 class="text-lg font-semibold dark:text-white-light">Thông tin chuyển khoản</h5>
-            </div>
-            <div class="mb-5">
-                <form class="space-y-5">
-                    <div class="flex flex-col sm:flex-row">
-                        <label for="horizontalEmail" class="mb-0 rtl:ml-2 sm:w-1/4 sm:ltr:mr-2">Số tài khoản</label>
-                        <input id="horizontalEmail" type="text" placeholder="" class="form-input flex-1" disabled="disabled" value="<?= $AuthSite->get("banking.info.account_number") ?>">
-                    </div>
-                    <div class="flex flex-col sm:flex-row">
-                        <label for="horizontalPassword" class="mb-0 rtl:ml-2 sm:w-1/4 sm:ltr:mr-2">Ngân hàng</label>
-                        <input type="text" placeholder="" disabled="disabled" class="form-input flex-1" value="<?= $AuthSite->get("banking.info.bank") ?>">
-                    </div>
-                    <div class="flex flex-col sm:flex-row">
-                        <label for="horizontalEmail" class="mb-0 rtl:ml-2 sm:w-1/4 sm:ltr:mr-2">Chủ tài khoản</label>
-                        <input id="horizontalEmail" type="text" placeholder="" class="form-input flex-1" disabled="disabled" value="<?= $AuthSite->get("banking.info.account_name") ?>">
-                    </div>
-                    <div class="flex flex-col sm:flex-row">
-                        <label for="horizontalPassword" class="mb-0 rtl:ml-2 sm:w-1/4 sm:ltr:mr-2">Chi Nhánh</label>
-                        <input type="text" placeholder="" disabled="disabled" class="form-input flex-1" value="<?= $AuthSite->get("banking.info.branch") ?>">
-                    </div>
-                    <div class="flex flex-col sm:flex-row">
-                        <label for="horizontalEmail" class="mb-0 rtl:ml-2 sm:w-1/4 sm:ltr:mr-2">Nội dung chuyển khoản</label>
-                        <input id="horizontalEmail" type="text" placeholder="" class="form-input flex-1" disabled="disabled" value="<?= $AuthSite->get("banking.info.content") ?>">
-                    </div>
-                    <div class="flex flex-col sm:flex-row">
-                        <label for="horizontalPassword" class="mb-0 rtl:ml-2 sm:w-1/4 sm:ltr:mr-2">Nhập số tiền</label>
-                        <input type="text" placeholder="Nhập vào số tiền để tạo QR code" class="form-input flex-1">
-                    </div>
-                </form>
-            </div>
-        </div>
+<div class="container-xxl flex-grow-1 container-p-y">
+    <h4 class="py-3 mb-4"><span class="text-muted fw-light">Nạp tiền</h4>
 
-        <div class="panel">
-            <div class="mb-5 flex items-center justify-between">
-                <h5 class="text-lg font-semibold dark:text-white-light">Mã QR chuyển khoản</h5>
-            </div>
-            <div class="flex flex-col sm:flex-row items-center justify-center">
-                <img src="https://img.vietqr.io/image/<?= $AuthSite->get("banking.auth.bank_code") ?>-<?= $AuthSite->get("banking.info.account_number") ?>-<?= $AuthSite->get("banking.auth.template") ?>.png?amount=0&accountName=<?= $AuthSite->get("banking.info.account_name") ?>&addInfo=<?= $AuthSite->get("banking.info.content") . " " . $AuthUser->get("id") ?>" alt="image" class="h-full w-full object-cover" id="qr_code" style="width: 400px;">
-            </div>
-        </div>
+    <!-- Card Border Shadow -->
+    <div class="row justify-content-center mb-4">
+        <div class="col-xl-6 col-md-12">
+            <div class="card mb-xl-0">
+                <div class="card-body">
+                    <div class="p-2">
+                    <h5 class="font-size-16">Thông tin chuyển khoản</h5>
 
-        <div class="panel lg:col-span-2 bg-warning-light text-black">
-            <h5 class="mb-2 text-lg font-semibold dark:text-white-light">Lưu ý</h5>
-            <div class="w-full rounded-md">
-                <ul class="space-y-3 font-semibold">
-                    <li>
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="inline h-4 w-4 text-primary ltr:mr-2 rtl:ml-2 rtl:rotate-180">
-                            <path d="M4 12H20M20 12L14 6M20 12L14 18" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-                        </svg>
-                        <span class="list-text">Quý khách ghi đúng thông tin nạp tiền thì tài khoản sẽ được cộng tự động sau khi giao dịch thành công.</span>
-                    </li>
-                    <li>
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="inline h-4 w-4 text-primary ltr:mr-2 rtl:ml-2 rtl:rotate-180">
-                            <path d="M4 12H20M20 12L14 6M20 12L14 18" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-                        </svg>
-                        <span class="list-text">Quý khách nhập sai nội dung chuyển khoản sẽ không được hoàn tiền</span>
-                    </li>
-                    <li>
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="inline h-4 w-4 text-primary ltr:mr-2 rtl:ml-2 rtl:rotate-180">
-                            <path d="M4 12H20M20 12L14 6M20 12L14 18" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-                        </svg>
-                        <span class="list-text">Vui lòng nạp tối thiểu 100.000đ, dưới tối thiểu sẽ không hỗ trợ giải quyết</span>
-                    </li>
-                </ul>
+                    <div>
+                        <div class="col-10 mb-4 offset-1">
+                        <div class="form-group row mb-0">
+                            <label class="col-md-3 col-form-label form-control-label">Số tài khoản</label>
+                            <div class="col-md-9">
+                            <div class="form-group">
+                                <div class="">
+                                <input type="text" placeholder="" disabled="disabled" class="form-control" value="<?= $AuthSite->get("banking.info.account_number") ?>">
+                                </div>
+                            </div>
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+
+                    <div>
+                        <div class="col-10 mb-4 offset-1">
+                        <div class="form-group row mb-0">
+                            <label class="col-md-3 col-form-label form-control-label">Ngân hàng</label>
+                            <div class="col-md-9">
+                            <div class="form-group">
+                                <div class="">
+                                <input type="text" placeholder="" disabled="disabled" class="form-control" value="<?= $AuthSite->get("banking.info.bank") ?>">
+                                </div>
+                            </div>
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+
+                    <div>
+                        <div class="col-10 mb-4 offset-1">
+                        <div class="form-group row mb-0">
+                            <label class="col-md-3 col-form-label form-control-label">Chủ tài khoản</label>
+                            <div class="col-md-9">
+                            <div class="form-group">
+                                <div class="">
+                                <input type="text" placeholder="" disabled="disabled" type="text" placeholder="" class="form-control" value="<?= $AuthSite->get("banking.info.account_name") ?>">
+                                </div>
+                            </div>
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+
+                    <div>
+                        <div class="col-10 mb-4 offset-1">
+                        <div class="form-group row mb-0">
+                            <label class="col-md-3 col-form-label form-control-label">Chi Nhánh</label>
+                            <div class="col-md-9">
+                            <div class="form-group">
+                                <div class="">
+                                <input type="text" placeholder="Chi nhánh" disabled="disabled" value="<?= $AuthSite->get("banking.info.branch") ?>" class="form-control">
+                                </div>
+                            </div>
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+
+                    <div>
+                        <div class="col-10 mb-4 offset-1">
+                        <div class="form-group row mb-0">
+                            <label class="col-md-3 col-form-label form-control-label">Nội dung chuyển
+                            khoản</label>
+                            <div class="col-md-9">
+                            <div class="form-group">
+                                <div class="">
+                                <input type="text" placeholder="" disabled="disabled" type="text" placeholder="" class="form-control" value="<?= $AuthSite->get("banking.info.content") ?> <?= $AuthUser->get("id") ?>">
+                                </div>
+                            </div>
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+
+                    <div>
+                        <div class="col-10 mb-4 offset-1">
+                        <div class="form-group row mb-0">
+                            <label class="col-md-3 col-form-label form-control-label">Nhập số tiền</label>
+                            <div class="col-md-9">
+                            <div class="form-group">
+                                <div class="">
+                                <input type="text" class="form-control" id="money" placeholder="Nhập vào số tiền để tạo QR code">
+                                </div>
+                            </div>
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+            <!-- end card body -->
+            </div>
+            <!-- end card -->
+        </div>
+        <!-- end col -->
+
+        <div class="col-xl-6 col-md-12">
+            <div class="card mb-xl-0">
+                <div class="card-body">
+                    <div class="p-2">
+                        <img class="rounded mx-auto d-block" id="qr_code" src="https://img.vietqr.io/image/<?= $AuthSite->get("banking.auth.bank_code") ?>-<?= $AuthSite->get("banking.info.account_number") ?>-<?= $AuthSite->get("banking.auth.template") ?>.png?amount=0&accountName=<?= $AuthSite->get("banking.info.account_name") ?>&addInfo=<?= $AuthSite->get("banking.info.content") . " " . $AuthUser->get("id") ?>" style="width: 400px;">
+                    </div>
+                </div>
+            <!-- end card body -->
+            </div>
+            <!-- end card -->
+        </div>
+        <!-- end col -->
+    </div>
+
+    <div class="row justify-content-center">
+        <div class="col-12">
+            <div class="alert alert-danger" role="alert">
+                <h4 class="alert-heading">Lưu ý!</h4>
+                <p> - Quý khách ghi đúng thông tin nạp tiền thì tài khoản sẽ được cộng tự động sau khi giao dịch
+                    thành công.</p>
+                <p> - Quý khách nhập sai nội dung chuyển khoản sẽ không được hoàn tiền </p>
+                <p> - Vui lòng nạp tối thiểu 100.000đ, dưới tối thiểu sẽ không hỗ trợ giải quyết </p>
             </div>
         </div>
     </div>

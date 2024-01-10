@@ -61,6 +61,12 @@
             </a>
         </li>
         <li class="menu-item">
+            <a href="<?= APPURL . "/topup" ?>" class="menu-link">
+            <i class="menu-icon tf-icons ti ti-cash"></i>
+            <div data-i18n="Nạp tiền">Nạp tiền</div>
+            </a>
+        </li>
+        <li class="menu-item">
             <a href="<?= APPURL . "/payment-history" ?>" class="menu-link">
             <i class="menu-icon tf-icons ti ti-credit-card"></i>
             <div data-i18n="Lịch sử nạp tiền">Lịch sử nạp tiền</div>

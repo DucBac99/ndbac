@@ -187,10 +187,18 @@
                     data.recordsTotal = 5000000;
                     data.recordsFiltered = 5000000;
                     } else {
-                    data.data = [];
-                    data.recordsTotal = 0;
-                    data.recordsFiltered = 0;
-                    Swal.fire('Oops...', json.msg, 'error')
+                        data.data = [];
+                        data.recordsTotal = 0;
+                        data.recordsFiltered = 0;
+                        Swal.fire({
+                            title: "Oops...",
+                            text:  resp.msg,
+                            icon: "error",
+                            customClass: {
+                                confirmButton: "btn btn-primary waves-effect waves-light"
+                            },
+                            buttonsStyling: !1
+                        });
                     }
                     return JSON.stringify(data);
                 }
@@ -210,6 +218,7 @@
                 columnDefs: [{
                 data: "id",
                 render: function(t, a, e) {
+                    console.log(e.firstname);
                     return ` <p class="font-w600 mb-1">
                             #${t} - <a href="javascript:void(0)">${e.firstname} ${e.lastname}</a> - ${e.email}
                             </p>
