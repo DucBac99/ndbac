@@ -12,7 +12,7 @@
                 <input type="hidden" name="action" value="save">
                 <div class="row">
                     <div class="mb-3 col-md-12">
-                        <label for="firstName" class="form-label">Danh sách key / proxy <span id="count_list">( 0 )</span></label>
+                        <label for="firstName" class="form-label fw-semibold">Danh sách key / proxy <span id="count_list">( 0 )</span></label>
                         <textarea type="text" name="list" rows="20" class="form-control input-count" data-target="#count_list" required><?= $list ?></textarea>
                     </div>
                 </div>

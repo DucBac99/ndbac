@@ -12,11 +12,11 @@
                 <input type="hidden" name="action" value="save">
                 <div class="row">
                     <div class="mb-3 col-md-12">
-                        <label for="firstName" class="form-label">Tên</label>
+                        <label for="firstName" class="form-label fw-semibold">Tên</label>
                         <input type="text" name="idname" value="<?= $Theme->get("idname") ?>" class="form-control" required>
                     </div>
                     <div class="mb-3 col-md-12">
-                        <label for="lastName" class="form-label">Thumb</label>
+                        <label for="lastName" class="form-label fw-semibold">Thumb</label>
                         <div class="input-group">
                             <input class="form-control thumb" name="thumb" type="text" value="<?= $Theme->get("thumb") ?>" maxlength="100">
                             <button type="button" class="btn btn-success waves-effect waves-light btn-ckfinder" data-target=".thumb"><i class="ti ti-photo-edit"></i></button>

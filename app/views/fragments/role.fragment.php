@@ -12,19 +12,19 @@
                 <input type="hidden" name="action" value="save">
                 <div class="row">
                     <div class="mb-3 col-md-6">
-                        <label for="firstName" class="form-label">ID name (*)</label>
+                        <label for="firstName" class="form-label fw-semibold">ID name (*)</label>
                         <input type="text" name="idname" value="<?= $Role->get("idname") ?>" class="form-control" required>
                     </div>
                     <div class="mb-3 col-md-6">
-                        <label for="lastName" class="form-label">Tiêu đề (*)</label>
+                        <label for="lastName" class="form-label fw-semibold">Tiêu đề (*)</label>
                         <input type="text" name="title" value="<?= $Role->get("title") ?>" class="form-control" required>
                     </div>
                     <div class="mb-3 col-md-6">
-                        <label for="firstName" class="form-label">Điều kiện nạp</label>
+                        <label for="firstName" class="form-label fw-semibold">Điều kiện nạp</label>
                         <input type="number" name="amount" value="<?= $Role->get("amount") ?>" class="form-control" required>
                     </div>
                     <div class="mb-3 col-md-6">
-                        <label for="lastName" class="form-label">Màu sắc (*)</label>
+                        <label for="lastName" class="form-label fw-semibold">Màu sắc (*)</label>
                         <select name="color" class="form-select" required>
                             <option value="primary" <?= $Role->get("color") == "primary" ? "selected" : "" ?>>Primary</option>
                             <option value="secondary" <?= $Role->get("color") == "secondary" ? "selected" : "" ?>>Secondary</option>

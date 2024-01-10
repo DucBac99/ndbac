@@ -12,7 +12,7 @@
                 <input type="hidden" name="action" value="save">
                 <div class="row">
                     <div class="mb-3 col-md-6">
-                        <label for="firstName" class="form-label">Loại tài khoản</label>
+                        <label for="firstName" class="form-label fw-semibold">Loại tài khoản</label>
                         <select class="form-control" name="account-type" <?= $User->get("id") == $AuthUser->get("id") ? "disabled" : "" ?>>
                             <?php foreach ($Roles->getDataAs("Role") as $role) : ?>
                             <option value="<?= $role->get("id") ?>" <?= $User->get("role_id") == $role->get("id") ? "selected" : "" ?>>
@@ -22,7 +22,7 @@
                         </select>
                     </div>
                     <div class="mb-3 col-md-6">
-                        <label for="lastName" class="form-label">Tình trạng</label>
+                        <label for="lastName" class="form-label fw-semibold">Tình trạng</label>
                         <select class="form-control" name="status" <?= $User->get("id") == $AuthUser->get("id") ? "disabled" : "" ?>>
                             <?php
                                 if ($User->isAvailable()) {
@@ -36,26 +36,26 @@
                         </select>
                     </div>
                     <div class="mb-3 col-md-6">
-                        <label for="firstName" class="form-label">Tên đầu</label>
+                        <label for="firstName" class="form-label fw-semibold">Tên đầu</label>
                         <input class="form-control" type="text" id="firstName" name="firstname" value="<?= $AuthUser->get("firstname") ?>" autofocus="">
                     </div>
                     <div class="mb-3 col-md-6">
-                        <label for="lastName" class="form-label">Tên cuối</label>
+                        <label for="lastName" class="form-label fw-semibold">Tên cuối</label>
                         <input class="form-control" type="text" name="lastname" id="lastName" value="<?= $AuthUser->get("lastname") ?>">
                     </div>
                     <div class="mb-3 col-md-12">
-                        <label for="email" class="form-label">E-mail</label>
+                        <label for="email" class="form-label fw-semibold">E-mail</label>
                         <input class="form-control" type="text" id="email" name="email" value="<?= $AuthUser->get("email") ?>" disabled>
                     </div>
                     <div class="mb-3 col-md-6">
-                        <label for="organization" class="form-label">Mật khẩu mới</label>
+                        <label for="organization" class="form-label fw-semibold">Mật khẩu mới</label>
                         <input type="text" class="form-control" id="organization" name="password">
                         <p class="form-text text-muted">
                             Nếu bạn không muốn thay đổi mật khẩu thì hãy để trống các trường mật khẩu này!
                         </p>
                     </div>
                     <div class="mb-3 col-md-6">
-                        <label for="address" class="form-label">Mật khẩu xác nhận</label>
+                        <label for="address" class="form-label fw-semibold">Mật khẩu xác nhận</label>
                         <input type="text" class="form-control" name="password-confirm">
                     </div>
                     <div class="mb-3 col-md-6">

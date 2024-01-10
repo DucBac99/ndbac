@@ -13,29 +13,29 @@
                         <input type="hidden" name="action" value="save">
                         <div class="row">
                             <div class="mb-3 col-md-12">
-                                <label for="firstName" class="form-label">Tiêu đề gốc</label>
+                                <label for="firstName" class="form-label fw-semibold">Tiêu đề gốc</label>
                                 <input type="text" name="title" value="<?= $Service->get("title") ?>" class="form-control">
                             </div>
                             <?php if ($Service->isAvailable()) : ?>
                                 <div class="mb-3 col-md-12">
-                                    <label for="firstName" class="form-label">Tiêu đề khác</label>
+                                    <label for="firstName" class="form-label fw-semibold">Tiêu đề khác</label>
                                     <input type="text" name="title_extra" value="<?= $Service->get("title_extra") ?>" class="form-control">
                                 </div>
                             <?php endif ?>
                             <div class="mb-3 col-md-6">
-                                <label for="lastName" class="form-label">Số ngày bảo hành</label>
+                                <label for="lastName" class="form-label fw-semibold">Số ngày bảo hành</label>
                                 <input type="number" name="warranty" value="<?= $Service->get("warranty") ?>" class="form-control">
                             </div>
                             <div class="mb-3 col-md-6">
-                                <label for="firstName" class="form-label">Icon</label>
+                                <label for="firstName" class="form-label fw-semibold">Icon</label>
                                 <input class="form-control" type="text" id="icon" name="icon" value="<?= $Service->get("icon") ?>" autofocus="">
                             </div>
                             <div class="mb-3 col-md-6">
-                                <label for="lastName" class="form-label">ID Name</label>
+                                <label for="lastName" class="form-label fw-semibold">ID Name</label>
                                 <input class="form-control" type="text" name="idname" id="idname" value="<?= $Service->get("idname") ?>">
                             </div>
                             <div class="mb-3 col-md-6">
-                                <label for="organization" class="form-label">Group</label>
+                                <label for="organization" class="form-label fw-semibold">Group</label>
                                 <select name="group" class="form-select" required>
                                     <option value="facebook" <?= $Service->get("group") == "facebook" ? "selected" : "" ?>>Facebook</option>
                                     <option value="youtube" <?= $Service->get("group") == "youtube" ? "selected" : "" ?>>Youtube</option>
@@ -43,11 +43,11 @@
                                 </select>
                             </div>
                             <div class="mb-3 col-md-6">
-                                <label for="address" class="form-label">Tốc độ</label>
+                                <label for="address" class="form-label fw-semibold">Tốc độ</label>
                                 <input type="text" class="form-control" name="speed" value="<?= $Service->get("speed") ?>">
                             </div>
                             <div class="mb-3 col-md-6">
-                                <label for="address" class="form-label">Max hold</label>
+                                <label for="address" class="form-label fw-semibold">Max hold</label>
                                 <input type="text" class="form-control" name="max_hold" value="<?= $Service->get("max_hold") ?>">
                             </div>
                             <div class="mb-3 col-md-12">

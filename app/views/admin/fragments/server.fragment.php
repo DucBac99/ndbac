@@ -12,19 +12,19 @@
                 <input type="hidden" name="action" value="save">
                 <div class="row">
                     <div class="mb-3 col-md-6">
-                        <label for="firstName" class="form-label">Tên</label>
+                        <label for="firstName" class="form-label fw-semibold">Tên</label>
                         <input type="text" name="name" value="<?= $Server->get("name") ?>" class="form-control" required>
                     </div>
                     <div class="mb-3 col-md-6">
-                        <label for="lastName" class="form-label">API URL</label>
+                        <label for="lastName" class="form-label fw-semibold">API URL</label>
                         <input type="text" name="api_url" value="<?= $Server->get("api_url") ?>" class="form-control" required>
                     </div>
                     <div class="mb-3 col-md-6">
-                        <label for="firstName" class="form-label">API KEY</label>
+                        <label for="firstName" class="form-label fw-semibold">API KEY</label>
                         <input class="form-control" type="text" id="api_key" name="api_key" value="<?= $Server->get("api_key") ?>" autofocus="" required>
                     </div>
                     <div class="mb-3 col-md-6">
-                        <label for="lastName" class="form-label">API USER ID</label>
+                        <label for="lastName" class="form-label fw-semibold">API USER ID</label>
                         <input type="text" name="api_user_id" value="<?= $Server->get("api_user_id") ?>" class="form-control" required>
                     </div>
                     <div class="mb-3 col-md-12">

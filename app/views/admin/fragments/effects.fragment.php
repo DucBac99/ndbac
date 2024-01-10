@@ -12,7 +12,7 @@
                 <input type="hidden" name="action" value="save">
                 <div class="row">
                     <div class="mb-3 col-md-6">
-                        <label for="firstName" class="form-label">Hiệu ứng</label>
+                        <label for="firstName" class="form-label fw-semibold">Hiệu ứng</label>
                         <select class="form-control form-select" name="effect_name" required>
                             <option value="" disabled selected>Chọn hiệu ứng</option>
                             <?php require_once(APPPATH . "/inc/effects.inc.php") ?>

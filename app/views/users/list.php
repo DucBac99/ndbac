@@ -108,18 +108,18 @@
                                     <input type="hidden" name="action" value="change_balance">
                                     <input type="hidden" name="user_id" value="0">
                                     <div class="row mb-3">
-                                        <label for="nameWithTitle" class="form-label">Loại</label>
+                                        <label for="nameWithTitle" class="form-label fw-semibold">Loại</label>
                                         <select class="form-control select" name="type_change" data-search-enabled="false">
                                             <option value="+">Cộng tiền</option>
                                             <option value="-">Trừ tiền</option>
                                         </select>
                                     </div>
                                     <div class="row mb-3">
-                                        <label for="emailWithTitle" class="form-label">Số tiền</label>
+                                        <label for="emailWithTitle" class="form-label fw-semibold">Số tiền</label>
                                         <input type="number" name="money" class="form-control">
                                     </div>
                                     <div class="row mb-3">
-                                        <label for="dobWithTitle" class="form-label">Reference ID</label>
+                                        <label for="dobWithTitle" class="form-label fw-semibold">Reference ID</label>
                                         <input type="text" name="reference_id" value="" class="form-control" placeholder="Nhập Reference ID" required>
                                         <div class="form-text">Đây là mã bill thanh toán của vcb. Hãy nhập chính xác tránh cộng đúp tiền</div>
                                     </div>

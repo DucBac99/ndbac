@@ -12,19 +12,19 @@
                 <input type="hidden" name="action" value="save">
                 <div class="row">
                     <div class="mb-3 col-md-6">
-                        <label for="firstName" class="form-label">Domain</label>
+                        <label for="firstName" class="form-label fw-semibold">Domain</label>
                         <input type="text" name="domain" value="<?= $Site->get("domain") ?>" class="form-control" required>
                     </div>
                     <div class="mb-3 col-md-6">
-                        <label for="lastName" class="form-label"><?= __("Site name") ?></label>
+                        <label for="lastName" class="form-label fw-semibold"><?= __("Site name") ?></label>
                         <input class="form-control" name="name" type="text" value="<?= htmlchars($Site->get("settings.site_name")) ?>" placeholder="<?= __("Enter site name here") ?>" maxlength="100">
                     </div>
                     <div class="mb-3 col-md-6">
-                        <label for="firstName" class="form-label"><?= __("Site slogan") ?></label>
+                        <label for="firstName" class="form-label fw-semibold"><?= __("Site slogan") ?></label>
                         <input class="form-control" name="slogan" type="text" value="<?= htmlchars($Site->get("settings.site_slogan")) ?>" placeholder="<?= __("Enter site slogan here") ?>" maxlength="100">
                     </div>
                     <div class="mb-3 col-md-6">
-                        <label for="lastName" class="form-label"><?= __("Site theme") ?></label>
+                        <label for="lastName" class="form-label fw-semibold"><?= __("Site theme") ?></label>
                         <select class="form-control select" name="theme" data-search-enabled="false" required>
                             <option value="" disabled selected>Chọn giao diện</option>
                             <?php foreach ($Themes->getDataAs("Theme") as $theme) : ?>
@@ -33,18 +33,18 @@
                         </select>
                     </div>
                     <div class="mb-3 col-md-12">
-                        <label for="email" class="form-label"><?= __("Site description") ?></label>
+                        <label for="email" class="form-label fw-semibold"><?= __("Site description") ?></label>
                         <textarea class="form-control" name="description" maxlength="255" rows="3"><?= htmlchars($Site->get("settings.site_description")) ?></textarea>
                         <ul class="field-tips">
                             <li>Độ dài khuyến nghị của mô tả là 150-160 ký tự</li>
                         </ul>
                     </div>
                     <div class="mb-3 col-md-12">
-                        <label for="organization" class="form-label"><?= __("Keywords") ?></label>
+                        <label for="organization" class="form-label fw-semibold"><?= __("Keywords") ?></label>
                         <textarea class="form-control" name="keywords" maxlength="500" rows="3"><?= htmlchars($Site->get("settings.site_keywords")) ?></textarea>
                     </div>
                     <div class="mb-3 col-md-12">
-                        <label for="address" class="form-label">Tình trạng</label>
+                        <label for="address" class="form-label fw-semibold">Tình trạng</label>
                         <select class="form-control" name="status">
                             <option value="1" <?= $Site->get("is_active") == 1 ? "selected" : "" ?>>Hoạt động</option>
                             <option value="0" <?= $Site->get("is_active") == 0 ? "selected" : "" ?>>Ngừng hoạt động</option>
