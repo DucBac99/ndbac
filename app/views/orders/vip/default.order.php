@@ -36,6 +36,12 @@
                             </div>
                             <div class="col-lg-12">
                                 <div class="mb-3">
+                                    <label class="fw-bold form-label">Số tháng</label>
+                                    <input type="number" name="month" min="1" class="form-control input-number" placeholder="Nhập số tháng cần tăng" required>
+                                </div>
+                            </div>
+                            <div class="col-lg-12">
+                                <div class="mb-3">
                                     <label class="fw-bold form-label">Server</label>
                                     <?php $index = 0;
                                     foreach ($Servers as $sv) : ?>
@@ -60,43 +66,6 @@
                                     <div class="form-text">Sẽ có giá khác nhau cho mỗi cấp tài khoản, cũng như trên từng server. <a href="<?= APPURL . "/pricing-details" ?>" target="_blank">Xem thêm tại đây</a></div>
                                 </div>
                             </div>
-
-                            <div class="col-lg-12">
-                                <div class="mb-3">
-                                    <label class="fw-bold form-label">Loại tương tác</label>
-                                    <div>
-                                        <div class="form-check form-check-inline mb-3 me-1">
-                                            <input type="checkbox" class="form-check-input input-checkbox" id="like" hidden name="reaction_type[]" value="LIKE">
-                                            <label class="form-check-label" for="like"><img class="opacity-25" style="cursor: pointer;" src="<?= APPURL . "/assets/img/reactions/like.svg" ?>" width="45px" /></label>
-                                        </div>
-                                        <div class="form-check form-check-inline mb-3 me-1">
-                                            <input type="checkbox" class="form-check-input input-checkbox" id="love" hidden name="reaction_type[]" value="LOVE">
-                                            <label class="form-check-label" for="love"><img class="opacity-25" style="cursor: pointer;" src="<?= APPURL . "/assets/img/reactions/love.svg" ?>" width="45px" /></label>
-                                        </div>
-                                        <div class="form-check form-check-inline mb-3 me-1">
-                                            <input type="checkbox" class="form-check-input input-checkbox" id="care" hidden name="reaction_type[]" value="CARE">
-                                            <label class="form-check-label" for="care"><img class="opacity-25" style="cursor: pointer;" src="<?= APPURL . "/assets/img/reactions/care.svg" ?>" width="45px" /></label>
-                                        </div>
-                                        <div class="form-check form-check-inline mb-3 me-1">
-                                            <input type="checkbox" class="form-check-input input-checkbox" id="haha" hidden name="reaction_type[]" value="HAHA">
-                                            <label class="form-check-label" for="haha"><img class="opacity-25" style="cursor: pointer;" src="<?= APPURL . "/assets/img/reactions/haha.svg" ?>" width="45px" /></label>
-                                        </div>
-                                        <div class="form-check form-check-inline mb-3 me-1">
-                                            <input type="checkbox" class="form-check-input input-checkbox" id="wow" hidden name="reaction_type[]" value="WOW">
-                                            <label class="form-check-label" for="wow"><img class="opacity-25" style="cursor: pointer;" src="<?= APPURL . "/assets/img/reactions/wow.svg" ?>" width="45px" /></label>
-                                        </div>
-                                        <div class="form-check form-check-inline mb-3 me-1">
-                                            <input type="checkbox" class="form-check-input input-checkbox" id="sad" hidden name="reaction_type[]" value="SAD">
-                                            <label class="form-check-label" for="sad"><img class="opacity-25" style="cursor: pointer;" src="<?= APPURL . "/assets/img/reactions/sad.svg" ?>" width="45px" /></label>
-                                        </div>
-                                        <div class="form-check form-check-inline mb-3 me-1">
-                                            <input type="checkbox" class="form-check-input input-checkbox" id="angry" hidden name="reaction_type[]" value="ANGRY">
-                                            <label class="form-check-label" for="angry"><img class="opacity-25" style="cursor: pointer;" src="<?= APPURL . "/assets/img/reactions/angry.svg" ?>" width="45px" /></label>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
                             <div class="col-lg-12">
                                 <div class="mb-3">
                                     <label class="fw-bold form-label">Ghi chú (không bắt buộc)</label>

@@ -30,7 +30,7 @@
 
             <div class="card-datatable table-responsive">
                 <div id="DataTables_Table_1_wrapper" class="dataTables_wrapper dt-bootstrap5">
-                    <table class="dt-complex-header table table-bordered dataTable no-footer" id="users_table" data-url="<?= APPURL . "/users" ?>" aria-describedby="DataTables_Table_1_info" style="width: 1394px;">
+                    <table class="dt-complex-header table table-bordered dataTable" id="users_table" data-url="<?= APPURL . "/users" ?>" aria-describedby="DataTables_Table_1_info" style="width: 1394px;">
                         <thead>
                             <tr>
                                 <th style="width: 20px;">

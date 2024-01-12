@@ -128,7 +128,7 @@
                             <div class="mb-3 col-md-12">
                                 <div class="card-datatable table-responsive">
                                     <div id="DataTables_Table_1_wrapper" class="dataTables_wrapper dt-bootstrap5">
-                                        <table class="dt-complex-header table table-bordered dataTable no-footer" id="servers_table" aria-describedby="DataTables_Table_1_info" style="width: 1394px;">
+                                        <table class="dt-complex-header table table-bordered dataTable" id="servers_table" aria-describedby="DataTables_Table_1_info" style="width: 1394px;">
                                             <thead>
                                                 <tr>
                                                     <th>Tên server</th>

@@ -36,6 +36,12 @@
                             </div>
                             <div class="col-lg-12">
                                 <div class="mb-3">
+                                    <label class="fw-bold form-label">Số tháng</label>
+                                    <input type="number" name="month" min="1" class="form-control input-number" placeholder="Nhập số tháng cần tăng" required>
+                                </div>
+                            </div>
+                            <div class="col-lg-12">
+                                <div class="mb-3">
                                     <label class="fw-bold form-label">Server</label>
                                     <?php $index = 0;
                                     foreach ($Servers as $sv) : ?>
