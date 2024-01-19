@@ -82,10 +82,10 @@
         <div class="col-sm-6 col-lg-3 mb-2">
             <div class="card card-body">
                 <div class="d-flex align-items-center">
-                    <i class=" ti ti-coin-yen text-danger opacity-75 me-3"></i>
+                    <i class=" ti ti-coin-yen ph-3x text-danger opacity-75 me-3 font-size-30"></i>
                     <div class="flex-fill">
                         <h6 class="mb-0">Tổng tiền nạp toàn thời gian</h6>
-                        <span class="text-muted">111,111</span>
+                        <span class="text-muted">0</span>
                     </div>
                 </div>
             </div>
@@ -94,7 +94,7 @@
         <div class="col-sm-6 col-lg-3 mb-2">
             <div class="card card-body">
                 <div class="d-flex align-items-center">
-                    <i class="ti ti-dollar ph-2x text-indigo opacity-75 me-3 font-size-30"></i>
+                    <i class="ti ti-coin-euro ph-2x text-indigo opacity-75 me-3 font-size-30"></i>
 
                     <div class="flex-fill">
                         <h6 class="mb-0">Tổng tiền nạp tháng <?= date('m/Y') ?></h6>
@@ -107,7 +107,7 @@
         <div class="col-sm-6 col-lg-3 mb-2">
             <div class="card card-body">
                 <div class="d-flex align-items-center">
-                    <i class="ti ti-pound ph-2x text-primary opacity-75 me-3 font-size-30"></i>
+                    <i class="ti ti-coin-bitcoin ph-2x text-primary opacity-75 me-3 font-size-30"></i>
                     <div class="flex-fill">
                         <h6 class="mb-0">Tổng tiền nạp tuần</h6>
                         <span class="text-muted">0</span>
@@ -119,13 +119,12 @@
         <div class="col-sm-6 col-lg-3 mb-2">
             <div class="card card-body">
                 <div class="d-flex align-items-center">
-                    <i class="ti ti-rupee ph-2x text-success opacity-75 me-3 font-size-30"></i>
+                    <i class="ti ti-coin ph-2x text-success opacity-75 me-3 font-size-30"></i>
                     <div class="flex-fill">
                         <h6 class="mb-0">Tổng tiền nạp hôm nay</h6>
                         <span class="text-muted">0</span>
                     </div>
                 </div>
-
             </div>
         </div>
     </div>
@@ -146,7 +145,7 @@
         <div class="col-sm-6 col-lg-3 mb-2">
             <div class="card card-body">
             <div class="d-flex align-items-center">
-                <i class="bx bx-dollar ph-2x text-indigo opacity-75 me-3 font-size-30"></i>
+                <i class="ti ti-coin-euro ph-2x text-indigo opacity-75 me-3 font-size-30"></i>
 
                 <div class="flex-fill">
                 <h6 class="mb-0">Tổng tiền tiêu tháng <?= date('m/Y') ?></h6>
@@ -159,7 +158,7 @@
         <div class="col-sm-6 col-lg-3 mb-2">
             <div class="card card-body">
             <div class="d-flex align-items-center">
-                <i class="bx bx-pound ph-2x text-primary opacity-75 me-3 font-size-30"></i>
+                <i class="ti ti-coin-bitcoin ph-2x text-primary opacity-75 me-3 font-size-30"></i>
                 <div class="flex-fill">
                 <h6 class="mb-0">Tổng tiền tiêu tuần</h6>
                 <span class="text-muted">0</span>
@@ -171,7 +170,7 @@
         <div class="col-sm-6 col-lg-3 mb-2">
             <div class="card card-body">
             <div class="d-flex align-items-center">
-                <i class="bx bx-rupee ph-2x text-success opacity-75 me-3 font-size-30"></i>
+                <i class="ti ti-coin ph-2x text-success opacity-75 me-3 font-size-30"></i>
                 <div class="flex-fill">
                 <h6 class="mb-0">Tổng tiền tiêu hôm nay</h6>
                 <span class="text-muted">0</span>
@@ -198,7 +197,7 @@
         <div class="col-sm-6 col-lg-3 mb-2">
             <div class="card card-body">
             <div class="d-flex align-items-center">
-                <i class="bx bx-dollar ph-2x text-indigo opacity-75 me-3 font-size-30"></i>
+                <i class="ti ti-coin-euro ph-2x text-indigo opacity-75 me-3 font-size-30"></i>
 
                 <div class="flex-fill">
                 <h6 class="mb-0">Tổng tiền hoàn tháng <?= date('m/Y') ?></h6>
@@ -211,7 +210,7 @@
         <div class="col-sm-6 col-lg-3 mb-2">
             <div class="card card-body">
             <div class="d-flex align-items-center">
-                <i class="bx bx-pound ph-2x text-primary opacity-75 me-3 font-size-30"></i>
+                <i class="ti ti-coin-bitcoin ph-2x text-primary opacity-75 me-3 font-size-30"></i>
                 <div class="flex-fill">
                 <h6 class="mb-0">Tổng tiền hoàn tuần</h6>
                 <span class="text-muted">0</span>
@@ -223,7 +222,7 @@
         <div class="col-sm-6 col-lg-3 mb-2">
             <div class="card card-body">
             <div class="d-flex align-items-center">
-                <i class="bx bx-rupee ph-2x text-success opacity-75 me-3 font-size-30"></i>
+                <i class="ti ti-coin ph-2x text-success opacity-75 me-3 font-size-30"></i>
                 <div class="flex-fill">
                 <h6 class="mb-0">Tổng tiền hoàn hôm nay</h6>
                 <span class="text-muted">0</span>
@@ -234,5 +233,82 @@
         </div>
     </div>
 
-    
+    <div class="row">
+        <div class="col-sm-6">
+
+
+            <div class="card">
+                <div class="card-body text-center">
+                    <div class="d-inline-flex bg-success bg-opacity-10 text-success rounded-pill p-2 mb-3 mt-1">
+                        <i class=" bx bx-file-blank ph-2x m-1 font-size-30"></i>
+                    </div>
+                    <h5 class="card-title">API docs</h5>
+                    <p class="mb-3">Bạn muốn tích hợp hệ thống chúng tôi vào hệ thống của bạn. Hãy tìm hiểu API docs</p>
+                    <a href="https://documenter.getpostman.com/view/4725791/2s9Xy5MWB1" class="btn btn-success mb-1">Xem API docs</a>
+                </div>
+            </div>
+
+
+            <div class="card">
+                <div class="card-body">
+                    <form action="<?= APPURL . "/api-docs" ?>" method="POST">
+                    <input type="hidden" name="action" value="renew">
+                    <div class="mb-4">
+                        <div class="fw-bold border-bottom pb-2 mb-2">API KEY</div>
+                        <p class="mb-3">Bên dưới chứa API key của bạn. Nếu trống hãy nhấn "Làm mới API Key" để lấy</p>
+                        <div class="flex-fill align-self-center mb-3">
+                        <div class="d-flex">
+                            <div class="me-2" style="width: 500px">
+                            <input type="text" name="api_key" id="api_key" class="form-control" value="<?= $AuthUser->get("api_key") ? ($AuthUser->get("id") . "." . $AuthUser->get("api_key")) : "" ?>" readonly>
+                            </div>
+                            <a href="javascript:void(0)" class="align-self-center btn-copy fs-sm" data-clipboard-target="#api_key"><u>Nhấn để copy</u></a>
+                        </div>
+                        </div>
+                        <button type="button" class="btn btn-primary js-renew-api-key">Tạo mới API key</button>
+                    </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-sm-6">
+
+            <!-- Clean blog layout #1 -->
+            <div class="card">
+            <div class="card-header">
+                <h5 class="mb-0">
+                Hoạt động gần đây
+                </h5>
+            </div>
+
+            <div class="card-body">
+
+                <div class="list-feed">
+                <?php foreach ($fluctuations as $item) : ?>
+                    <?php
+                    $date = new \Moment\Moment($item->date, date_default_timezone_get());
+                    ?>
+                    <div class="list-feed-item">
+                    <?php
+                    $name = $item->firstname . " " . $item->lastname;
+                    $len = mb_strlen($name);
+                    $display_name = mb_substr($name, 0, 2);
+                    if ($len > 2) {
+                        $display_name .= str_repeat("*", $len - 2);
+                    }
+                    ?>
+                    <a href="javascript:void(0)"><?= $display_name ?></a> <?= $item->content ?>
+                    <div class="text-muted"><?= $date->format("Y-m-d H:i:s") ?></div>
+                    </div>
+                    <hr />
+                <?php endforeach ?>
+
+                </div>
+            </div>
+            </div>
+            <!-- /clean blog layout #1 -->
+
+
+        </div>
+    </div>
 </div>

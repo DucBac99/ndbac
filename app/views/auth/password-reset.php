@@ -14,7 +14,7 @@
       name="viewport"
       content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0" />
 
-      <title>Khôi phục mật khẩu | <?= site_settings("site_name") . " - " . site_settings("site_slogan") ?></title>
+      <title>Đặt lại mật khẩu | <?= site_settings("site_name") . " - " . site_settings("site_slogan") ?></title>
 
     <meta name="description" content="" />
 
@@ -62,76 +62,60 @@
     <!-- Content -->
 
     <div class="authentication-wrapper authentication-cover authentication-bg">
-      <div class="authentication-inner row">
-        <!-- /Left Text -->
-        <div class="d-none d-lg-flex col-lg-7 p-0">
-          <div class="auth-cover-bg auth-cover-bg-color d-flex justify-content-center align-items-center">
-            <img
-              src="../../assets/img/illustrations/auth-forgot-password-illustration-light.png"
-              alt="auth-forgot-password-cover"
-              class="img-fluid my-5 auth-illustration"
-              data-app-light-img="illustrations/auth-forgot-password-illustration-light.png"
-              data-app-dark-img="illustrations/auth-forgot-password-illustration-dark.png" />
+        <div class="authentication-inner row">
+            <!-- Reset Password -->
+            <div class="d-flex col-12 col-lg-5 align-items-center p-4 p-sm-5">
+                <div class="w-px-400 mx-auto">
+                <?php if (empty($success)) : ?>
+                    <h4 class="mb-1">Đặt lại mật khẩu🔒</h4>
+                    <p class="mb-4">cho <span class="fw-medium"><?= $AuthUser->get("firstname") . " " . $AuthUser->get("lastname") ?></span></p>
+                    <form id="formAuthentication" class="mb-3" action="<?= APPURL . "/recovery/" . $Route->params->id . "." . $Route->params->hash ?>" method="POST">
+                        <input type="hidden" name="action" value="reset">
 
-            <img
-              src="../../assets/img/illustrations/bg-shape-image-light.png"
-              alt="auth-forgot-password-cover"
-              class="platform-bg"
-              data-app-light-img="illustrations/bg-shape-image-light.png"
-              data-app-dark-img="illustrations/bg-shape-image-dark.png" />
-          </div>
-        </div>
-        <!-- /Left Text -->
-
-        <!-- Forgot Password -->
-        <div class="d-flex col-12 col-lg-5 align-items-center p-sm-5 p-4">
-          <div class="w-px-400 mx-auto">
-            <?php if (empty($success)) : ?>
-            <h3 class="mb-1">Khôi phục mật khẩu? 🔒</h3>
-            <p class="mb-4">Chúng tôi sẽ gửi cho bạn hướng dẫn trong email khi bạn nhập đầy đủ thông tin bên dưới</p>
-            <form id="formAuthentication" class="mb-3" action="<?= APPURL . "/recovery" ?>" method="POST">
-              <input type="hidden" name="action" value="recover">
-              <?php if (!empty($error)) : ?>
-                <div class="alert alert-danger alert-icon-start fade show">
-                  <span class="alert-icon bg-danger text-white">
-                    <i class="ph-x-circle"></i>
-                  </span>
-                  <span class="fw-semibold"> <?= $error ?>
+                        <?php if (!empty($error)) : ?>
+                        <div class="alert alert-danger alert-icon-start fade show">
+                            <span class="alert-icon bg-danger text-white">
+                            <i class="ph-x-circle"></i>
+                            </span>
+                            <span class="fw-semibold"> <?= $error ?>
+                        </div>
+                        <?php endif; ?>
+                        <div class="mb-3 form-password-toggle">
+                            <label class="form-label" for="password">Nhập mật khẩu mới</label>
+                            <div class="input-group input-group-merge">
+                            <input type="password" name="password" class="form-control" placeholder="Nhập mật khẩu mới">
+                            <span class="input-group-text cursor-pointer"><i class="ti ti-eye-off"></i></span>
+                            </div>
+                        </div>
+                        <div class="mb-3 form-password-toggle">
+                            <label class="form-label" for="confirm-password">Nhập mật khẩu xác nhận</label>
+                            <div class="input-group input-group-merge">
+                            <input type="password" name="password-confirm" class="form-control" placeholder="Nhập mật khẩu xác nhận">
+                            <span class="input-group-text cursor-pointer"><i class="ti ti-eye-off"></i></span>
+                            </div>
+                        </div>
+                        <button class="btn btn-primary d-grid w-100 mb-3">Đặt lại mật khẩu</button>
+                    </form>
+                <?php else : ?>
+                    <div class="text-center">
+                        <div class="avatar-lg mx-auto">
+                        <div class="avatar-title rounded-circle bg-light">
+                            <i class="bx bxs-envelope h2 mb-0 text-primary"></i>
+                        </div>
+                        </div>
+                        <div class="p-2 mt-4">
+                        <h4>Thành công</h4>
+                        <p>Bạn đã đổi thành công mật khẩu của mình. Hãy đăng nhập lại</p>
+                        <div class="mt-4">
+                            <a href="<?= APPURL ?>" class="btn btn-primary w-10">Về trang chủ</a>
+                        </div>
+                        </div>
+                    </div>
+                    <?php endif ?>
                 </div>
-              <?php endif; ?>
-              <div class="mb-3">
-                <label for="email" class="form-label">Email</label>
-                <input type="email" name="email" class="form-control" placeholder="Nhập email của bạn">
-              </div>
-              <button class="btn btn-primary d-grid w-100">Đặt lại mật khẩu</button>
-            </form>
-            <div class="text-center">
-              <a href="<?= APPURL . "/login" ?>" class="d-flex align-items-center justify-content-center">
-                <i class="ti ti-chevron-left scaleX-n1-rtl"></i>
-                Quay lại đăng nhập
-              </a>
             </div>
-            <?php else : ?>
-              <div class="text-center">
-                <div class="avatar-lg mx-auto">
-                  <div class="avatar-title rounded-circle bg-light">
-                    <i class="bx bx-mail-send h2 mb-0 text-primary"></i>
-                  </div>
-                </div>
-                <div class="p-2 mt-4">
-                  <h4>Thành công !</h4>
-                  <p class="text-muted">Hướng dẫn đặt lại mật khẩu được gửi đến địa chỉ email của bạn.</p>
-                  <div class="mt-4">
-                    <a href="<?= APPURL ?>" class="btn btn-primary w-100">Về trang chủ</a>
-                  </div>
-                </div>
-              </div>
-
-            <?php endif ?>
-          </div>
+            <!-- /Reset Password -->
         </div>
-        <!-- /Forgot Password -->
-      </div>
     </div>
 
     <!-- / Content -->

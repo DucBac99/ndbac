@@ -1,155 +1,217 @@
 
 <!DOCTYPE html>
-<html lang="en">
+
+<html
+    lang="en"
+    class="light-style layout-wide customizer-hide"
+    dir="ltr"
+    data-theme="theme-default"
+    data-assets-path="<?= APPURL . "/assets/" ?>"
+    data-template="vertical-menu-template">
     <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="description" content="wingo admin is super flexible, powerful, clean &amp; modern responsive bootstrap 4 admin template with unlimited possibilities.">
-        <meta name="keywords" content="admin template, wingo admin template, dashboard template, flat admin template, responsive admin template, web app">
-        <meta name="author" content="pixelstrap">
-        <link rel="icon" href="../assets/images/favicon.png" type="image/x-icon">
-        <link rel="shortcut icon" href="../assets/images/favicon.png" type="image/x-icon">
+        <meta charset="utf-8" />
+        <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0" />
+
         <title>Đăng nhập | <?= site_settings("site_name") . " - " . site_settings("site_slogan") ?></title>
-        <!-- Google font-->
-        <link rel="preconnect" href="https://fonts.gstatic.com">
-        <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&amp;display=swap" rel="stylesheet">
-        <!-- Font Awesome-->
-        <link rel="stylesheet" type="text/css" href="<?= APPURL . "/assets/css/vendors/font-awesome.css?v=" . VERSION ?>">
-        <!-- ico-font-->
-        <link rel="stylesheet" type="text/css" href="<?= APPURL . "/assets/css/vendors/icofont.css?v=" . VERSION ?>">
-        <!-- Themify icon-->
-        <link rel="stylesheet" type="text/css" href="<?= APPURL . "/assets/css/vendors/themify.css?v=" . VERSION ?>">
-        <!-- Flag icon-->
-        <link rel="stylesheet" type="text/css" href="<?= APPURL . "/assets/css/vendors/flag-icon.css?v=" . VERSION ?>">
-        <!-- Feather icon-->
-        <link rel="stylesheet" type="text/css" href="<?= APPURL . "/assets/css/vendors/feather-icon.css?v=" . VERSION ?>">
-        <!-- Plugins css start-->
-        <!-- Plugins css Ends-->
-        <!-- Bootstrap css-->
-        <link rel="stylesheet" type="text/css" href="<?= APPURL . "/assets/css/vendors/bootstrap.css?v=" . VERSION ?>">
-        <!-- App css-->
-        <link rel="stylesheet" type="text/css" href="<?= APPURL . "/assets/css/style.css?v=" . VERSION ?>">
-        <link id="color" rel="stylesheet" href="<?= APPURL . "/assets/css/color-1.css?v=" . VERSION ?>" media="screen">
-        <!-- Responsive css-->
-        <link rel="stylesheet" type="text/css" href="<?= APPURL . "/assets/css/responsive.css?v=" . VERSION ?>">
+
+        <meta name="description" content="" />
+
+        <!-- Favicon -->
+        <link rel="icon" type="image/x-icon" href="<?= APPURL . "/assets/img/favicon/favicon.ico" ?>" />
+
+        <!-- Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+        href="https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&ampdisplay=swap"
+        rel="stylesheet" />
+
+        <!-- Icons -->
+        <link rel="stylesheet" href="<?= APPURL . "/assets/vendor/fonts/fontawesome.css?v=" . VERSION ?>" />
+        <link rel="stylesheet" href="<?= APPURL . "/assets/vendor/fonts/tabler-icons.css?v=" . VERSION ?>" />
+        <link rel="stylesheet" href="<?= APPURL . "/assets/vendor/fonts/flag-icons.css?v=" . VERSION ?>" />
+
+        <!-- Core CSS -->
+        <link rel="stylesheet" href="<?= APPURL . "/assets/vendor/css/rtl/core.css?v=" . VERSION ?>" class="template-customizer-core-css" />
+        <link rel="stylesheet" href="<?= APPURL . "/assets/vendor/css/rtl/theme-default.css?v=" . VERSION ?>" class="template-customizer-theme-css" />
+        <link rel="stylesheet" href="<?= APPURL . "/assets/css/demo.css?v=" . VERSION ?>" />
+
+        <!-- Vendors CSS -->
+        <link rel="stylesheet" href="<?= APPURL . "/assets/vendor/libs/node-waves/node-waves.css?v=" . VERSION ?>" />
+        <link rel="stylesheet" href="<?= APPURL . "/assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.css?v=" . VERSION ?>" />
+        <link rel="stylesheet" href="<?= APPURL . "/assets/vendor/libs/typeahead-js/typeahead.css?v=" . VERSION ?>" />
+        <!-- Vendor -->
+        <link rel="stylesheet" href="<?= APPURL . "/assets/vendor/libs/@form-validation/umd/styles/index.min.css?v=" . VERSION ?>" />
+
+        <!-- Page CSS -->
+        <!-- Page -->
+        <link rel="stylesheet" href="<?= APPURL . "/assets/vendor/css/pages/page-auth.css?v=" . VERSION ?>" />
+
+        <!-- Helpers -->
+        <script src="<?= APPURL . "/assets/vendor/js/helpers.js?v=" . VERSION ?>"></script>
+        <!--! Template customizer & Theme config files MUST be included after core stylesheets and helpers.js in the <head> section -->
+        <!--? Template customizer: To hide customizer set displayCustomizer value false in config.js.  -->
+        <script src="<?= APPURL . "/assets/vendor/js/template-customizer.js?v=" . VERSION ?>"></script>
+        <!--? Config:  Mandatory theme config file contain global vars & default theme options, Set your preferred theme option in this file.  -->
+        <script src="<?= APPURL . "/assets/js/config.js?v=" . VERSION ?>"></script>
     </head>
+
     <body>
-        <!-- Loader starts-->
-        <div class="loader-wrapper">
-        <div class="main-loader">
-            <div class="bar-0"></div>
-            <div class="bar-1"></div>
-            <div class="bar-2"></div>
-            <div class="bar-3"></div>
-            <div class="bar-4"></div>
-        </div>
-        <div class="loading">Loading...    </div>
-        </div>
-        <!-- Loader ends-->
-        <!-- page-wrapper Start-->
-        <section>         
-        <div class="container-fluid p-0">
-            <div class="row">
-            <div class="col-12">              
-                <div class="login-card"><img class="img-fluid bg-img-cover" src="../assets/images/bg-login.jpg" alt="">
-                <form action="<?= APPURL . "/login" ?>" method="POST" class="theme-form login-form">
-                    <input type="hidden" name="action" value="login">
-                    <?php if (!empty($FormError)) : ?>
-                        <div class="alert alert-danger alert-icon-start fade show">
-                            <span class="alert-icon bg-danger text-white">
-                                <i class="ph-x-circle"></i>
-                            </span>
-                            <span class="fw-semibold"><?= $FormError ?>
-                        </div>
-                    <?php endif; ?>
-                    <div class="login-header text-center">
-                    <h4>Đăng nhập</h4>
-                    <h6>Chào mừng trở lại. Đăng nhập vào tài khoản của bạn!</h6>
+        <!-- Content -->
+
+        <div class="authentication-wrapper authentication-cover authentication-bg">
+            <div class="authentication-inner row">
+                <!-- /Left Text -->
+                <div class="d-none d-lg-flex col-lg-7 p-0">
+                    <div class="auth-cover-bg auth-cover-bg-color d-flex justify-content-center align-items-center">
+                        <img
+                        src="../../assets/img/illustrations/auth-login-illustration-light.png"
+                        alt="auth-login-cover"
+                        class="img-fluid my-5 auth-illustration"
+                        data-app-light-img="illustrations/auth-login-illustration-light.png"
+                        data-app-dark-img="illustrations/auth-login-illustration-dark.png" />
+
+                        <img
+                        src="../../assets/img/illustrations/bg-shape-image-light.png"
+                        alt="auth-login-cover"
+                        class="platform-bg"
+                        data-app-light-img="illustrations/bg-shape-image-light.png"
+                        data-app-dark-img="illustrations/bg-shape-image-dark.png" />
                     </div>
-                    <div class="form-group">
-                    <ul class="login-social">
-                        <li><a href="https://www.google.com/" target="_blank">
-                            <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewbox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
-                            <path style="fill:#167EE6;" d="M492.668,211.489l-208.84-0.01c-9.222,0-16.697,7.474-16.697,16.696v66.715                          c0,9.22,7.475,16.696,16.696,16.696h117.606c-12.878,33.421-36.914,61.41-67.58,79.194L384,477.589                          c80.442-46.523,128-128.152,128-219.53c0-13.011-0.959-22.312-2.877-32.785C507.665,217.317,500.757,211.489,492.668,211.489z"></path>
-                            <path style="fill:#12B347;" d="M256,411.826c-57.554,0-107.798-31.446-134.783-77.979l-86.806,50.034                          C78.586,460.443,161.34,512,256,512c46.437,0,90.254-12.503,128-34.292v-0.119l-50.147-86.81                          C310.915,404.083,284.371,411.826,256,411.826z"></path>
-                            <path style="fill:#0F993E;" d="M384,477.708v-0.119l-50.147-86.81c-22.938,13.303-49.48,21.047-77.853,21.047V512                          C302.437,512,346.256,499.497,384,477.708z"></path>
-                            <path style="fill:#FFD500;" d="M100.174,256c0-28.369,7.742-54.91,21.043-77.847l-86.806-50.034C12.502,165.746,0,209.444,0,256                          s12.502,90.254,34.411,127.881l86.806-50.034C107.916,310.91,100.174,284.369,100.174,256z"></path>
-                            <path style="fill:#FF4B26;" d="M256,100.174c37.531,0,72.005,13.336,98.932,35.519c6.643,5.472,16.298,5.077,22.383-1.008                          l47.27-47.27c6.904-6.904,6.412-18.205-0.963-24.603C378.507,23.673,319.807,0,256,0C161.34,0,78.586,51.557,34.411,128.119                          l86.806,50.034C148.202,131.62,198.446,100.174,256,100.174z"></path>
-                            <path style="fill:#D93F21;" d="M354.932,135.693c6.643,5.472,16.299,5.077,22.383-1.008l47.27-47.27                          c6.903-6.904,6.411-18.205-0.963-24.603C378.507,23.672,319.807,0,256,0v100.174C293.53,100.174,328.005,113.51,354.932,135.693z"></path>
-                            <g></g>
-                            </svg></a></li>
-                        <li><a href="https://twitter.com/" target="_blank">
-                            <svg id="Capa_1" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewbox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
-                            <path style="fill:#03A9F4;" d="M512,97.248c-19.04,8.352-39.328,13.888-60.48,16.576c21.76-12.992,38.368-33.408,46.176-58.016                            c-20.288,12.096-42.688,20.64-66.56,25.408C411.872,60.704,384.416,48,354.464,48c-58.112,0-104.896,47.168-104.896,104.992                            c0,8.32,0.704,16.32,2.432,23.936c-87.264-4.256-164.48-46.08-216.352-109.792c-9.056,15.712-14.368,33.696-14.368,53.056                            c0,36.352,18.72,68.576,46.624,87.232c-16.864-0.32-33.408-5.216-47.424-12.928c0,0.32,0,0.736,0,1.152                            c0,51.008,36.384,93.376,84.096,103.136c-8.544,2.336-17.856,3.456-27.52,3.456c-6.72,0-13.504-0.384-19.872-1.792                            c13.6,41.568,52.192,72.128,98.08,73.12c-35.712,27.936-81.056,44.768-130.144,44.768c-8.608,0-16.864-0.384-25.12-1.44                            C46.496,446.88,101.6,464,161.024,464c193.152,0,298.752-160,298.752-298.688c0-4.64-0.16-9.12-0.384-13.568                            C480.224,136.96,497.728,118.496,512,97.248z"></path>
-                            <g></g>
-                            </svg></a></li>
-                        <li><a href="https://www.instagram.com/" target="_blank">
-                            <svg enable-background="new 0 0 24 24" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                            <lineargradient id="SVGID_1_" gradienttransform="matrix(0 -1.982 -1.844 0 -132.522 -51.077)" gradientunits="userSpaceOnUse" x1="-37.106" x2="-26.555" y1="-72.705" y2="-84.047">
-                                <stop offset="0" stop-color="#fd5"></stop>
-                                <stop offset=".5" stop-color="#ff543e"></stop>
-                                <stop offset="1" stop-color="#c837ab"></stop>
-                            </lineargradient>
-                            <path d="m1.5 1.633c-1.886 1.959-1.5 4.04-1.5 10.362 0 5.25-.916 10.513 3.878 11.752 1.497.385 14.761.385 16.256-.002 1.996-.515 3.62-2.134 3.842-4.957.031-.394.031-13.185-.001-13.587-.236-3.007-2.087-4.74-4.526-5.091-.559-.081-.671-.105-3.539-.11-10.173.005-12.403-.448-14.41 1.633z" fill="url(#SVGID_1_)"></path>
-                            <path d="m11.998 3.139c-3.631 0-7.079-.323-8.396 3.057-.544 1.396-.465 3.209-.465 5.805 0 2.278-.073 4.419.465 5.804 1.314 3.382 4.79 3.058 8.394 3.058 3.477 0 7.062.362 8.395-3.058.545-1.41.465-3.196.465-5.804 0-3.462.191-5.697-1.488-7.375-1.7-1.7-3.999-1.487-7.374-1.487zm-.794 1.597c7.574-.012 8.538-.854 8.006 10.843-.189 4.137-3.339 3.683-7.211 3.683-7.06 0-7.263-.202-7.263-7.265 0-7.145.56-7.257 6.468-7.263zm5.524 1.471c-.587 0-1.063.476-1.063 1.063s.476 1.063 1.063 1.063 1.063-.476 1.063-1.063-.476-1.063-1.063-1.063zm-4.73 1.243c-2.513 0-4.55 2.038-4.55 4.551s2.037 4.55 4.55 4.55 4.549-2.037 4.549-4.55-2.036-4.551-4.549-4.551zm0 1.597c3.905 0 3.91 5.908 0 5.908-3.904 0-3.91-5.908 0-5.908z" fill="#fff"></path>
-                            </svg></a></li>
-                        <li><a href="https://www.facebook.com/" target="_blank">
-                            <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewbox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
-                            <path style="fill:#1976D2;" d="M384,176h-96v-64c0-17.664,14.336-32,32-32h32V0h-64l0,0c-53.024,0-96,42.976-96,96v80h-64v80h64v256                            h96V256h64L384,176z"></path>
-                            <g></g>
-                            </svg></a></li>
-                    </ul>
-                    </div>
-                    <div class="login-social-title">                
-                    <h5>Đăng nhập với Email</h5>
-                    </div>
-                    <div class="form-group">
-                    <label>Địa chỉ Email</label>
-                    <div class="input-group"><span class="input-group-text"><i class="icon-email"></i></span>
-                        <input class="form-control" type="email" id="username" name="username" required="" placeholder="Test@gmail.com" value="<?= Input::post("username") ?>">
-                    </div>
-                    </div>
-                    <div class="form-group">
-                    <label>Mật khẩu</label>
-                    <div class="input-group"><span class="input-group-text"><i class="icon-lock"></i></span>
-                        <input class="form-control" type="password" name="password" id="password-input" required="" placeholder="*********">
-                        <div class="show-hide"><span class="show">                         </span></div>
-                    </div>
-                    </div>
-                    <div class="form-group">
-                    <div class="checkbox">
-                        <input id="checkbox1" type="checkbox" id="remember-check" name="remember" value="1" <?= Input::post("remember") ? "checked" : "" ?>>
-                        <label class="text-muted" for="checkbox1">Ghi nhớ đăng nhập</label>
-                    </div><a class="link" href="<?= APPURL . "/recovery" ?>">Quên mật khẩu?</a>
-                    </div>
-                    <div class="form-group">
-                    <button class="btn btn-primary btn-block" type="submit">Đăng nhập</button>
-                    </div>
-                    <p>Bạn chưa có tài khoản?<a class="ms-2" href="<?= APPURL . "/signup" ?>">Đăng ký ngay</a></p>
-                </form>
                 </div>
-            </div>
+                <!-- /Left Text -->
+
+                <!-- Login -->
+                <div class="d-flex col-12 col-lg-5 align-items-center p-sm-5 p-4">
+                    <div class="w-px-400 mx-auto">
+                        <!-- Logo -->
+                        <div class="app-brand mb-4">
+                        <a href="index.html" class="app-brand-link gap-2">
+                            <span class="app-brand-logo demo">
+                            <svg width="32" height="22" viewBox="0 0 32 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                fill-rule="evenodd"
+                                clip-rule="evenodd"
+                                d="M0.00172773 0V6.85398C0.00172773 6.85398 -0.133178 9.01207 1.98092 10.8388L13.6912 21.9964L19.7809 21.9181L18.8042 9.88248L16.4951 7.17289L9.23799 0H0.00172773Z"
+                                fill="#7367F0" />
+                                <path
+                                opacity="0.06"
+                                fill-rule="evenodd"
+                                clip-rule="evenodd"
+                                d="M7.69824 16.4364L12.5199 3.23696L16.5541 7.25596L7.69824 16.4364Z"
+                                fill="#161616" />
+                                <path
+                                opacity="0.06"
+                                fill-rule="evenodd"
+                                clip-rule="evenodd"
+                                d="M8.07751 15.9175L13.9419 4.63989L16.5849 7.28475L8.07751 15.9175Z"
+                                fill="#161616" />
+                                <path
+                                fill-rule="evenodd"
+                                clip-rule="evenodd"
+                                d="M7.77295 16.3566L23.6563 0H32V6.88383C32 6.88383 31.8262 9.17836 30.6591 10.4057L19.7824 22H13.6938L7.77295 16.3566Z"
+                                fill="#7367F0" />
+                            </svg>
+                            </span>
+                        </a>
+                        </div>
+                        <!-- /Logo -->
+                        <h3 class="mb-1">Chào mừng đến với <?= site_settings("site_name") ?>! 👋</h3>
+                        <p class="mb-4">Hãy đăng nhập vào tài khoản của bạn!</p>
+
+                        <form id="formAuthentication" class="mb-3" action="<?= APPURL . "/login" ?>" method="POST">
+                            <input type="hidden" name="action" value="login">
+                            <?php if (!empty($FormError)) : ?>
+                                <div class="alert alert-danger alert-icon-start fade show">
+                                    <span class="alert-icon bg-danger text-white">
+                                    <i class="ph-x-circle"></i>
+                                    </span>
+                                    <span class="fw-semibold"><?= $FormError ?>
+                                </div>
+                            <?php endif; ?>
+                            <div class="mb-3">
+                                <label for="email" class="form-label">Email</label>
+                                <input type="text" class="form-control" id="username" name="username" placeholder="Nhập địa chỉ email" value="<?= Input::post("username") ?>">
+                            </div>
+                            <div class="mb-3 form-password-toggle">
+                                <div class="d-flex justify-content-between">
+                                <label class="form-label" for="password">Mật khẩu</label>
+                                <a href="<?= APPURL . "/recovery" ?>">
+                                    <small>Quên mật khẩu?</small>
+                                </a>
+                                </div>
+                                <div class="input-group input-group-merge">
+                                <input type="password" name="password" class="form-control pe-5" id="password-input" placeholder="Nhập mật khẩu của bạn">
+                                <span class="input-group-text cursor-pointer"><i class="ti ti-eye-off"></i></span>
+                                </div>
+                            </div>
+                            <div class="mb-3">
+                                <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="remember-check" name="remember" value="1" <?= Input::post("remember") ? "checked" : "" ?>>
+                                <label class="form-check-label" for="remember-me"> Ghi nhớ đăng nhập </label>
+                                </div>
+                            </div>
+                            <button class="btn btn-primary d-grid w-100">Đăng nhập</button>
+                        </form>
+
+                        <p class="text-center">
+                        <span>Bạn chưa có tài khoản?</span>
+                        <a href="<?= APPURL . "/signup" ?>">
+                            <span>Đăng ký</span>
+                        </a>
+                        </p>
+
+                        <div class="divider my-4">
+                        <div class="divider-text">Đăng nhập với</div>
+                        </div>
+
+                        <div class="d-flex justify-content-center">
+                            <a href="javascript:;" class="btn btn-icon btn-label-facebook me-3">
+                                <i class="tf-icons fa-brands fa-facebook-f fs-5"></i>
+                            </a>
+
+                            <a href="javascript:;" class="btn btn-icon btn-label-google-plus me-3">
+                                <i class="tf-icons fa-brands fa-google fs-5"></i>
+                            </a>
+
+                            <a href="javascript:;" class="btn btn-icon btn-label-twitter">
+                                <i class="tf-icons fa-brands fa-twitter fs-5"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <!-- /Login -->
             </div>
         </div>
-        </section>
-        <!-- page-wrapper end-->
-        <!-- latest jquery-->
-        <script src="<?= APPURL . "/assets/js/jquery-3.5.1.min.js?v=" . VERSION ?>"></script>
-        <!-- feather icon js-->
-        <script src="<?= APPURL . "/assets/js/icons/feather-icon/feather.min.js?v=" . VERSION ?>"></script>
-        <script src="<?= APPURL . "/assets/js/icons/feather-icon/feather-icon.js?v=" . VERSION ?>"></script>
-        <!-- Sidebar jquery-->
-        <script src="<?= APPURL . "/assets/js/sidebar-menu.js?v=" . VERSION ?>"></script>
-        <script src="<?= APPURL . "/assets/js/config.js?v=" . VERSION ?>">   </script>
-        <!-- Bootstrap js-->
-        <script src="<?= APPURL . "/assets/js/bootstrap/popper.min.js?v=" . VERSION ?>"></script>
-        <script src="<?= APPURL . "/assets/js/bootstrap/bootstrap.min.js?v=" . VERSION ?>"></script>
-        <!-- Plugins JS start-->
-        <!-- Plugins JS Ends-->
-        <!-- Theme js-->
-        <script src="<?= APPURL . "/assets/js/script.js?v=" . VERSION ?>"></script>
-        <!-- login js-->
-        <!-- Plugin used-->
+
+        <!-- / Content -->
+
+        <!-- Core JS -->
+        <!-- build:js assets/vendor/js/core.js -->
+
+        <script src="<?= APPURL . "/assets/vendor/libs/jquery/jquery.js?v=" . VERSION ?>"></script>
+        <script src="<?= APPURL . "/assets/vendor/libs/popper/popper.js?v=" . VERSION ?>"></script>
+        <script src="<?= APPURL . "/assets/vendor/js/bootstrap.js?v=" . VERSION ?>"></script>
+        <script src="<?= APPURL . "/assets/vendor/libs/node-waves/node-waves.js?v=" . VERSION ?>"></script>
+        <script src="<?= APPURL . "/assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.js?v=" . VERSION ?>"></script>
+        <script src="<?= APPURL . "/assets/vendor/libs/hammer/hammer.js?v=" . VERSION ?>"></script>
+        <script src="<?= APPURL . "/assets/vendor/libs/i18n/i18n.js?v=" . VERSION ?>"></script>
+        <script src="<?= APPURL . "/assets/vendor/libs/typeahead-js/typeahead.js?v=" . VERSION ?>"></script>
+        <script src="<?= APPURL . "/assets/vendor/js/menu.js?v=" . VERSION ?>"></script>
+
+        <!-- endbuild -->
+
+        <!-- Vendors JS -->
+        <script src="<?= APPURL . "/assets/vendor/libs/@form-validation/umd/bundle/popular.min.js?v=" . VERSION ?>"></script>
+        <script src="<?= APPURL . "/assets/vendor/libs/@form-validation/umd/plugin-bootstrap5/index.min.js?v=" . VERSION ?>"></script>
+        <script src="<?= APPURL . "/assets/vendor/libs/@form-validation/umd/plugin-auto-focus/index.min.js?v=" . VERSION ?>"></script>
+
+        <!-- Main JS -->
+        <script src="<?= APPURL . "/assets/js/main.js?v=" . VERSION ?>"></script>
+
+        <!-- Page JS -->
+        <script src="<?= APPURL . "/assets/js/pages-auth.js?v=" . VERSION ?>"></script>
     </body>
 </html>
